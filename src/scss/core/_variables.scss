@@ -1,0 +1,31 @@
+@import 'colors';
+@import 'fonts';
+@import 'brand';
+@import 'zindex';
+
+// Re-usable variables
+$mobile-padding: 1.5rem;
+$grid-gutter-width: $mobile-padding;
+$base64-spacer: 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7';
+$error-icon-within-inputs: "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='none' stroke='%23dc3545' viewBox='0 0 12 12'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/%3e%3ccircle cx='6' cy='8.2' r='.6' fill='%23dc3545' stroke='none'/%3e%3c/svg%3e";
+$general-animation-style: 0.25s ease-in-out;
+
+// bootstrap component tweaks
+$dropdown-icon-right-offset: 5px;
+$dropdown-icon-dropdown-offset: 16px;
+$dropdown-search-custom-width: 250px;
+$dropdown-min-width: 200px;
+$dropdown-menu-item-chevron: 30px;
+
+// (custom) tak cards
+$tak-card-spacer: 1rem;
+$tak-card-2col-width: 50%;
+$tak-card-3col-width: 33.3%;
+$tak-card-3col-max-width: 365px;
+$tak-card-thumbnail-height-sm: 165px;
+$tak-card-thumbnail-height-md: 200px;
+
+// disclaimer
+$disclaimer-small-down-top-offset: 75px;
+$disclaimer-medium-up-top-offset: 180px;
+$disclaimer-accordion-spacer: $disclaimer-medium-up-top-offset * 1.5;

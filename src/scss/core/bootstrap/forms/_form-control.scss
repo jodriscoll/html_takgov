@@ -1,0 +1,66 @@
+//@import "../../../../../node_modules/bootstrap/scss/forms/form-control.scss";
+
+// bootstrap modifiers may require !important
+$form-input-border-default: 1px;
+$form-input-border-left-width: 3px;
+$form-input-border-bottom-width: 2px;
+$form-input-error-icon-position: calc(100% - 8px);
+$form-input-error-icon-size: 16px;
+
+.form-control {
+  @include rfs(10px 13px !important, padding);
+  @include rfs($form-input-border-left-width solid $form-input-bg, border-left);
+  @include rfs($form-input-border-bottom-width solid $umber, border-bottom);
+  background-color: $form-input-bg;
+  background-clip: border-box;
+  border-right: none;
+  border-top: none;
+
+  // if the user has entered text
+  &:not(:placeholder-shown) {
+    border-left-color: $umber;
+  }
+
+  // custom handler for the reveal password feature
+  &[type='password'],
+  &[type='text'] {
+    position: relative;
+
+    + .js-reveal-password {
+      bottom: 20%;
+      position: absolute;
+      right: 10px;
+    }
+
+    // tabbing/interaction(s)
+    &:focus {
+      + .js-reveal-password {
+        z-index: 3;
+      }
+    }
+  }
+}
+
+// validation
+form.was-validated input.form-control:invalid,
+form input.form-control.is-invalid {
+  background-image: url($error-icon-within-inputs);
+  background-position: right ($form-input-error-icon-size / 2) center;
+  background-repeat: no-repeat;
+  background-size: $form-input-error-icon-size $form-input-error-icon-size;
+  border-color: $red-login-error !important;
+  border-left-width: $form-input-border-left-width;
+}
+
+form.was-validated {
+  input.form-control {
+    &[type='password'],
+    &[type='text'] {
+      @include padding-right(50px !important);
+
+      + .js-reveal-password {
+        right: 32px;
+      }
+    }
+  }
+}

@@ -1,0 +1,23 @@
+//@import "../../../../node_modules/bootstrap/scss/badge";
+
+// bootstrap modifiers may require !important
+$badge-facet-custom-font-size: 12px;
+$badge-facet-y-axis-padding: 6px;
+
+.badge {
+  // facet badges (dismissible)
+  &.facet {
+    @include padding-bottom($badge-facet-y-axis-padding);
+    @include padding-top($badge-facet-y-axis-padding);
+
+    // text shown within
+    span {
+      @include font-size($badge-facet-custom-font-size);
+    }
+
+    // when a close button is present within
+    .btn-close {
+      @include font-size(8px); // 8px translates to a 12x12 icon
+    }
+  }
+}

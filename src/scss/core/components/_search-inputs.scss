@@ -1,0 +1,17 @@
+.search-input-square {
+  @include media-breakpoint-down(lg) {
+    @include rfs(21px !important, border-radius);
+    @include rfs(8px 8px 8px ($nav-search-input-icon-sm-width * 3) !important, padding);
+    background-color: $white;
+    border: none;
+    color: $black;
+  }
+}
+
+.search-input-rounded {
+  @include search-input-rounded(false, 6px);
+
+  input[type='text'] {
+    @include font-size(14px);
+  }
+}

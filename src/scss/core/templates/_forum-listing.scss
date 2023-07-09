@@ -1,0 +1,72 @@
+// bootstrap modifiers may require !important
+$forum-row-metadata-max-width: 120px;
+$forum-row-card-border-radius: 10px;
+
+// attached to main.main
+.forums-listing {
+  &__results {
+    // each results card/row
+    .card {
+      border-radius: $forum-row-card-border-radius;
+
+      // if pinned...
+      &[data-pinned='true'] {
+        // change the border on the discussion
+        .card-body {
+          border: 2px solid $yellow-primary;
+        }
+
+        // show the pinned status element
+        .forums-listing__pinned-status {
+          opacity: 1;
+          visibility: visible;
+        }
+      }
+    }
+
+    // card content wrapper
+    .card-body {
+      border: 2px solid $white;
+      border-radius: $forum-row-card-border-radius;
+      overflow: hidden;
+      transition: border-color $general-animation-style;
+    }
+  }
+
+  // follows, replies, icons, badges, etc...
+  &__metadata {
+    @include media-breakpoint-up(md) {
+      max-width: $forum-row-metadata-max-width;
+    }
+  }
+
+  // content
+  &__content {
+    @include media-breakpoint-up(lg) {
+      padding-left: 0;
+    }
+
+    a {
+      &:hover,
+      &:focus {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  // tags
+  &__tags {
+    // ...
+  }
+
+  // (conditional) pinned discussion
+  &__pinned-status {
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+    right: 10px;
+    top: 4px;
+    transition: opacity $general-animation-style;
+    visibility: hidden;
+  }
+}

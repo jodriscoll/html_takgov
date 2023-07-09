@@ -1,0 +1,93 @@
+$accordion-form-padding-mobile: 10px;
+$accordion-form-field-bg-mobile: $white;
+$filters-sidebar-width-midrange: 30%;
+$filters-sidebar-width-desktop: 250px;
+$filters-content-width-midrange: 70%;
+$filters-content-sorter-width-desktop: 200px;
+$filters-sidebar-quicklinks-width-desktop: 280px;
+
+.sidebar {
+  &__filters {
+    @include media-breakpoint-between(md, xl) {
+      width: $filters-sidebar-width-midrange;
+    }
+    @include media-breakpoint-up(xl) {
+      @include margin-right(30px);
+      width: $filters-sidebar-width-desktop;
+    }
+
+    .accordion {
+      @include media-breakpoint-down(md) {
+        border-radius: 6px;
+        background-color: $smoke;
+        width: 100%;
+        margin: 0 auto;
+      }
+
+      .search-input-rounded {
+        // avoid duplicate labels
+        label {
+          @include media-breakpoint-down(md) {
+            display: none !important;
+            pointer-events: none;
+          }
+        }
+
+        input {
+          @include media-breakpoint-down(md) {
+            background-color: $accordion-form-field-bg-mobile;
+          }
+        }
+      }
+
+      // accordion trigger (mobile only)
+      button {
+        @include media-breakpoint-down(md) {
+          padding: $accordion-form-padding-mobile;
+        }
+      }
+
+      // content hidden by accordion
+      section {
+        @include media-breakpoint-down(md) {
+          padding: ($accordion-form-padding-mobile + 5px) !important;
+        }
+        @include media-breakpoint-up(md) {
+          display: block;
+        }
+      }
+
+      .accordion-ui-select {
+        button {
+          @include media-breakpoint-down(md) {
+            background-color: $accordion-form-field-bg-mobile;
+          }
+        }
+      }
+    }
+  }
+
+  &__content {
+    @include media-breakpoint-between(sm, md) {
+      // ...
+    }
+    @include media-breakpoint-between(md, xl) {
+      width: $filters-content-width-midrange;
+    }
+
+    // facets
+    .results-facets {
+      &__sorter {
+        @include media-breakpoint-up(lg) {
+          max-width: $filters-content-sorter-width-desktop;
+        }
+      }
+    }
+  }
+
+  &__quick-links {
+    @include media-breakpoint-up(lg) {
+      width: $filters-sidebar-quicklinks-width-desktop;
+    }
+  }
+}

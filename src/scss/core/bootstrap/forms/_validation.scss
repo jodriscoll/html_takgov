@@ -1,0 +1,18 @@
+//@import "../../../../../node_modules/bootstrap/scss/forms/validation";
+
+// bootstrap modifiers may require !important
+form.was-validated {
+  .form-control:invalid,
+  .form-control.is-invalid {
+    border-left-width: 2px;
+    border-right: 0;
+    border-top: 0;
+  }
+
+  //@include padding-right(30px);
+
+  .invalid-feedback {
+    @include font-size(12px);
+    color: $red-login-error;
+  }
+}

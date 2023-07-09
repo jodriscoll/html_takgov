@@ -1,0 +1,100 @@
+$btn-wysiwyg-toggle-inactive-bg-color: $percent_30;
+$btn-wysiwyg-toggle-inactive-font-color: $black;
+$btn-wysiwyg-toggle-active-bg-color: $button-primary;
+$btn-wysiwyg-toggle-active-font-color: $white;
+$btn-forums-reply-bg-color: $percent_15;
+$btn-forums-reply-font-size: 12px;
+$btn-forums-reply-line-height: ($btn-forums-reply-font-size + 8px);
+
+.btn {
+  // (custom) slim version (Create New Discussion on forums)
+  &.btn-slim {
+    @include rfs(6px 13px !important, padding);
+  }
+
+  // (custom) success (Reply on forums)
+  &.btn-reply {
+    @include font-size($btn-forums-reply-font-size);
+    background-color: $btn-forums-reply-bg-color;
+    border-radius: 10px;
+    color: $black;
+    font-weight: $font-weight-normal;
+    line-height: $btn-forums-reply-line-height;
+    text-align: left;
+
+    // interactions
+    &:hover,
+    &:focus,
+    &:active {
+      text-decoration: none;
+    }
+  }
+
+  // (custom) follow, reply, report (on forums)
+  &.btn-forums {
+    @include font-size($btn-forums-reply-font-size);
+    background-color: $btn-forums-reply-bg-color;
+    border-radius: 2px !important;
+    color: $black;
+    font-weight: $font-weight-normal;
+    line-height: $btn-forums-reply-line-height;
+
+    // interactions
+    &:hover,
+    &:focus,
+    &:active {
+      text-decoration: none;
+    }
+  }
+
+  // (custom) wysiwyg editor buttons
+  &-wysiwyg {
+    @include media-breakpoint-down(sm) {
+      + label i {
+        font-size: 12px !important;
+      }
+    }
+
+    // when active
+    &:checked,
+    &:active {
+      + *[class*='btn'] {
+        background-color: $btn-wysiwyg-toggle-active-bg-color;
+        color: $btn-wysiwyg-toggle-active-font-color;
+      }
+    }
+
+    // default button state
+    + *[class*='btn'] {
+      @include padding(10px !important);
+      background-color: $btn-wysiwyg-toggle-inactive-bg-color;
+      border: none;
+      border-radius: 6px !important;
+      color: $btn-wysiwyg-toggle-inactive-font-color;
+    }
+  }
+
+  // (custom) button toggle follow, reply, report (on forums)
+  &-check-forums {
+    // when active
+    &:checked,
+    &:active {
+      + *[class*='btn'] {
+        background-color: $btn-wysiwyg-toggle-active-bg-color;
+        color: $btn-wysiwyg-toggle-active-font-color;
+      }
+    }
+
+    // default button state
+    + *[class*='btn'] {
+      @include padding(10px !important);
+      @include font-size($btn-forums-reply-font-size);
+      background-color: $percent_15;
+      border: none;
+      border-radius: 2px !important;
+      color: $black;
+      font-weight: $font-weight-normal;
+      line-height: $btn-forums-reply-line-height;
+    }
+  }
+}

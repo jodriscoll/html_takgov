@@ -1,0 +1,7 @@
+//@import "../../../../../node_modules/bootstrap/scss/forms/labels.scss";
+
+// bootstrap modifiers may require !important
+.form-label {
+    @include font-size(12px);
+    color: $bark;
+}

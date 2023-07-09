@@ -1,0 +1,167 @@
+@import '../../../../node_modules/bootstrap/scss/accordion';
+
+// bootstrap modifiers may require !important
+$button-opened-text-color: $black;
+$quick-links-border-radius: 5px;
+$topper-border-radius: $quick-links-border-radius;
+
+.accordion {
+  &-button {
+    text-align: left;
+  }
+
+  // when the accordion button is in an "opened" state
+  &-button:not(.collapsed) {
+    color: $button-opened-text-color;
+  }
+
+  // appear as if the accordion is a select dropdown
+  &-select {
+    .accordion-button {
+      @include border-radius(0);
+      @include padding(11px 25px 11px 15px);
+      @include font-size(14px);
+      border-bottom: 1px solid $black;
+      border-left: 2px solid $form-input-bg;
+      border-right: 1px solid $form-input-bg;
+      border-top: 1px solid $form-input-bg;
+      background-color: $form-input-bg;
+      position: relative;
+
+      // chevron
+      &::after {
+        bottom: 11px;
+        position: absolute;
+        right: 5px;
+        // you can't use transform, or you break the default animation
+      }
+
+      &.collapsed[data-count='0'] {
+        color: $percent_30 !important;
+      }
+    }
+
+    .accordion-body {
+      background-color: $percent_5;
+
+      .form-check-label {
+        @include font-size(14px);
+      }
+    }
+
+    .accordion-collapse {
+      border-width: 0;
+    }
+
+    .accordion-item {
+      &:first-of-type {
+        .accordion-button {
+          @include border-top-radius(0);
+        }
+      }
+
+      &:last-of-type {
+        .accordion-button.collapsed {
+          @include border-bottom-radius(0);
+        }
+      }
+    }
+  }
+
+  // appears on product detail pages
+  &-requirements {
+    .accordion-button {
+      @include padding(11px 25px 11px 15px);
+      @include font-size(14px);
+      background-color: $smoke;
+      position: relative;
+
+      // chevron
+      &::after {
+        bottom: 11px;
+        position: absolute;
+        right: 5px;
+        // you can't use transform, or you break the default animation
+      }
+
+      // clear focus state
+      &:focus {
+        box-shadow: none;
+        outline: none;
+      }
+    }
+
+    .accordion-body {
+      background-color: $smoke;
+    }
+
+    .accordion-collapse {
+      border-width: 0;
+    }
+
+    .accordion-item {
+      // ...
+    }
+  }
+
+  // appears on program office pages
+  &-quick-links {
+    .accordion-header {
+      border-radius: $quick-links-border-radius;
+    }
+
+    .accordion-button {
+      @include padding(11px 25px 11px 15px);
+      @include font-size(14px);
+      background-color: rgba($smoke, 0.5);
+      position: relative;
+
+      // chevron
+      &::after {
+        bottom: 11px;
+        position: absolute;
+        right: 5px;
+        // you can't use transform, or you break the default animation
+      }
+
+      // clear focus state
+      &:focus {
+        box-shadow: none;
+        outline: none;
+      }
+
+      // work in the custom radius in the default state
+      &.collapsed,
+      &[aria-expanded='false'] {
+        border-radius: $quick-links-border-radius;
+      }
+    }
+
+    .accordion-body {
+      @include padding-top(5px);
+      background-color: rgba($smoke, 0.5);
+      border-bottom-left-radius: $quick-links-border-radius;
+      border-bottom-right-radius: $quick-links-border-radius;
+    }
+
+    .accordion-collapse {
+      border-width: 0;
+    }
+
+    .accordion-item {
+      // ...
+    }
+  }
+
+  // appears on dev resources sidebar
+  &-topper {
+    @include font-size(14px);
+    background-color: $bark;
+    border-top-left-radius: $topper-border-radius;
+    border-top-right-radius: $topper-border-radius;
+    color: $white;
+    display: block;
+    font-weight: $font-weight-bolder;
+    padding: 5px 15px;
+  }
+}

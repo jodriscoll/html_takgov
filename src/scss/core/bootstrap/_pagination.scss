@@ -1,0 +1,71 @@
+//@import "../../../../node_modules/bootstrap/scss/breadcrumb";
+
+// bootstrap modifiers may require !important
+$pagination-item-spacer: 5px;
+
+.pagination {
+  // each pagination item
+  .page-item {
+    // not a previous/next page item
+    &.page-number {
+      @include margin-left($pagination-item-spacer);
+      @include margin-right($pagination-item-spacer);
+    }
+
+    // previous page
+    &.previous-page {
+      @include margin-right($pagination-item-spacer);
+    }
+
+    // next page
+    &.next-page {
+      @include margin-left($pagination-item-spacer);
+
+      // the link within
+      .page-link {
+        background-color: $slate;
+        border-color: $slate;
+        color: $white;
+
+        &:hover,
+        &:focus {
+          color: $white;
+        }
+      }
+    }
+
+    // if active
+    &.active {
+      // the link within
+      .page-link {
+        background-color: $button-primary;
+        border-color: $button-primary;
+        color: $white;
+      }
+    }
+
+    // if disabled
+    &.disabled {
+      cursor: not-allowed;
+
+      // the link within
+      .page-link {
+        background-color: $percent_15;
+        border-color: $percent_15;
+        pointer-events: none;
+      }
+    }
+  }
+
+  // each pagination link
+  .page-link {
+    @include font-size(14px);
+    border-width: 2px;
+    color: $slate;
+
+    &:hover,
+    &:focus {
+      color: $slate;
+    }
+  }
+}

@@ -1,0 +1,25 @@
+// login button
+.btn {
+  &-login {
+    @extend .btn;
+    @extend .btn-outline-light;
+
+    // both on hover and when modal is opened
+    &:hover,
+    &:focus {
+      background-color: $login-background;
+      color: $white;
+    }
+
+    // when login modal is opened
+    &.show {
+      background-color: $login-background;
+      color: $white;
+
+      // initial focus presentation
+      &:focus {
+        box-shadow: 0 0 0 0.25rem $tak-light-blue;
+      }
+    }
+  }
+}

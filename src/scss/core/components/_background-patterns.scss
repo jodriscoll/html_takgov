@@ -1,0 +1,57 @@
+* {
+  // top to bottom
+  &[data-pattern='top-down'] {
+    background-position: top;
+    background-repeat: repeat-x;
+
+    &[data-pattern-color='dark'] {
+      background-image: url($pattern-grid-vertical-ttb-dark);
+    }
+
+    &[data-pattern-color='light'] {
+      background-image: url($pattern-grid-vertical-ttb-light);
+    }
+  }
+
+  // bottom to top
+  &[data-pattern='bottom-up'] {
+    background-position: bottom;
+    background-repeat: repeat-x;
+
+    &[data-pattern-color='dark'] {
+      background-image: url($pattern-grid-vertical-btt-dark);
+    }
+
+    &[data-pattern-color='light'] {
+      background-image: url($pattern-grid-vertical-btt-light);
+    }
+  }
+
+  // right to left
+  &[data-pattern='rtl'] {
+    background-position: right !important;
+    background-repeat: repeat-y;
+
+    &[data-pattern-color='dark'] {
+      background-image: url($pattern-grid-horizontal-rtl-long-dark);
+    }
+
+    &[data-pattern-color='light'] {
+      background-image: url($pattern-grid-horizontal-rtl-long-light);
+    }
+  }
+
+  // both, from the top and from the bottom
+  &[data-pattern='both-directions'] {
+    background-position: top right, bottom left;
+    background-repeat: repeat-x;
+
+    &[data-pattern-color='dark'] {
+      background-image: url($pattern-grid-vertical-ttb-dark), url($pattern-grid-vertical-btt-dark);
+    }
+
+    &[data-pattern-color='light'] {
+      background-image: url($pattern-grid-vertical-ttb-light), url($pattern-grid-vertical-btt-light);
+    }
+  }
+}

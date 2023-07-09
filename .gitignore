@@ -1,0 +1,36 @@
+# dependencies
+node_modules
+package-lock.json
+
+# production
+/dist
+
+# misc
+npm-debug.log
+yarn-error.log
+yarn.lock
+.yarnclean
+.sass-cache
+
+# editors
+.vscode
+.idea
+*.iml
+*.un~
+
+# os hidden
+.DS_Store
+.DS_Store*
+ehthumbs.db
+Thumbs.db
+._*
+
+# other
+/test/coverage/*
+
+# cdk files
+cdk.context.json
+cdk.out/
+__pycache__/
+*.egg-info/
+.env.local

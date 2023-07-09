@@ -1,0 +1,13 @@
+#navbarProducts {
+    + .dropdown-menu {
+        @include media-breakpoint-up(lg) {
+            //width: 550px;
+        }
+
+        // each menu item
+        .dropdown-item {
+            display: block;
+            //white-space: normal;
+        }
+    }
+}

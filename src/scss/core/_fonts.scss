@@ -1,0 +1,25 @@
+// feather icons
+@import '/fonts/tak-icons/icons';
+
+// third party font(s)
+@import url('//fonts.googleapis.com/css?family=Public+Sans:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap'); // Public Sans
+@import url('//fonts.googleapis.com/css?family=Source+Sans+Pro:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap'); // Source Code Sans
+
+// typography
+$font-family-sans-serif: Arial, Helvetica, sans-serif;
+$font-family-serif: 'Georgia', 'Times New Roman', serif;
+//$font-family-monospace: 'Source Sans Pro', Consolas, monospace;
+$font-family-public-sans: 'Public Sans', $font-family-serif;
+$font-family-base: $font-family-public-sans;
+$font-family-tak-icons: 'tak-icons';
+$font-family-icons: $font-family-tak-icons;
+
+$font-size-base: 16px;
+$line-height-base: 1.5;
+
+// Font Weights
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-bold: 500;
+$font-weight-heavy: 700;
+$font-weight-base: $font-weight-light;

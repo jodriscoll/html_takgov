@@ -1,0 +1,223 @@
+$video-player-width-medium: 100%;
+$video-player-width-desktop: 753px;
+
+$video-metadata-offset: 20px; // enough for youtube videos
+$video-metadata-min-width-desktop: 260px;
+$video-metadata-padding: 20px;
+
+$video-playlist-width-desktop: 387px;
+$video-playlist-link-y-padding: 5px;
+$video-playlist-link-x-padding: 15px;
+$video-playlist-image-border-radius: 8px;
+$video-playlist-image-spacer: 15px;
+
+$video-max-height-desktop: 424px;
+$video-max-width-desktop: $video-player-width-desktop + $video-playlist-width-desktop;
+
+$video-browse-all-height-desktop: 62px;
+
+.video-playlist {
+  background-color: $percent_10;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  z-index: $zindex-marquee-background;
+
+  @include media-breakpoint-down(lg) {
+    max-width: 100%;
+  }
+
+  // topographic pattern
+  &::after {
+    background: url($pattern-topographic-dark) repeat;
+    background-size: 40%;
+    content: '';
+    height: 100%;
+    left: 0;
+    opacity: 0.1;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: $zindex-marquee-pseudo;
+  }
+
+  @include media-breakpoint-up(xl) {
+    height: $video-max-height-desktop;
+    width: $video-max-width-desktop;
+  }
+
+  &:hover,
+  &:focus {
+    .video-playlist__metadata {
+      opacity: 1;
+    }
+  }
+
+  &__metadata {
+    align-items: center;
+    background-color: rgba($black, 0.8);
+    border-radius: 6px;
+    display: flex;
+    flex-direction: row;
+    left: $video-metadata-offset;
+    min-width: $video-metadata-min-width-desktop;
+    opacity: 0;
+    padding: $video-metadata-padding;
+    position: absolute;
+    top: $video-metadata-offset;
+    transition: opacity $general-animation-style;
+    z-index: $zindex-marquee-content + 1;
+
+    *[class*='ico-'] {
+      color: $white;
+    }
+
+    .video-description {
+      color: $white;
+      display: flex;
+      flex-direction: column;
+      margin-left: 15px;
+    }
+
+    .video-title {
+      font-weight: $font-weight-bolder;
+      margin-bottom: 2px;
+
+      @include media-breakpoint-down(lg) {
+        font-size: 20px;
+        line-height: 24px;
+      }
+      @include media-breakpoint-up(lg) {
+        font-size: 24px;
+        line-height: 28px;
+      }
+    }
+
+    .video-length {
+      font-size: 14px;
+    }
+  }
+
+  // player wrapper
+  &__player {
+    position: relative;
+    z-index: $zindex-marquee-content;
+
+    @include media-breakpoint-down(xl) {
+      height: 424px;
+      width: 100%;
+    }
+    @include media-breakpoint-up(xl) {
+      float: left;
+      height: 0;
+      padding-bottom: 52%;
+      padding-top: 30px;
+      width: $video-player-width-desktop;
+    }
+
+    iframe,
+    object,
+    embed {
+      left: 0;
+      min-height: $video-player-width-desktop / 2;
+      position: absolute;
+      top: 0;
+      width: 100%;
+    }
+  }
+
+  // sidebar wrapper
+  &__sidebar {
+    background-color: transparent;
+    float: right;
+    overflow: hidden;
+    position: relative;
+    z-index: $zindex-marquee-content;
+
+    @include media-breakpoint-down(xl) {
+      //height: $video-max-height-desktop - $video-browse-all-height-desktop;
+      margin-bottom: $video-browse-all-height-desktop - 1px;
+      width: 100%;
+    }
+    @include media-breakpoint-up(xl) {
+      height: $video-max-height-desktop - $video-browse-all-height-desktop;
+      width: $video-playlist-width-desktop;
+    }
+
+    &:hover,
+    &:focus {
+      overflow-y: auto;
+    }
+  }
+
+  &__list {
+    height: $video-max-height-desktop;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    z-index: $zindex-marquee-content;
+  }
+
+  &__list-item {
+    list-style: none;
+  }
+
+  &__link {
+    display: flex;
+    flex-direction: row;
+    padding: $video-playlist-link-y-padding $video-playlist-link-x-padding;
+    transition: background-color $general-animation-style, color $general-animation-style;
+    text-decoration: none;
+
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: rgba($black, 0.75);
+      color: $white;
+    }
+
+    &.active {
+      background-color: $brush;
+      color: $black;
+      text-shadow: 1px 1px 1px rgba($white, 0.2);
+
+      &:hover,
+      &:focus,
+      &:active {
+        color: $black;
+      }
+    }
+  }
+
+  &__thumbnail {
+    border-radius: $video-playlist-image-border-radius;
+    margin-right: $video-playlist-image-spacer;
+  }
+
+  &__image {
+    border-radius: $video-playlist-image-border-radius;
+  }
+
+  &__description {
+    @include media-breakpoint-up(lg) {
+      margin-top: 5px;
+    }
+  }
+
+  &__browse-all {
+    max-height: $video-browse-all-height-desktop;
+    z-index: $zindex-marquee-content;
+
+    @include media-breakpoint-down(xl) {
+      bottom: 0;
+      position: absolute;
+      width: 100%;
+    }
+    @include media-breakpoint-up(xl) {
+      overflow: hidden;
+      position: relative;
+      width: $video-playlist-width-desktop;
+    }
+  }
+}

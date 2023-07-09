@@ -1,0 +1,104 @@
+$border-divider: 2px solid $white;
+
+.footer {
+  position: relative;
+
+  @include media-breakpoint-up(md) {
+    //@include rfs(-3.4rem !important, padding-bottom);
+    //@include rfs(0 !important, padding-top);
+  }
+
+  // pattern variations
+  &[data-pattern='dark'] {
+    background: url($pattern-topographic-dark) repeat $slate;
+  }
+
+  &[data-pattern='light'] {
+    background: url($pattern-topographic-light) repeat $dark-footer-bg;
+  }
+
+  // primary container
+  .container {
+    // ...
+  }
+
+  // tak.gov logo
+  &__logo {
+    // ...
+  }
+
+  // bottom row mobile, left column desktop
+  &__content {
+    color: $white;
+
+    // div.footer__content
+    @include media-breakpoint-up(md) {
+      border-right: 2px solid $white;
+    }
+
+    &--top {
+      border-bottom: $border-divider;
+    }
+
+    // the content column only has a .col class
+    .col {
+      @include media-breakpoint-down(sm) {
+        span {
+          @include font-size(12px);
+        }
+
+        address,
+        a {
+          @include font-size(12px);
+        }
+      }
+    }
+  }
+
+  // link list wrapper
+  &__links {
+    // div.footer__links
+    .list-group-item {
+      background-color: transparent;
+
+      @include media-breakpoint-down(lg) {
+        width: 33.3%;
+      }
+      @include media-breakpoint-up(lg) {
+        width: 25%;
+      }
+    }
+  }
+
+  // list list parent
+  &__link-list {
+    // ...
+  }
+
+  // list list child
+  &__link {
+    // a.footer__link
+    @include font-size(14px);
+    color: $white;
+
+    &:hover,
+    &:focus {
+      color: $percent_30;
+    }
+  }
+
+  // top row mobile, right column desktop
+  &__messaging {
+    color: $white;
+
+    // div.footer__messaging
+    @include media-breakpoint-up(md) {
+      @include rfs(4rem, padding-left);
+      @include rfs(0, padding-right);
+    }
+
+    p {
+      @include font-size(14px);
+    }
+  }
+}

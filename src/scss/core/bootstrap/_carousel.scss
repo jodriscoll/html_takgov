@@ -1,0 +1,59 @@
+//@import "../../../../node_modules/bootstrap/scss/carousel";
+
+// bootstrap modifiers may require !important
+$carousel-custom-bottom-offset: 14px;
+$carousel-custom-element-height: 35px;
+$carousel-custom-indicator-size: 8px;
+$carousel-custom-indicator-radius: 50%;
+
+.carousel {
+  &-custom-indicators {
+    background-color: rgba($slate, 0.85);
+    border-radius: $carousel-custom-element-height;
+    bottom: $carousel-custom-bottom-offset;
+    height: $carousel-custom-element-height;
+    z-index: 2;
+
+    [class*='carousel-control-'] {
+      opacity: 1;
+      position: relative;
+    }
+
+    [class*='carousel-indicators'] {
+      align-items: center;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      position: relative;
+
+      li {
+        background-color: black;
+        border: 2px solid $white;
+        border-radius: $carousel-custom-indicator-radius;
+        cursor: pointer;
+        height: $carousel-custom-indicator-size;
+        opacity: 1;
+        position: relative;
+        width: $carousel-custom-indicator-size;
+        transition: background-color $general-animation-style, opacity $general-animation-style;
+
+        &.active {
+          background-color: $tak-light-blue;
+          border-color: $tak-light-blue;
+
+          &:after {
+            background-color: $tak-light-blue;
+            border-radius: $carousel-custom-indicator-radius;
+            content: '';
+            height: 115%;
+            left: 0;
+            position: absolute;
+            top: 0;
+            width: 115%;
+            z-index: -1;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,31 @@
+stages:
+  - build_app
+  - deploy_app
+
+build_app:
+  stage: build_app
+  image: node:12.19.0-buster
+  script:
+    - npm install -g webpack
+    - npm install
+    - npm run build
+  artifacts:
+    paths:
+      - dist/
+  only:
+    - master
+    - tags
+  allow_failure: false
+
+deploy_app:
+  stage: deploy_app
+  image: egmmd/aws-node-8.16:1
+  script:
+    - aws s3 sync dist/ s3://$S3_BUCKET
+    - if [ -z "$WEB_CLOUDFRONT_DISTRO_ID" ]; then echo "No cache to clear"; else aws cloudfront create-invalidation --distribution-id $WEB_CLOUDFRONT_DISTRO_ID --paths "/*"; fi
+  only:
+    - master
+    - tags
+  when: on_success
+  dependencies:
+    - build_app

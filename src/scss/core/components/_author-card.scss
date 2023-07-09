@@ -1,0 +1,36 @@
+$author-thumbnail-height-mobile: 64px;
+$author-thumbnail-height-desktop: 200px;
+$author-thumbnail-width-mobile: 64px;
+$author-thumbnail-width-desktop: 200px;
+
+.author-card {
+  display: flex;
+
+  @include media-breakpoint-down(sm) {
+    flex-direction: row;
+  }
+  @include media-breakpoint-up(md) {
+    flex-direction: column;
+  }
+
+  &__title {
+    // ...
+  }
+
+  &__thumbnail {
+    border-radius: 50%;
+
+    @include media-breakpoint-down(md) {
+      height: $author-thumbnail-height-mobile;
+      width: $author-thumbnail-width-mobile;
+    }
+    @include media-breakpoint-up(md) {
+      height: $author-thumbnail-height-desktop;
+      width: $author-thumbnail-width-desktop;
+    }
+  }
+
+  &__author {
+    // ...
+  }
+}

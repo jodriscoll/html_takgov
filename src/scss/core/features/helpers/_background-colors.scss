@@ -1,0 +1,31 @@
+// imported through /features/_helpers.scss
+
+.bg {
+  &-transparent {
+    background-color: transparent;
+  }
+
+  &-smoke {
+    background-color: $smoke !important;
+  }
+
+  &-percent-5 {
+    background-color: $percent_5 !important;
+  }
+
+  &-percent-80 {
+    background-color: $percent_80 !important;
+  }
+
+  &-percent-90 {
+    background-color: $percent_90 !important;
+  }
+
+  &-bark {
+    background-color: $bark !important;
+  }
+
+  &-black {
+    background-color: $black !important;
+  }
+}

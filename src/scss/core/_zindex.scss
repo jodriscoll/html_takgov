@@ -1,0 +1,26 @@
+/**
+  bootstrap variables
+  ===============================
+  $zindex-dropdown:       1000;
+  $zindex-sticky:         1020;
+  $zindex-fixed:          1030;
+  $zindex-modal-backdrop: 1040;
+  $zindex-modal:          1050;
+  $zindex-popover:        1060;
+  $zindex-tooltip:        1070;
+ */
+
+// skip to content
+$zindex-skip-to-content:    9999;
+
+// disclaimer
+$zindex-disclaimer:         $zindex-dropdown;
+
+// marquee
+$zindex-marquee-background: ($zindex-dropdown - 3); // 997
+$zindex-marquee-pseudo:     ($zindex-dropdown - 2); // 998
+$zindex-marquee-content:    ($zindex-dropdown - 1); // 999
+
+// input with an icon
+$zindex-input-field:        ($zindex-dropdown - 3); // 997
+$zindex-input-icon:         ($zindex-dropdown - 2); // 998

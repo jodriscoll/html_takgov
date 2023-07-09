@@ -1,0 +1,51 @@
+// navbar-search
+
+&-search {
+  &.navbar-nav {
+    @include media-breakpoint-down(lg) {
+      // make the search field fill the width
+      width: 100%;
+    }
+  }
+
+  // dropdown overrides
+  .dropdown {
+    // menu
+    .dropdown-menu {
+      left: auto;
+
+      @include media-breakpoint-down(lg) {
+        @include search-input-rounded(true);
+      }
+
+      @include media-breakpoint-up(lg) {
+        width: $dropdown-search-custom-width;
+      }
+    }
+
+    // navigation link (single icon)
+    .dropdown-toggle {
+      @include media-breakpoint-down(md) {
+        // hide the toggler when it switches ui
+        display: none;
+      }
+
+      // remove the default space for the chevron icon
+      @include padding-right(0 !important);
+
+      // hide the default chevron icon
+      &::after {
+        display: none;
+      }
+
+      // when active page
+      &.active {
+        border-bottom-color: transparent;
+
+        *[class*='ico-']::before {
+          color: $tak-light-blue;
+        }
+      }
+    }
+  }
+}

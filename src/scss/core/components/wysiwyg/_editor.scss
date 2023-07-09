@@ -1,0 +1,11 @@
+// imported through: /components/_wysiwyg.scss
+
+.wysiwyg__editor {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  @include media-breakpoint-up(md) {
+    //padding-bottom: 5rem;
+  }
+}

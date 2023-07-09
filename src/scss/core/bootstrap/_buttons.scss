@@ -1,0 +1,50 @@
+//@import "../../../../node_modules/bootstrap/scss/buttons";
+
+// bootstrap modifiers may require !important
+
+.btn {
+  @include font-size(14px);
+  @include rfs(11px 13px, padding);
+  align-items: center;
+  border-radius: 0;
+  display: inline-flex;
+  text-transform: uppercase;
+
+  // (override) primary
+  &.btn-primary {
+    @include rfs(1px solid $button-primary, border);
+    background-color: $button-primary;
+    line-height: 1.5;
+
+    &:focus {
+      box-shadow: none;
+    }
+  }
+
+  // (override) success (Add to Duffle transition)
+  &.btn-success {
+    background-color: $progress-bar-active;
+    border-color: $progress-bar-active;
+    color: $black;
+  }
+
+  // (override) warning
+  &.btn-warning {
+    background-color: $yellow-secondary;
+    border-color: $yellow-primary;
+  }
+
+  // (overrides) disabled
+  &[disabled] {
+    background-color: $percent_15;
+    border-color: $percent_15;
+    color: $percent_50;
+    cursor: not-allowed;
+    pointer-events: none;
+    opacity: 1;
+  }
+}
+
+@import '../components/buttons/login';
+@import '../components/buttons/duffle';
+@import '../components/buttons/forums';

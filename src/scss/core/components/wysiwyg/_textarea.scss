@@ -1,0 +1,25 @@
+// imported through: /components/_wysiwyg.scss
+
+&.wysiwyg {
+  textarea {
+    background-color: $smoke;
+    border: none;
+    font-weight: $font-weight-light;
+    width: 100%;
+
+    @include media-breakpoint-down(lg) {
+      height: $wysiwyg-global-min-height-mobile;
+      padding: ($wysiwyg-toolbar-offset * 2 + 40px) $wysiwyg-toolbar-offset $wysiwyg-toolbar-offset !important;
+    }
+    @include media-breakpoint-up(lg) {
+      min-height: $wysiwyg-global-min-height-desktop;
+      padding: ($wysiwyg-toolbar-offset * 2 + 40px) $wysiwyg-toolbar-offset $wysiwyg-toolbar-offset !important;
+    }
+
+    // placeholder styling
+    &::placeholder {
+      color: $percent_50;
+      font-style: italic;
+    }
+  }
+}

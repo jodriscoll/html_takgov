@@ -1,0 +1,21 @@
+// imported through: /components/_wysiwyg.scss
+
+.wysiwyg__toolbar {
+  @include padding($wysiwyg-toolbar-offset);
+  @include padding-top(
+    ($wysiwyg-toolbar-offset - $wysiwyg-toolbar-bg-offset-band-aid) !important
+  );
+  @include padding-left(
+    ($wysiwyg-toolbar-offset - $wysiwyg-toolbar-bg-offset-band-aid) !important
+  );
+  background-color: $smoke;
+  left: $wysiwyg-toolbar-bg-offset-band-aid;
+  top: $wysiwyg-toolbar-bg-offset-band-aid;
+
+  // space on the generic buttons
+  .input-group {
+    &:not(:last-of-type) {
+      @include margin-right(8px);
+    }
+  }
+}

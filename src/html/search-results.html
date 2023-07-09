@@ -1,0 +1,994 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <title>TAK.gov :: Search Results</title>
+    <!-- favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/img/favicon/site.webmanifest">
+    <link rel="mask-icon" href="/img/favicon/safari-pinned-tab.svg" color="#d8e7b9">
+    <meta name="msapplication-TileColor" content="#d8e7b9">
+    <meta name="theme-color" content="#ffffff">
+    <!-- main css file -->
+    <link rel="stylesheet" href="/css/index.min.css" />
+</head>
+
+<body>
+
+<!-- skip to content: start -->
+<a class="btn btn-primary position-absolute start-50 rounded-bottom visually-hidden-focusable skip-to-content"
+   href="#content"
+   title="...">Skip to main content</a>
+<!-- skip to content: end -->
+
+<!-- header: start -->
+<header class="header">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark w-100" data-scale="condensed">
+        <div class="container d-flex">
+            <a class="navbar-brand align-middle"
+               href="/"
+               title="Return home">
+                <img src="/img/logos/brand.svg"
+                     width="86"
+                     height="90"
+                     class="d-inline-block"
+                     alt="..."
+                     loading="lazy" />
+                <img src="/img/logos/takgov.png"
+                     width="138"
+                     height="30"
+                     class="d-none d-xxl-inline-block"
+                     alt="..."
+                     loading="lazy" />
+            </a>
+            <button class="navbar-toggler"
+                    type="button"
+                    data-toggle="collapse"
+                    data-target="#navbarCollapse"
+                    aria-controls="navbarCollapse"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation">
+                <i class="ico-menu fs-1"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="d-flex flex-wrap flex-lg-nowrap ms-auto align-items-center">
+                    <ul class="navbar-nav mb-md-0 order-3 order-lg-1 navbar-navigation">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle"
+                               href="#"
+                               id="navbarSolutions"
+                               role="button"
+                               data-toggle="dropdown"
+                               aria-expanded="false">Solutions</a>
+                            <div class="dropdown-menu start-0 shadow-sm" aria-labelledby="navbarSolutions">
+                                <a class="dropdown-item w-auto m-auto text-center fw-bolder"
+                                   href="/solutions.html"
+                                   title="...">Our Solutions</a>
+                                <div class="dropdown-divider mb-0 mb-md-2"></div>
+                                <a class="dropdown-item" href="/solutions-detail.html" title="...">Military</a>
+                                <a class="dropdown-item" href="/solutions-detail.html" title="...">Law Enforcement</a>
+                                <a class="dropdown-item" href="/solutions-detail.html" title="...">Emergency Management &amp; First Responders</a>
+                                <a class="dropdown-item" href="/solutions-detail.html" title="...">Commercial</a>
+                                <a class="dropdown-item" href="/solutions-detail.html" title="...">Recreation</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle"
+                               href="#"
+                               id="navbarProducts"
+                               role="button"
+                               data-toggle="dropdown"
+                               aria-expanded="false">Products</a>
+                            <div class="dropdown-menu start-0 shadow-sm" aria-labelledby="navbarProducts">
+                                <a class="dropdown-item w-auto m-auto text-center fw-bolder"
+                                   href="/products.html"
+                                   title="...">All Products</a>
+                                <div class="dropdown-divider mb-0 mb-md-2"></div>
+                                <div class="dropdown-columns d-flex w-100 flex-wrap flex-md-nowrap">
+                                    <div class="col-12 col-md-3">
+                                        <span class="dropdown-header fw-bolder">ATAK</span>
+                                        <a class="dropdown-item" href="/product-detail.html" title="...">ATAK-Mil</a>
+                                        <a class="dropdown-item" href="/product-detail.html" title="...">ATAK-Civ</a>
+                                        <a class="dropdown-item" href="/product-plugins.html" title="...">ATAK Plugins</a>
+                                    </div>
+                                    <div class="col-12 col-md-3">
+                                        <span class="dropdown-header fw-bolder">WinTAK</span>
+                                        <a class="dropdown-item" href="/product-detail.html" title="...">WinTAK-Mil</a>
+                                        <a class="dropdown-item" href="/product-detail.html" title="...">WinTAK-Civ</a>
+                                        <a class="dropdown-item" href="/product-plugins.html" title="...">WinTAK Plugins</a>
+                                    </div>
+                                    <div class="col-12 col-md-6">
+                                        <span class="dropdown-header fw-bolder">Other</span>
+                                        <a class="dropdown-item" href="/product-detail.html" title="...">iTAK</a>
+                                        <a class="dropdown-item" href="/product-detail.html" title="...">PiTAK</a>
+                                        <a class="dropdown-item" href="/product-detail.html" title="...">TAK Server</a>
+                                        <a class="dropdown-item" href="/product-detail.html" title="...">Android End-User Device (EUD)</a>
+                                        <a class="dropdown-item" href="/product-detail.html" title="...">VTAK</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle"
+                               href="#"
+                               id="navbarTrainingTactics"
+                               role="button"
+                               data-toggle="dropdown"
+                               aria-expanded="false">Training &amp; Tactics</a>
+                            <div class="dropdown-menu start-0 shadow-sm" aria-labelledby="navbarTrainingTactics">
+                                <a class="dropdown-item w-auto m-auto text-center fw-bolder"
+                                   href="/training-tactics.html"
+                                   title="...">Training &amp; Tactics</a>
+                                <div class="dropdown-divider mb-0 mb-md-2"></div>
+                                <a class="dropdown-item" href="/training-tactics--training-videos.html" title="...">Training Videos</a>
+                                <a class="dropdown-item" href="/training-tactics--downloadable-resources.html" title="...">Downloadable Resources</a>
+                                <a class="dropdown-item" href="/training-tactics--dted-level-0-data.html" title="...">DTED Level 0 Data</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle"
+                               href="#"
+                               id="navbarCollaborate"
+                               role="button"
+                               data-toggle="dropdown"
+                               aria-expanded="false">Collaborate</a>
+                            <div class="dropdown-menu end-0 shadow-sm" aria-labelledby="navbarCollaborate">
+                                <a class="dropdown-item w-auto m-auto text-center fw-bolder"
+                                   href="/collaborate.html"
+                                   title="...">Collaborate</a>
+                                <div class="dropdown-divider mb-0 mb-md-2"></div>
+                                <a class="dropdown-item" href="/events.html" title="...">Events</a>
+                                <a class="dropdown-item" href="/forum-landing.html" title="...">Forum</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle"
+                               href="#"
+                               id="navbarProgramOffices"
+                               role="button"
+                               data-toggle="dropdown"
+                               aria-expanded="false">Program Offices</a>
+                            <div class="dropdown-menu end-0 shadow-sm" aria-labelledby="navbarProgramOffices">
+                                <a class="dropdown-item w-auto m-auto text-center fw-bolder"
+                                   href="/program-offices.html"
+                                   title="...">Program Offices</a>
+                                <div class="dropdown-divider mb-0 mb-md-2"></div>
+                                <a class="dropdown-item" href="/program-office.html" title="...">Army</a>
+                                <a class="dropdown-item" href="/program-office.html" title="...">Colorado Center for Excellence</a>
+                                <a class="dropdown-item" href="/program-office.html" title="...">Corona Fire Department</a>
+                                <a class="dropdown-item" href="/program-office.html" title="...">Homeland Security Science and Technology</a>
+                                <a class="dropdown-item" href="/program-office.html" title="...">USMC</a>
+                                <a class="dropdown-item" href="/program-office.html" title="...">NIST</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle"
+                               href="#"
+                               id="navbarDevResources"
+                               role="button"
+                               data-toggle="dropdown"
+                               aria-expanded="false">Dev Resources</a>
+                            <div class="dropdown-menu end-0 shadow-sm" aria-labelledby="navbarDevResources">
+                                <a class="dropdown-item w-auto m-auto text-center fw-bolder"
+                                   href="/developer-resources.html"
+                                   title="...">Available Resources</a>
+                                <div class="dropdown-divider mb-0 mb-md-2"></div>
+                                <a class="dropdown-item" href="/developer-resource.html" title="...">SDKs</a>
+                                <a class="dropdown-item" href="/developer-resource.html" title="...">Plugin Guides</a>
+                                <a class="dropdown-item" href="/developer-resource.html" title="...">Documentation</a>
+                                <a class="dropdown-item" href="/developer-resource.html" title="...">Our Process</a>
+                                <a class="dropdown-item" href="/developer-resource.html" title="...">Dev FAQs</a>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav ms-auto position-relative order-0 order-lg-2 navbar-search">
+                        <li class="nav-item dropdown">
+                            <a href="#"
+                               class="dropdown-toggle dropdown-toggler-hide active"
+                               id="navbarSearch"
+                               role="button"
+                               data-toggle="dropdown"
+                               aria-haspopup="true"
+                               aria-expanded="false">
+                                <i class="d-none d-lg-inline ico-search fs-5 text-light"></i>
+                                <span class="d-none">Search</span>
+                            </a>
+                            <div class="dropdown-menu p-3 end-0 shadow-sm" aria-labelledby="navbarSearch">
+                                <div class="form-group">
+                                    <form action="/search-results.html"
+                                          id="formGlobalSearch"
+                                          class="navbar-search__form"
+                                          aria-labelledby="navbarSearch">
+                                        <div class="d-flex flex-column input-group input-group-sm">
+                                            <svg width="1em"
+                                                 height="1em"
+                                                 viewBox="0 0 16 16"
+                                                 class="d-none d-lg-block position-absolute top-0 end-0 translate-middle bi bi-caret-up-fill"
+                                                 fill="#ffffff"
+                                                 xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M7.247 4.86l-4.796 5.481c-.566.647-.106 1.659.753 1.659h9.592a1 1 0 0 0 .753-1.659l-4.796-5.48a1 1 0 0 0-1.506 0z"/>
+                                            </svg>
+                                            <label for="searchForm" class="form-label fw-bolder text-bark text-uppercase">Search the entire website</label>
+                                            <input type="text"
+                                                   class="form-control rounded-0 input-group-sm w-100 search-input-square"
+                                                   id="searchForm"
+                                                   placeholder="Search..." />
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <!-- condition start: user is logged in -->
+                    <ul class="navbar-nav position-relative order-0 order-lg-3 mx-auto navbar-duffle">
+                        <li class="nav-item">
+                            <div class="dropdown">
+                                <a class="nav-link position-relative dropdown-toggle dropdown-toggler-hide"
+                                   type="button"
+                                   id="duffleDropdown"
+                                   data-toggle="dropdown"
+                                   aria-expanded="false">
+                                    <div class="d-inline">
+                                        <div class="notification-dot fs-5" data-notification="0">
+                                            <i class="d-none d-lg-inline ico-briefcase text-light"></i>
+                                        </div>
+                                        <span class="d-inline-block d-lg-none">Duffle</span>
+                                    </div>
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-centered shadow-sm" aria-labelledby="duffleDropdown">
+                                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="position-absolute bottom-100 start-50 translate-middle bi bi-caret-up-fill" fill="#ffffff" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M7.247 4.86l-4.796 5.481c-.566.647-.106 1.659.753 1.659h9.592a1 1 0 0 0 .753-1.659l-4.796-5.48a1 1 0 0 0-1.506 0z"></path>
+                                    </svg>
+                                    <ul class="list-unstyled mb-0">
+                                        <li class="dropdown-item mb-0">
+                                            <span class="d-block text-center fs-6 smaller" id="duffleTotalQuantity">There are no items in your duffle.</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav position-relative order-0 order-lg-3 mx-auto mx-lg-0 navbar-forum">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link"
+                               href="/forum-landing.html"
+                               title="...">
+                                <div class="d-inline">
+                                    <div class="notification-dot fs-5" data-notification="5">
+                                        <i class="d-none d-lg-inline ico-message-square text-light"></i>
+                                    </div>
+                                    <span class="d-inline-block d-lg-none">Forum</span>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav position-relative order-0 order-lg-3 mx-auto mx-lg-0 navbar-user">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link"
+                               href="/user-account.html"
+                               title="...">
+                                <span class="d-inline-block d-lg-none">Account</span>
+                                <img src="img/avatars/generic-small.jpg"
+                                     class="d-none d-lg-block user-thumbnail rounded-1"
+                                     height="42"
+                                     width="42"
+                                     alt="..."
+                                     loading="lazy" />
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav position-relative order-0 order-lg-3 mx-auto mx-lg-0 navbar-logout">
+                        <li class="nav-item dropdown d-inline-flex justify-content-center me-0">
+                            <a class="btn btn-outline-light my-auto"
+                               href="/"
+                               title="Click to log out of your account"
+                               role="button">Logout</a>
+                        </li>
+                    </ul>
+                    <!-- condition end: user is logged in -->
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>
+<!-- header: end -->
+
+<!-- main body: start -->
+<main class="main search-results"
+      data-pattern="bottom-up"
+      data-pattern-color="dark">
+    <!-- content area: start -->
+    <article class="content-area" id="content">
+        <div class="container position-relative mt-2 mt-md-5">
+            <!-- introduction: start -->
+            <div class="row">
+                <div class="col">
+                    <h1 class="display-5 display-5 fw-bolder text-start search__title">Search results for &lsquo;<span class="search-results__query">query</span>&rsquo;</h1>
+                    <p class="d-block mb-5 fst-italic fs-6 search__total-results">About <span class="search__total-results-count">4</span> results</p>
+                </div>
+            </div>
+            <!-- introduction: end -->
+
+            <!-- search query form: start -->
+            <form action=""
+                  class="row position-relative align-items-center"
+                  id="searchQuery">
+                <div class="col col-md-6 h-100">
+                    <label class="visually-hidden" for="searchQueryInput">Refine search query</label>
+                    <div class="input-group position-relative search__input">
+                        <i class="ico-search position-absolute top-50 translate-middle fs-4" aria-hidden="true"></i>
+                        <input class="form-control me-auto border-0 rounded-pill py-2"
+                               type="text"
+                               id="searchQueryInput"
+                               aria-label="Search Query"
+                               placeholder="Enter a query..."
+                               value="query" />
+                    </div>
+                </div>
+                <div class="col-auto ps-0 h-100">
+                    <button type="submit"
+                            class="btn btn-primary"
+                            id="">Search</button>
+                </div>
+            </form>
+            <!-- search query form: end -->
+
+            <!-- search results : start -->
+            <div class="row">
+                <div class="col search__results">
+                    <!-- results section -> tabs: start -->
+                    <ul class="nav nav-pills d-flex flex-row justify-content-between mt-5 mb-5 ms-0 ms-md-2 w-75"
+                        id="query-tabs"
+                        role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link active"
+                               id="query-all-tab"
+                               data-toggle="pill"
+                               href="#query-all"
+                               role="tab"
+                               aria-controls="query-all"
+                               aria-selected="true">All</a>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link"
+                               id="query-products-tab"
+                               data-toggle="pill"
+                               href="#query-products"
+                               role="tab"
+                               aria-controls="query-products"
+                               aria-selected="false">Products</a>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link"
+                               id="query-resources-tab"
+                               data-toggle="pill"
+                               href="#query-resources"
+                               role="tab"
+                               aria-controls="query-resources"
+                               aria-selected="false">Resources</a>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link"
+                               id="query-videos-tab"
+                               data-toggle="pill"
+                               href="#query-videos"
+                               role="tab"
+                               aria-controls="query-videos"
+                               aria-selected="false">Videos</a>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link"
+                               id="query-forums-tab"
+                               data-toggle="pill"
+                               href="#query-forums"
+                               role="tab"
+                               aria-controls="query-forums"
+                               aria-selected="false">Forums</a>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link"
+                               id="query-dev-resources-tab"
+                               data-toggle="pill"
+                               href="#query-dev-resources"
+                               role="tab"
+                               aria-controls="query-dev-resources"
+                               aria-selected="false">Dev Resources</a>
+                        </li>
+                    </ul>
+                    <!-- results section -> tabs: end -->
+
+                    <!-- results section -> content: start -->
+                    <div class="tab-content" id="query-tabContent">
+                        <!-- results section "all": start -->
+                        <div class="tab-pane fade show active"
+                             id="query-all"
+                             role="tabpanel"
+                             aria-labelledby="query-all-tab">
+                            <ul class="search__results-list">
+                                <!-- search result condition start: thumbnail no button -->
+                                <li class="search__results-item">
+                                    <!-- result top row: start -->
+                                    <div class="d-flex flex-column flex-md-row">
+                                        <div class="col">
+                                            <a href="#"
+                                               class="fs-5 d-block mb-1 fw-normal"
+                                               title="...">Result with <strong>query</strong> in the title</a>
+                                            <span class="d-inline-block mb-3 fs-6 fst-italic text-muted w-100">https://tak.gov/sample-url</span>
+                                        </div>
+                                    </div>
+                                    <!-- result top row: end -->
+
+                                    <!-- result bottom row: start -->
+                                    <div class="d-flex flex-row">
+                                        <div class="d-none d-md-inline-flex col-1">
+                                            <img src="/img/uploads/search-result-01.jpg"
+                                                 class="rounded-3"
+                                                 height="76"
+                                                 width="76"
+                                                 alt="..."
+                                                 loading="lazy" />
+                                        </div>
+                                        <div class="col">
+                                            <p class="mb-0">Integer massa eu, et at suspendisse. Tellus dui consectetur nibh iaculis feugiat auctor donec. Vitae morbi tellus proin tristique enim ultrices. Arcu scelerisque leo eget integer. Nascetur mi morbi volutpat consequat scelerisque nulla metus. Gravida faucibus ac rhoncus vel quis odio at. Ut quam aliquet amet, arcu volutpat, aliquam, mattis ultrices fringilla.</p>
+                                        </div>
+                                    </div>
+                                    <!-- result bottom row: start -->
+                                </li>
+                                <!-- search result condition end: thumbnail no button -->
+
+                                <!-- search result condition start: thumbnail, buttons -->
+                                <li class="search__results-item mt-5">
+                                    <!-- result top row: start -->
+                                    <div class="d-flex flex-column flex-md-row">
+                                        <div class="col">
+                                            <a href="#"
+                                               class="fs-5 d-block mb-1 fw-normal"
+                                               title="...">Downloadable resource with <strong>query</strong> in the title</a>
+                                            <div class="d-inline-block mb-3 fs-6 fst-italic text-muted">https://tak.gov/sample-url.pdf</div>
+                                        </div>
+                                        <div class="col mb-4 mb-md-0">
+                                            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                                                <a href="files/Filename1.pdf"
+                                                   class="btn btn-dark me-md-2"
+                                                   title="Download Filename1.pdf">
+                                                    <i class="ico-download fs-5"></i>
+                                                </a>
+                                                <!-- condition start: if logged in -->
+                                                <button class="btn btn-duffle"
+                                                        data-duffle-id="thisResourceFile"
+                                                        data-duffle-title="Resource Name"
+                                                        data-duffle-selected="false"
+                                                        data-duffle-filename="Filename1.pdf"
+                                                        data-duffle-link="files/Filename1.pdf"
+                                                        data-duffle-type="PDF"
+                                                        data-duffle-size="555MB"
+                                                        title="Add Filename1.pdf to your duffle">Add to Duffle</button>
+                                                <!-- condition end: if logged in -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- result top row: end -->
+
+                                    <!-- result bottom row: start -->
+                                    <div class="d-flex flex-row">
+                                        <div class="d-none d-md-inline-flex col-1">
+                                            <img src="/img/uploads/search-result-02.jpg"
+                                                 class="rounded-3"
+                                                 height="76"
+                                                 width="76"
+                                                 alt="..."
+                                                 loading="lazy" />
+                                        </div>
+                                        <div class="col">
+                                            <p class="mb-0">Integer massa eu, et at suspendisse. Tellus dui consectetur nibh iaculis feugiat auctor donec. Vitae morbi tellus proin tristique enim ultrices. Arcu scelerisque leo eget integer. Nascetur mi morbi volutpat consequat scelerisque nulla metus. Gravida faucibus ac rhoncus vel quis odio at. Ut quam aliquet amet, arcu volutpat, aliquam, mattis ultrices fringilla.</p>
+                                        </div>
+                                    </div>
+                                    <!-- result bottom row: start -->
+                                </li>
+                                <!-- search result condition end: thumbnail no button -->
+
+                                <!-- search result condition start: button, modal -->
+                                <li class="search__results-item mt-5">
+                                    <!-- result top row: start -->
+                                    <div class="d-flex flex-column flex-md-row">
+                                        <div class="col">
+                                            <a href="#"
+                                               class="fs-5 d-block mb-1 fw-normal"
+                                               title="...">Video result with <strong>query</strong> in the title</a>
+                                            <div class="d-inline-block mb-3 fs-6 fst-italic text-muted">https://tak.gov/sample-url.mp4</div>
+                                        </div>
+                                        <div class="col mb-4 mb-md-0">
+                                            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                                                <button type="button"
+                                                        class="btn btn-outline-dark"
+                                                        data-toggle="modal"
+                                                        data-target="#queryItemId01">Play Video</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- result top row: end -->
+
+                                    <!-- result bottom row: start -->
+                                    <div class="d-flex flex-row">
+                                        <div class="d-none d-md-inline-flex col-1">
+                                            <img src="/img/uploads/search-result-03.jpg"
+                                                 class="rounded-3"
+                                                 height="76"
+                                                 width="76"
+                                                 alt="..."
+                                                 loading="lazy" />
+                                        </div>
+                                        <div class="col">
+                                            <p class="mb-0">Lobortis massa maecenas cras integer donec congue porta sit. Faucibus vitae magna pellentesque tempus, commodo. Turpis vitae, in egestas ut nulla pellentesque donec ut mauris. Lectus morbi id ullamcorper netus duis mattis cursus. Orci dui tempus consectetur laoreet diam aliquet lobortis.</p>
+                                        </div>
+                                    </div>
+                                    <!-- result bottom row: start -->
+
+                                    <!-- result modal: start -->
+                                    <div class="modal fade"
+                                         id="queryItemId01"
+                                         tabindex="-1"
+                                         aria-labelledby="queryItemId01-modal-title"
+                                         aria-hidden="true">
+                                        <div class="modal-dialog modal-dialog-centered">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title" id="queryItemId01-modal-title">Search results 01 modal title</h5>
+                                                    <button type="button"
+                                                            class="btn-close"
+                                                            data-dismiss="modal"
+                                                            aria-label="Close"></button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <div class="ratio ratio-16x9">
+                                                        <iframe src="https://www.youtube.com/embed/-FlxM_0S2lA?rel=0"
+                                                                title="YouTube video"
+                                                                allowfullscreen></iframe>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- result modal: end -->
+                                </li>
+                                <!-- search result condition end: button, modal -->
+
+                                <!-- search result condition start: no thumbnail -->
+                                <li class="search__results-item mt-5">
+                                    <!-- result top row: start -->
+                                    <div class="d-flex flex-column flex-md-row">
+                                        <div class="col">
+                                            <a href="#"
+                                               class="fs-5 d-block mb-1 fw-normal"
+                                               title="...">Forum Discussion: Result with <strong>query</strong> in the title</a>
+                                            <span class="d-inline-block mb-3 fs-6 fst-italic text-muted">https://tak.gov/sample-url</span>
+                                        </div>
+                                    </div>
+                                    <!-- result top row: end -->
+
+                                    <!-- result bottom row: start -->
+                                    <div class="d-flex flex-row">
+                                        <div class="col">
+                                            <p class="mb-0">Ac odio egestas rhoncus varius elementum curabitur auctor enim. Duis urna amet, pellentesque libero fermentum suscipit nullam risus magna. Sagittis eu at consequat eget. Vel eleifend tellus sit iaculis. Hendrerit nunc ultrices donec ultrices. Vestibulum morbi volutpat nec ullamcorper morbi scelerisque. Erat at nec nisl hac neque, purus ultrices. Morbi sed turpis quam nunc semper pharetra. Magnis metus id odio phasellus turpis pellentesque.</p>
+                                        </div>
+                                    </div>
+                                    <!-- result bottom row: start -->
+                                </li>
+                                <!-- search result condition end: no thumbnail -->
+                            </ul>
+                        </div>
+                        <!-- results section "all": end -->
+
+                        <!-- results section "products": start -->
+                        <div class="tab-pane fade"
+                             id="query-products"
+                             role="tabpanel"
+                             aria-labelledby="query-products-tab">
+                            <ul class="search__results-list">
+                                <!-- search result condition start: button, modal -->
+                                <li class="search__results-item">
+                                    <!-- result top row: start -->
+                                    <div class="d-flex flex-column flex-md-row">
+                                        <div class="col">
+                                            <a href="#"
+                                               class="fs-5 d-block mb-1 fw-normal"
+                                               title="...">Video result with <strong>query</strong> in the title</a>
+                                            <div class="d-inline-block mb-3 fs-6 fst-italic text-muted">https://tak.gov/sample-url.mp4</div>
+                                        </div>
+                                        <div class="col mb-4 mb-md-0">
+                                            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                                                <button type="button"
+                                                        class="btn btn-outline-dark"
+                                                        data-toggle="modal"
+                                                        data-target="#queryItemId02">Play Video</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- result top row: end -->
+
+                                    <!-- result bottom row: start -->
+                                    <div class="d-flex flex-row">
+                                        <div class="d-none d-md-inline-flex col-1">
+                                            <img src="/img/uploads/search-result-03.jpg"
+                                                 class="rounded-3"
+                                                 height="76"
+                                                 width="76"
+                                                 alt="..."
+                                                 loading="lazy" />
+                                        </div>
+                                        <div class="col">
+                                            <p class="mb-0">Lobortis massa maecenas cras integer donec congue porta sit. Faucibus vitae magna pellentesque tempus, commodo. Turpis vitae, in egestas ut nulla pellentesque donec ut mauris. Lectus morbi id ullamcorper netus duis mattis cursus. Orci dui tempus consectetur laoreet diam aliquet lobortis.</p>
+                                        </div>
+                                    </div>
+                                    <!-- result bottom row: start -->
+
+                                    <!-- result modal: start -->
+                                    <div class="modal fade"
+                                         id="queryItemId02"
+                                         tabindex="-1"
+                                         aria-labelledby="queryItemId02-modal-title"
+                                         aria-hidden="true">
+                                        <div class="modal-dialog modal-dialog-centered">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title" id="queryItemId02-modal-title">Search results 02 modal title</h5>
+                                                    <button type="button"
+                                                            class="btn-close"
+                                                            data-dismiss="modal"
+                                                            aria-label="Close"></button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <div class="ratio ratio-16x9">
+                                                        <iframe src="https://www.youtube.com/embed/5qap5aO4i9A?rel=0"
+                                                                title="YouTube video"
+                                                                allowfullscreen></iframe>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- result modal: end -->
+                                </li>
+                                <!-- search result condition end: button, modal -->
+                            </ul>
+                        </div>
+                        <!-- results section "products": end -->
+
+                        <!-- results section "resources": start -->
+                        <div class="tab-pane fade"
+                             id="query-resources"
+                             role="tabpanel"
+                             aria-labelledby="query-resources-tab">
+                            <ul class="search__results-list">
+                                <!-- search result condition start: thumbnail no button -->
+                                <li class="search__results-item">
+                                    <!-- result top row: start -->
+                                    <div class="d-flex flex-column flex-md-row">
+                                        <div class="col">
+                                            <a href="#"
+                                               class="fs-5 d-block mb-1 fw-normal"
+                                               title="...">Result with <strong>query</strong> in the title</a>
+                                            <span class="d-inline-block mb-3 fs-6 fst-italic text-muted">https://tak.gov/sample-url</span>
+                                        </div>
+                                    </div>
+                                    <!-- result top row: end -->
+
+                                    <!-- result bottom row: start -->
+                                    <div class="d-flex flex-row">
+                                        <div class="d-none d-md-inline-flex col-1">
+                                            <img src="/img/uploads/search-result-01.jpg"
+                                                 class="rounded-3"
+                                                 height="76"
+                                                 width="76"
+                                                 alt="..."
+                                                 loading="lazy" />
+                                        </div>
+                                        <div class="col">
+                                            <p class="mb-0">Integer massa eu, et at suspendisse. Tellus dui consectetur nibh iaculis feugiat auctor donec. Vitae morbi tellus proin tristique enim ultrices. Arcu scelerisque leo eget integer. Nascetur mi morbi volutpat consequat scelerisque nulla metus. Gravida faucibus ac rhoncus vel quis odio at. Ut quam aliquet amet, arcu volutpat, aliquam, mattis ultrices fringilla.</p>
+                                        </div>
+                                    </div>
+                                    <!-- result bottom row: start -->
+                                </li>
+                                <!-- search result condition end: thumbnail no button -->
+                            </ul>
+                        </div>
+                        <!-- results section "resources": end -->
+
+                        <!-- results section "videos": start -->
+                        <div class="tab-pane fade"
+                             id="query-videos"
+                             role="tabpanel"
+                             aria-labelledby="query-videos-tab">
+                            <ul class="search__results-list">
+                                <!-- search result condition start: no thumbnail -->
+                                <li class="search__results-item">
+                                    <!-- result top row: start -->
+                                    <div class="d-flex flex-column flex-md-row">
+                                        <div class="col">
+                                            <a href="#"
+                                               class="fs-5 d-block mb-1 fw-normal"
+                                               title="...">Forum Discussion: Result with <strong>query</strong> in the title</a>
+                                            <span class="d-inline-block mb-3 fs-6 fst-italic text-muted">https://tak.gov/sample-url</span>
+                                        </div>
+                                    </div>
+                                    <!-- result top row: end -->
+
+                                    <!-- result bottom row: start -->
+                                    <div class="d-flex flex-row">
+                                        <div class="col">
+                                            <p class="mb-0">Ac odio egestas rhoncus varius elementum curabitur auctor enim. Duis urna amet, pellentesque libero fermentum suscipit nullam risus magna. Sagittis eu at consequat eget. Vel eleifend tellus sit iaculis. Hendrerit nunc ultrices donec ultrices. Vestibulum morbi volutpat nec ullamcorper morbi scelerisque. Erat at nec nisl hac neque, purus ultrices. Morbi sed turpis quam nunc semper pharetra. Magnis metus id odio phasellus turpis pellentesque.</p>
+                                        </div>
+                                    </div>
+                                    <!-- result bottom row: start -->
+                                </li>
+                                <!-- search result condition end: no thumbnail -->
+                            </ul>
+                        </div>
+                        <!-- results section "videos": end -->
+
+                        <!-- results section "forums": start -->
+                        <div class="tab-pane fade"
+                             id="query-forums"
+                             role="tabpanel"
+                             aria-labelledby="query-forums-tab">
+                            <ul class="search__results-list">
+                                <!-- search result condition start: thumbnail, buttons -->
+                                <li class="search__results-item">
+                                    <!-- result top row: start -->
+                                    <div class="d-flex flex-column flex-md-row">
+                                        <div class="col">
+                                            <a href="#"
+                                               class="fs-5 d-block mb-1 fw-normal"
+                                               title="...">Downloadable resource with <strong>query</strong> in the title</a>
+                                            <div class="d-inline-block mb-3 fs-6 fst-italic text-muted">https://tak.gov/sample-url.pdf</div>
+                                        </div>
+                                        <div class="col mb-4 mb-md-0">
+                                            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                                                <a href="files/Filename2.pdf"
+                                                   class="btn btn-dark me-md-2 rounded-0"
+                                                   title="Download Filename2.pdf">
+                                                    <i class="ico-download fs-5"></i>
+                                                </a>
+                                                <!-- condition start: if logged in -->
+                                                <button class="btn btn-duffle rounded-0 text-uppercase"
+                                                        data-duffle-id="thatResourceFile"
+                                                        data-duffle-selected="false"
+                                                        data-duffle-title="Resource Name"
+                                                        data-duffle-filename="Filename2.pdf"
+                                                        data-duffle-link="files/Filename2.pdf"
+                                                        data-duffle-type="EXE"
+                                                        data-duffle-size="186MB"
+                                                        title="Add Filename3.pdf to your duffle">Add to Duffle</button>
+                                                <!-- condition end: if logged in -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- result top row: end -->
+
+                                    <!-- result bottom row: start -->
+                                    <div class="d-flex flex-row">
+                                        <div class="d-none d-md-inline-flex col-1">
+                                            <img src="/img/uploads/search-result-02.jpg"
+                                                 class="rounded-3"
+                                                 height="76"
+                                                 width="76"
+                                                 alt="..."
+                                                 loading="lazy" />
+                                        </div>
+                                        <div class="col">
+                                            <p class="mb-0">Integer massa eu, et at suspendisse. Tellus dui consectetur nibh iaculis feugiat auctor donec. Vitae morbi tellus proin tristique enim ultrices. Arcu scelerisque leo eget integer. Nascetur mi morbi volutpat consequat scelerisque nulla metus. Gravida faucibus ac rhoncus vel quis odio at. Ut quam aliquet amet, arcu volutpat, aliquam, mattis ultrices fringilla.</p>
+                                        </div>
+                                    </div>
+                                    <!-- result bottom row: start -->
+                                </li>
+                                <!-- search result condition end: thumbnail no button -->
+                            </ul>
+                        </div>
+                        <!-- results section "forums": end -->
+
+                        <!-- results section "dev resources": start -->
+                        <div class="tab-pane fade"
+                             id="query-dev-resources"
+                             role="tabpanel"
+                             aria-labelledby="query-dev-resources-tab">
+                            <ul class="search__results-list">
+                                <!-- search result condition start: no thumbnail -->
+                                <li class="search__results-item">
+                                    <!-- result top row: start -->
+                                    <div class="d-flex flex-column flex-md-row">
+                                        <div class="col">
+                                            <a href="#"
+                                               class="fs-5 d-block mb-1 fw-normal"
+                                               title="...">Forum Discussion: Result with <strong>query</strong> in the title</a>
+                                            <span class="d-inline-block mb-3 fs-6 fst-italic text-muted">https://tak.gov/sample-url</span>
+                                        </div>
+                                    </div>
+                                    <!-- result top row: end -->
+
+                                    <!-- result bottom row: start -->
+                                    <div class="d-flex flex-row">
+                                        <div class="col">
+                                            <p class="mb-0">Ac odio egestas rhoncus varius elementum curabitur auctor enim. Duis urna amet, pellentesque libero fermentum suscipit nullam risus magna. Sagittis eu at consequat eget. Vel eleifend tellus sit iaculis. Hendrerit nunc ultrices donec ultrices. Vestibulum morbi volutpat nec ullamcorper morbi scelerisque. Erat at nec nisl hac neque, purus ultrices. Morbi sed turpis quam nunc semper pharetra. Magnis metus id odio phasellus turpis pellentesque.</p>
+                                        </div>
+                                    </div>
+                                    <!-- result bottom row: start -->
+                                </li>
+                                <!-- search result condition end: no thumbnail -->
+                            </ul>
+                        </div>
+                        <!-- results section "dev resources": end -->
+                    </div>
+                    <!-- results section -> content: end -->
+                </div>
+            </div>
+            <!-- search results: end -->
+
+            <!-- pagination: start -->
+            <div class="row mt-5">
+                <div class="col">
+                    <nav aria-label="Search pagination">
+                        <ul class="pagination">
+                            <li class="page-item previous-page disabled">
+                                <a href="#0"
+                                   class="page-link text-uppercase"
+                                   tabindex="-1"
+                                   title="Previous page"
+                                   aria-disabled="true"><i class="ico-arrow-left"></i> Prev</a>
+                            </li>
+                            <li class="page-item page-number active">
+                                <a class="page-link"
+                                   href="#0"
+                                   title="Page 1">1</a>
+                            </li>
+                            <li class="page-item page-number">
+                                <a class="page-link"
+                                   href="#0"
+                                   title="Page 2">2</a>
+                            </li>
+                            <li class="page-item page-number">
+                                <a class="page-link"
+                                   href="#0"
+                                   title="Page 3">3</a>
+                            </li>
+                            <li class="page-item next-page">
+                                <a href="#0"
+                                   class="page-link text-uppercase"
+                                   title="Next page">Next <i class="ico-arrow-right"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <!-- pagination: end -->
+        </div>
+    </article>
+    <!-- content area: end -->
+</main>
+<!-- main body: end -->
+
+<!-- footer and disclaimer: start -->
+<footer class="footer mt-auto pt-5 pb-3 pb-md-5" data-pattern="dark">
+    <!-- disclaimer: start -->
+    <section class="disclaimer mx-auto w-100 position-relative">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 accordion" id="usageStatement">
+                    <div class="p-3 p-md-5 bg-light disclaimer__accordion">
+                        <button class="disclaimer__button d-flex d-md-none flex-row w-100 fw-bolder"
+                                type="button"
+                                data-toggle="collapse"
+                                data-target="#collapseUsage"
+                                aria-expanded="false"
+                                aria-controls="collapseUsage">TAK Usage Statement <i class="ico-chevron-down fs-4 ms-auto"></i></button>
+                        <article id="collapseUsage"
+                                 class="disclaimer__content collapse"
+                                 aria-labelledby="headingOne"
+                                 data-parent="#usageStatement">
+                            <br/><br/>
+                            <p>The TAK capability suite is a United States Government (USG) owned product. Use of these USG owned products outside of test and evaluation require the proper authority to operate (ATO) paperwork granted by your organization’s headquarters (HQ). Before installing and/or using any of the products, ensure you are within the guidelines of your organization.</p>
+                            <p>TAK-MIL is a restricted use product for USG military use only. NO distribution is authorized outside this forum except through properly vetted Program Management Offices.</p>
+                            <p>ATAK-CIV is subject to the Export Administration Regulations (EAR) administered by the Department of Commerce, Bureau of Industry and Security (BIS), which advises this item is classified as EAR99. Other TAK-CIV Product Lines are currently being evaluated for commodity determination.</p>
+                            <p class="mb-0">The TAK capability suite is a United States Government owned product. TAK-MIL is a restricted use product only available through Foreign Military Sales distribution. TAK-CIV is a restricted use product available through distribution of properly licensed commercial entities and Department of Commerce approval.</p>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- disclaimer: end -->
+
+    <!--footer content: start -->
+    <div class="container">
+        <div class="d-flex flex-wrap flex-md-nowrap">
+            <div class="order-1 order-md-0 col-sm-12 col-md-7 footer__content">
+                <div class="d-flex mb-4 pb-4 footer__content--top">
+                    <div class="col-sm-2 col-md col-md-1 me-4">
+                        <img src="/img/logos/brand.svg"
+                             width="70"
+                             height="74"
+                             class="d-inline-block"
+                             alt="..."
+                             loading="lazy" />
+                    </div>
+                    <div class="col d-flex flex-column justify-content-center align-content-center">
+                        <span class="d-block pb-3">&copy; Copyright 2020 <strong>TAK.gov</strong></span>
+                        <div class="d-block">
+                            <address class="d-inline-block mb-md-0">123 E Street NW, Washington, D.C. 00000</address>
+                            <span class="d-none d-md-inline-block">&nbsp;&mdash;&nbsp;</span>
+                            <a href="tel:1234567890" class="d-inline-block" title="...">(123) 456-7890</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flex footer__content--bottom">
+                    <div class="col footer__links">
+                        <ul class="list-group list-group-horizontal flex-wrap p-0 footer__link-list">
+                            <li class="list-group-item ps-0 pe-0 text-start border-0">
+                                <a href="/developer-resources.html"
+                                   class="footer__link text-decoration-none"
+                                   title="...">Dev Resources</a>
+                            </li>
+                            <li class="list-group-item ps-0 pe-0 text-start border-0">
+                                <a href="#0"
+                                   class="footer__link text-decoration-none"
+                                   title="...">FAQs</a>
+                            </li>
+                            <li class="list-group-item ps-0 pe-0 text-start border-0">
+                                <a href="#0"
+                                   class="footer__link text-decoration-none"
+                                   title="...">Media Center</a>
+                            </li>
+                            <li class="list-group-item ps-0 pe-0 text-start border-0">
+                                <a href="#0"
+                                   class="footer__link text-decoration-none"
+                                   title="...">Privacy Policy</a>
+                            </li>
+                            <li class="list-group-item ps-0 pe-0 text-start border-0">
+                                <a href="#0"
+                                   class="footer__link text-decoration-none"
+                                   title="...">Careers</a>
+                            </li>
+                            <li class="list-group-item ps-0 pe-0 text-start border-0">
+                                <a href="/news.html"
+                                   class="footer__link text-decoration-none"
+                                   title="...">Press &amp; News</a>
+                            </li>
+                            <li class="list-group-item ps-0 pe-0 text-start border-0">
+                                <a href="#0"
+                                   class="footer__link text-decoration-none"
+                                   title="...">Terms of Use</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="order-0 order-md-1 col-sm-12 col-md-5 ps-md-5 pe-2 mb-5 justify-content-center footer__messaging">
+                <span class="d-block h3 mb-3">Developer Callout Lorem Ipsum</span>
+                <div class="row">
+                    <div class="col-12">
+                        <p class="mb-0 lh-lg">Condimentum orci et commodo venenatis mattis. Dolor vehicula commodo ut congue.</p>
+                        <a href="#0"
+                           class="btn btn-primary btn-lg text-decoration-none mt-2"
+                           title="...">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--footer content: end -->
+</footer>
+<!-- footer and disclaimer: end -->
+
+</body>
+
+<!-- main js file -->
+<script type="text/javascript" src="/js/index.min.js"></script>
+
+<!-- custom scripts -->
+<!-- <script src="" type="text/javascript"></script> -->
+
+</html>

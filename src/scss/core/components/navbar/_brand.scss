@@ -1,0 +1,10 @@
+// navbar-brand (branding logo)
+
+&-brand {
+  // logo svg file
+  img {
+    @include media-breakpoint-down(md) {
+      max-width: 60px;
+    }
+  }
+}

@@ -1,0 +1,56 @@
+// grid system
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1440px,
+) !default;
+
+// container system
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1200px,
+) !default;
+
+// spacing structure
+$enable-negative-margins: true;
+$grid-gutter-width: 3rem;
+$spacer: 1rem;
+
+// typography
+//$font-size-base: 62.5%;
+$font-weight-light: 100;
+$font-weight-lighter: 300;
+$font-weight-normal: 400;
+$font-weight-bold: 500;
+$font-weight-bolder: 700;
+$text-muted: rgb(178, 178, 178);
+
+// horizontal ruler
+$hr-margin-y: 43px;
+$hr-color: rgba(0, 0, 0, 1);
+$hr-opacity: 100%;
+$hr-height: 2px;
+
+// box shadows
+$box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !default;
+$box-shadow-sm: 0 2px 15px rgba(0, 0, 0, 0.15);
+$box-shadow-lg: 0 1rem 3rem rgba(0, 0, 0, 0.175) !default;
+$box-shadow-inset: inset 0 1px 2px rgba(0, 0, 0, 0.075) !default;
+
+// form fields
+$form-check-input-checked-bg-color: rgb(0, 0, 0);
+$form-check-input-checked-border-color: rgb(0, 0, 0);
+
+// modal
+$modal-backdrop-bg: rgba(0, 0, 0, 0.4);
+
+// misc colors
+$danger: #dc3545;
+
+// accordions
+$accordion-icon-active-color: rgb(0, 0, 0);

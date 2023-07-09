@@ -1,0 +1,94 @@
+//@import "../../../../node_modules/bootstrap/scss/list-group";
+
+// bootstrap modifiers may require !important
+$list-group-requirements-list-item-font-size: 14px;
+$list-group-requirements-list-item-spacer: 10px;
+
+.list-group {
+  // ...
+}
+
+.list-group-item-action {
+  // ...
+
+  &:hover,
+  &:focus {
+    // ...
+  }
+
+  &:active {
+    // ...
+  }
+}
+
+.list-group-item {
+  // ...
+
+  &:first-child {
+    @include border-top-radius(inherit);
+  }
+
+  &:last-child {
+    @include border-bottom-radius(inherit);
+  }
+
+  &.disabled,
+  &:disabled {
+    // ...
+  }
+
+  &.active {
+    // ...
+  }
+
+  & + & {
+    // ..
+
+    &.active {
+      // ...
+    }
+  }
+}
+
+.list-group-requirements {
+  @include border-radius(0);
+
+  > .list-group-item {
+    @include font-size($list-group-requirements-list-item-font-size);
+    @include margin-bottom($list-group-requirements-list-item-spacer);
+    @include padding-bottom(0);
+    @include padding-left(30px);
+    @include padding-top(0);
+    background-color: transparent;
+    border: 0;
+    position: relative;
+
+    &::before {
+      content: $icon-arrow-right;
+      font-family: $font-family-icons;
+      font-size: inherit;
+      left: 0;
+      position: absolute;
+      top: 0;
+    }
+
+    &:last-child {
+      @include margin-bottom(0);
+    }
+  }
+}
+
+.list-group-event-information {
+  flex-direction: row;
+
+  .list-group-item {
+    @include padding(5px 0);
+    background-color: transparent;
+    border: none;
+
+    // the bolder labels
+    &:first-of-type {
+      max-width: 80px;
+    }
+  }
+}

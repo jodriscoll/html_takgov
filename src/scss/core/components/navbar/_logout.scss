@@ -1,0 +1,25 @@
+// navbar-logout (logged in only)
+
+// bootstrap modifiers may require !important
+
+&-logout {
+  @include media-breakpoint-down(lg) {
+    @include margin-bottom($nav-mobile-menu-text-link-spacer);
+    // match spacing to other navbar links with notifications
+    @include margin-top(
+      ($nav-mobile-notification-offset + $nav-mobile-menu-text-link-spacer) !important
+    );
+  }
+
+  .nav-item {
+    // strip the button style and match up to the text links
+    .btn-outline-light {
+      @include media-breakpoint-down(lg) {
+        @include padding(0 !important);
+        @include font-size(16px);
+        border: none;
+        text-transform: none !important;
+      }
+    }
+  }
+}

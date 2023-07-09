@@ -1,0 +1,10 @@
+.skip-to-content {
+    @include padding(8px);
+    transform: translateY(-100%);
+    transition: transform $general-animation-style;
+
+    // on focus
+    &:focus {
+        transform: translateY(0%);
+    }
+}

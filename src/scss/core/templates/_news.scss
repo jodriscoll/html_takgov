@@ -1,0 +1,69 @@
+// bootstrap modifiers may require !important
+$featured-article-featured-image-large-max-height: 427px;
+
+// @TODO: revisit this class naming, it should be just "news"
+// attached to main.main
+.press-news {
+  &__breadcrumbs {
+    // ..
+  }
+
+  &__featured-article {
+    // background image
+    .card-img {
+      @include media-breakpoint-down(lg) {
+        border-bottom-left-radius: 0 !important;
+        border-bottom-right-radius: 0 !important;
+      }
+      @include media-breakpoint-up(lg) {
+        max-height: $featured-article-featured-image-large-max-height;
+      }
+    }
+
+    // floating content
+    .card-img-overlay {
+      @include media-breakpoint-down(lg) {
+        position: relative;
+        width: 100%;
+      }
+
+      // wrapper
+      .bg-dark {
+        @include rfs(10px, border-radius);
+
+        @include media-breakpoint-down(md) {
+          background-color: $slate !important;
+        }
+        @include media-breakpoint-up(lg) {
+          background-color: rgba($black, 0.75) !important;
+        }
+      }
+    }
+
+    // content container
+    .card-img-overlay-content {
+      @include media-breakpoint-down(lg) {
+        border-top-left-radius: 0 !important;
+        border-top-right-radius: 0 !important;
+        width: 100% !important;
+      }
+      @include media-breakpoint-only(lg) {
+        width: 75%;
+      }
+      @include media-breakpoint-up(xl) {
+        width: 50%;
+      }
+    }
+  }
+
+  &__content {
+    // ...
+  }
+
+  &__results {
+    // ...
+    .mb-3:last-child {
+      margin-bottom: 0 !important;
+    }
+  }
+}

@@ -1,0 +1,227 @@
+// @url: https://codepen.io/nat-davydova/pen/PoYXZxg
+
+$steps-bar-view-class:          'viewed-step';
+$steps-border-default:          $black;
+$steps-inactive-color:          $percent_30;
+$steps-active-completed-color:  $progress-bar-active;
+$panel-active-class:            'visible-panel';
+$btn-offset-vert:               20px;
+$btn-circle-decor-dimensions:   13px;
+
+.multisteps-form {
+  &__progress-indicator {
+    @include media-breakpoint-down(md) {
+      position: relative;
+      width: 100%;
+    }
+    @include media-breakpoint-up(md) {
+      position: absolute;
+      right: 0;
+      width: 50%;
+    }
+  }
+
+  &__stepper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
+  }
+
+  // "Next" button
+  &__progress-btn {
+    @include transition-mix($duration: .15s);
+    background-color: transparent;
+    border: none;
+    color: $steps-inactive-color;
+    cursor: pointer;
+    outline: none !important;
+    position: relative;
+    text-indent: -9999px;
+
+    @media (min-width: 500px) {
+      text-indent: 0;
+      padding-top: $btn-offset-vert;
+    }
+
+    // circle decoration
+    &::before {
+      @include position-absolute($top: 0, $left: 50%);
+
+      background-color: $white;
+      border: 2px solid $steps-inactive-color;
+      border-radius: 50%;
+      box-sizing: border-box;
+      content: '';
+      display: block;
+      width: $btn-circle-decor-dimensions;
+      height: $btn-circle-decor-dimensions;
+      transform: translateX(-50%);
+      transition: all .15s linear 0s,
+      transform .15s cubic-bezier(.05, 1.09, .16, 1.4) 0s;
+      z-index: 3;
+    }
+
+    // line decoration
+    &::after {
+      @include position-absolute($top: $btn-offset-vert/4, $left: calc(-50% - #{$btn-circle-decor-dimensions} / 2));
+      @include transition-mix($duration: .15s);
+
+      background-color: $steps-inactive-color;
+      content: '';
+      display: block;
+      height: 2px;
+      width: 100%;
+      z-index: 1;
+    }
+
+    // last child - without line decoration
+    &:first-child {
+      &::after {
+        display: none;
+      }
+    }
+
+    // when disabled (not yet completed)
+    &[disabled],
+    &:disabled {
+      cursor: not-allowed;
+    }
+
+    // active styles
+    &.#{$steps-bar-view-class} {
+      color: $black;
+
+      // the completed circle
+      &::before {
+        transform: translateX(-50%) scale(1.2);
+        background-color: $progress-bar-active;
+        border-color: $progress-bar-active;
+      }
+
+      // the line before the current step
+      &::after {
+        background-color: $progress-bar-active;
+      }
+    }
+
+    // scale out
+    &[data-animation="scaleOut"] {
+      transform: scale(1.1);
+
+      &.#{$steps-bar-view-class} {
+        @include transition-mix;
+        transform: scale(1);
+      }
+    }
+
+    // slide in horizontally
+    &[data-animation="slideHorz"] {
+      left: 50px;
+
+      &.#{$steps-bar-view-class} {
+        @include transition-mix($duration: .25s, $timing: cubic-bezier(.2, 1.13, .38, 1.43));
+        left: 0;
+      }
+    }
+
+    // slide in vertically
+    &[data-animation="slideVert"] {
+      top: 30px;
+
+      &.#{$steps-bar-view-class} {
+        @include transition-mix();
+        top: 0;
+      }
+    }
+
+    // fade in
+    &[data-animation="fadeIn"] {
+      &.#{$steps-bar-view-class} {
+        @include transition-mix($duration: .3s);
+      }
+    }
+
+    // scale out
+    &[data-animation="scaleIn"] {
+      transform: scale(.9);
+
+      &.#{$steps-bar-view-class} {
+        @include transition-mix();
+        transform: scale(1);
+      }
+    }
+  }
+
+  // register view
+  &__register {
+    // ...
+  }
+
+  // form element
+  &__form {
+    position: relative;
+  }
+
+  // panel(s)
+  &__panel {
+    @include position-absolute($top: 0, $left: 0);
+    height: 0;
+    opacity: 0;
+    visibility: hidden;
+    width: 100%;
+
+    // active panels
+    &.#{$panel-active-class} {
+      height: auto;
+
+      opacity: 1;
+      visibility: visible;
+    }
+
+    // scale out
+    &[data-animation="scaleOut"] {
+      transform: scale(1.1);
+
+      &.#{$panel-active-class} {
+        @include transition-mix;
+        transform: scale(1);
+      }
+    }
+
+    // slide horizontally
+    &[data-animation="slideHorz"] {
+      left: 50px;
+
+      &.#{$panel-active-class} {
+        @include transition-mix($duration: .25s, $timing: cubic-bezier(0.2, 1.13, 0.38, 1.43));
+        left: 0;
+      }
+    }
+
+    // slider vertically
+    &[data-animation="slideVert"] {
+      top: 30px;
+
+      &.#{$panel-active-class} {
+        @include transition-mix();
+        top: 0;
+      }
+    }
+
+    // fade-in
+    &[data-animation="fadeIn"] {
+      &.#{$panel-active-class} {
+        @include transition-mix($duration: .3s);
+      }
+    }
+
+    // scale out
+    &[data-animation="scaleIn"] {
+      transform: scale(.9);
+
+      &.#{$panel-active-class} {
+        @include transition-mix();
+        transform: scale(1);
+      }
+    }
+  }
+}

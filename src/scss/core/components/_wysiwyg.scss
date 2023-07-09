@@ -1,0 +1,17 @@
+$wysiwyg-global-min-height-mobile: 300px;
+$wysiwyg-global-min-height-desktop: 250px;
+$wysiwyg-toolbar-offset: 10px;
+$wysiwyg-toolbar-bg-offset-band-aid: 1px;
+
+.wysiwyg {
+  position: relative;
+
+  // default elements
+  @import 'wysiwyg/textarea';
+  @import 'wysiwyg/blockquote';
+}
+
+// custom ui elements
+@import 'wysiwyg/editor';
+@import 'wysiwyg/save';
+@import 'wysiwyg/toolbar';

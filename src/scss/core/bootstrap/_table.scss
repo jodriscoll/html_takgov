@@ -1,0 +1,123 @@
+//@import "../../../../node_modules/bootstrap/scss/tables";
+//@import "../../../../node_modules/bootstrap/scss/mixins/table-variants";
+//@include table-variant(tak, $percent_5);
+
+// bootstrap modifiers may require !important
+$tak-table-border-radius: 15px;
+$tak-table-drop-shadow-spacer: 10px;
+
+.table-responsive {
+  // a trick to not lose the dropdown on smaller viewports
+  padding: $tak-table-drop-shadow-spacer;
+  margin: -$tak-table-drop-shadow-spacer;
+}
+
+// (custom) tak tables
+.table-tak {
+  background-color: $white;
+  border-radius: $tak-table-border-radius;
+
+  // custom header style
+  > thead {
+    background-color: $bark;
+
+    > tr {
+      color: $white;
+    }
+
+    // handle the border radius
+    th {
+      &:first-of-type {
+        border-top-left-radius: $tak-table-border-radius;
+      }
+
+      &:last-of-type {
+        border-top-right-radius: $tak-table-border-radius;
+      }
+    }
+  }
+
+  // rows
+  > tbody {
+    > tr {
+      position: relative;
+      overflow: hidden;
+
+      //transition: background-color $general-animation-style;
+      &:nth-of-type(#{$table-striped-order}) {
+        --#{$variable-prefix}table-accent-bg: var(--#{$variable-prefix}table-striped-bg);
+        color: var(--#{$variable-prefix}table-striped-color);
+      }
+
+      // clean up the border radius
+      &:last-of-type {
+        td {
+          border-bottom: 0;
+
+          &:first-of-type {
+            border-bottom-left-radius: $tak-table-border-radius;
+          }
+
+          &:last-of-type {
+            border-bottom-right-radius: $tak-table-border-radius;
+          }
+        }
+      }
+
+      // the category rows
+      .table-tak__category {
+        background-color: lighten($sand, 5%);
+        overflow: hidden;
+        position: relative;
+
+        &::after {
+          background: url($pattern-topographic-dark);
+          background-size: 30%;
+          content: '';
+          height: 100%;
+          left: 0;
+          opacity: 0.2;
+          position: absolute;
+          top: 0;
+          width: 100%;
+          z-index: $zindex-marquee-pseudo;
+        }
+      }
+    }
+
+    // disabled forum presentation
+    tr.locked {
+      td {
+        color: $percent_40;
+        cursor: not-allowed;
+      }
+
+      a {
+        @include margin-bottom(5px);
+        @include padding-left(25px);
+        color: $percent_40;
+        display: inline-block !important;
+        pointer-events: none !important;
+        position: relative;
+
+        // lock icon
+        &::before {
+          content: $icon-lock;
+          font-family: $font-family-icons;
+          left: 0;
+          position: absolute;
+          top: -1px;
+        }
+      }
+
+      small {
+        color: $percent_40;
+      }
+    }
+  }
+
+  // general padding for cells
+  > :not(caption) > * > * {
+    @include padding(10px 15px);
+  }
+}

@@ -1,0 +1,11 @@
+// imported through: /components/_wysiwyg.scss
+
+.wysiwyg__save {
+  @include media-breakpoint-down(md) {
+    margin-top: 20px;
+  }
+  @include media-breakpoint-up(md) {
+    bottom: -80px !important;
+    position: absolute;
+  }
+}

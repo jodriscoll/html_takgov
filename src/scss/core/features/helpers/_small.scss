@@ -1,0 +1,11 @@
+// imported through /features/_helpers.scss
+
+.small {
+  &er {
+    @include font-size(12px !important);
+  }
+
+  &est {
+    @include font-size(10px !important);
+  }
+}

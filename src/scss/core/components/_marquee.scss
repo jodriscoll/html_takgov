@@ -1,0 +1,235 @@
+//$zindex-marquee-background: ($zindex-dropdown - 3); // 997
+//$zindex-marquee-pseudo:     ($zindex-dropdown - 2); // 998
+//$zindex-marquee-content:    ($zindex-dropdown - 1); // 999
+
+.marquee {
+  background: url($base64-spacer) no-repeat center $marquee-bg;
+  background-size: cover;
+  color: $white;
+  position: relative;
+  z-index: $zindex-marquee-background;
+
+  // background image present
+  &[data-bg='true'] {
+    background-image: var(--marquee-bg-image);
+  }
+
+  // both pseudo elements
+  &[data-overlay='true'],
+  &[data-pattern='true'] {
+    &::before,
+    &::after {
+      content: '';
+      height: 100%;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 100%;
+    }
+  }
+
+  // linear gradient
+  &[data-overlay='true'] {
+    &::before {
+      background: linear-gradient(
+        0deg,
+        rgba($marquee-gradient, 0.65),
+        rgba($marquee-gradient, 0.65)
+      );
+      z-index: $zindex-marquee-pseudo;
+    }
+  }
+
+  // graphical patterns
+  &[data-pattern='true'] {
+    &::after {
+      background: url($pattern-topographic-dark);
+      background-size: 35%;
+      opacity: 0.5;
+      z-index: $zindex-marquee-pseudo;
+    }
+  }
+
+  // for video support
+  &[data-video='true'] {
+    overflow: hidden;
+
+    .marquee__video {
+      z-index: $zindex-marquee-background;
+    }
+    .marquee__content {
+      z-index: $zindex-marquee-content;
+    }
+
+    .marquee__logos {
+      z-index: $zindex-marquee-content;
+    }
+  }
+
+  // content container
+  &__content {
+    @include make-container();
+    z-index: $zindex-marquee-content;
+
+    @include media-breakpoint-down(md) {
+      @include padding-bottom(50px);
+      @include padding-top(45px);
+    }
+    @include media-breakpoint-up(md) {
+      @include padding-bottom(80px);
+      @include padding-top(85px);
+    }
+
+    // modifiers
+    &.text-center {
+      // specificity hack
+      .lead {
+        @include media-breakpoint-up(lg) {
+          margin: auto;
+          max-width: 775px;
+        }
+      }
+    }
+
+    // heading
+    .display-1 {
+      @include rfs(45px, line-height);
+
+      @include media-breakpoint-down(md) {
+        @include font-size(28px);
+        text-shadow: 2px 2px 1px $black;
+      }
+      @include media-breakpoint-up(md) {
+        @include font-size(38px);
+        text-shadow: 2px 4px 1px $black;
+      }
+    }
+
+    // content lead
+    .lead {
+      text-shadow: 1px 2px 1px $black;
+
+      @include media-breakpoint-down(md) {
+        @include font-size(14px);
+        @include rfs(21px, line-height);
+      }
+      @include media-breakpoint-up(md) {
+        @include font-size(18px);
+        @include rfs(30px, line-height);
+      }
+    }
+  }
+
+  // breadcrumbs within
+  &__breadcrumbs {
+    z-index: $zindex-marquee-content;
+
+    @include media-breakpoint-down(xs) {
+      .col-12 {
+        padding-left: 0;
+        padding-right: 0;
+      }
+    }
+
+    // each breadcrumb
+    .breadcrumb {
+      background-color: $slate;
+
+      @include media-breakpoint-down(sm) {
+        border-radius: 0 !important;
+      }
+      @include media-breakpoint-up(sm) {
+        @include rfs(10px 10px 0 0 !important, border-radius);
+      }
+      @include media-breakpoint-down(md) {
+        @include rfs(13px $grid-gutter-width, padding);
+      }
+      @include media-breakpoint-up(md) {
+        @include rfs(22px 28px, padding);
+      }
+
+      &-item {
+        // each breadcrumb item
+        + .breadcrumb-item {
+          color: $white;
+
+          // divider icon
+          &::before {
+            color: $white;
+          }
+        }
+      }
+    }
+  }
+
+  // video loop (homepage only)
+  &__video {
+    background-image: var(--marquee-bg-image);
+    background-position: center !important;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+
+    // linear gradient
+    &::after {
+      background: linear-gradient(
+          180deg,
+          $black 0%,
+          rgba($black, 0) 17.19%,
+          rgba($black, 0) 82.29%,
+          $black 100%
+        ),
+        rgba($black, 0.5);
+      content: '';
+      height: 100%;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 100%;
+      z-index: $zindex-marquee-pseudo;
+    }
+
+    @include media-breakpoint-down(md) {
+      background-position: center center;
+    }
+
+    @include media-breakpoint-up(lg) {
+      background-position: 0 0;
+    }
+
+    // video file
+    .video {
+      left: 50%;
+      min-height: 100%;
+      min-width: 100%;
+      position: relative;
+      top: 50%;
+
+      // positioning an scaling
+      background-size: cover;
+      height: auto;
+      transform: translateX(-50%) translateY(-50%);
+
+      // FadeVideoPoster() dependencies
+      opacity: 0; // start faded out; keep at zero, set through javascript
+      transition: opacity 0s ease-in; // css fade in; keep duration empty, set through javascript
+
+      @include media-breakpoint-down(md) {
+        height: 100%;
+      }
+
+      @include media-breakpoint-up(lg) {
+        width: auto; // this needs to stay at auto, otherwise, the width with be constrained and scale oddly
+      }
+    }
+  }
+
+  // logo list (homepage only)
+  &__logos {
+    z-index: $zindex-marquee-content;
+  }
+}

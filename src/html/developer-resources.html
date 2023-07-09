@@ -1,0 +1,970 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <title>TAK.gov :: Developer Resources</title>
+    <!-- favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/img/favicon/site.webmanifest">
+    <link rel="mask-icon" href="/img/favicon/safari-pinned-tab.svg" color="#d8e7b9">
+    <meta name="msapplication-TileColor" content="#d8e7b9">
+    <meta name="theme-color" content="#ffffff">
+    <!-- main css file -->
+    <link rel="stylesheet" href="/css/index.min.css" />
+</head>
+
+<body>
+
+<!-- skip to content: start -->
+<a class="btn btn-primary position-absolute start-50 rounded-bottom visually-hidden-focusable skip-to-content"
+   href="#content"
+   title="...">Skip to main content</a>
+<!-- skip to content: end -->
+
+<!-- header: start -->
+<header class="header">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark w-100" data-scale="condensed">
+        <div class="container d-flex">
+            <a class="navbar-brand align-middle"
+               href="/"
+               title="Return home">
+                <img src="/img/logos/brand.svg"
+                     width="86"
+                     height="90"
+                     class="d-inline-block"
+                     alt="..."
+                     loading="lazy" />
+                <img src="/img/logos/takgov.png"
+                     width="138"
+                     height="30"
+                     class="d-none d-xxl-inline-block"
+                     alt="..."
+                     loading="lazy" />
+            </a>
+            <button class="navbar-toggler"
+                    type="button"
+                    data-toggle="collapse"
+                    data-target="#navbarCollapse"
+                    aria-controls="navbarCollapse"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation">
+                <i class="ico-menu fs-1"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="d-flex flex-wrap flex-lg-nowrap ms-auto align-items-center">
+                    <ul class="navbar-nav mb-md-0 order-3 order-lg-1 navbar-navigation">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle"
+                               href="#"
+                               id="navbarSolutions"
+                               role="button"
+                               data-toggle="dropdown"
+                               aria-expanded="false">Solutions</a>
+                            <div class="dropdown-menu start-0 shadow-sm" aria-labelledby="navbarSolutions">
+                                <a class="dropdown-item w-auto m-auto text-center fw-bolder"
+                                   href="/solutions.html"
+                                   title="...">Our Solutions</a>
+                                <div class="dropdown-divider mb-0 mb-md-2"></div>
+                                <a class="dropdown-item" href="/solutions-detail.html" title="...">Military</a>
+                                <a class="dropdown-item" href="/solutions-detail.html" title="...">Law Enforcement</a>
+                                <a class="dropdown-item" href="/solutions-detail.html" title="...">Emergency Management &amp; First Responders</a>
+                                <a class="dropdown-item" href="/solutions-detail.html" title="...">Commercial</a>
+                                <a class="dropdown-item" href="/solutions-detail.html" title="...">Recreation</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle"
+                               href="#"
+                               id="navbarProducts"
+                               role="button"
+                               data-toggle="dropdown"
+                               aria-expanded="false">Products</a>
+                            <div class="dropdown-menu start-0 shadow-sm" aria-labelledby="navbarProducts">
+                                <a class="dropdown-item w-auto m-auto text-center fw-bolder"
+                                   href="/products.html"
+                                   title="...">All Products</a>
+                                <div class="dropdown-divider mb-0 mb-md-2"></div>
+                                <div class="dropdown-columns d-flex w-100 flex-wrap flex-md-nowrap">
+                                    <div class="col-12 col-md-3">
+                                        <span class="dropdown-header fw-bolder">ATAK</span>
+                                        <a class="dropdown-item" href="/product-detail.html" title="...">ATAK-Mil</a>
+                                        <a class="dropdown-item" href="/product-detail.html" title="...">ATAK-Civ</a>
+                                        <a class="dropdown-item" href="/product-plugins.html" title="...">ATAK Plugins</a>
+                                    </div>
+                                    <div class="col-12 col-md-3">
+                                        <span class="dropdown-header fw-bolder">WinTAK</span>
+                                        <a class="dropdown-item" href="/product-detail.html" title="...">WinTAK-Mil</a>
+                                        <a class="dropdown-item" href="/product-detail.html" title="...">WinTAK-Civ</a>
+                                        <a class="dropdown-item" href="/product-plugins.html" title="...">WinTAK Plugins</a>
+                                    </div>
+                                    <div class="col-12 col-md-6">
+                                        <span class="dropdown-header fw-bolder">Other</span>
+                                        <a class="dropdown-item" href="/product-detail.html" title="...">iTAK</a>
+                                        <a class="dropdown-item" href="/product-detail.html" title="...">PiTAK</a>
+                                        <a class="dropdown-item" href="/product-detail.html" title="...">TAK Server</a>
+                                        <a class="dropdown-item" href="/product-detail.html" title="...">Android End-User Device (EUD)</a>
+                                        <a class="dropdown-item" href="/product-detail.html" title="...">VTAK</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle"
+                               href="#"
+                               id="navbarTrainingTactics"
+                               role="button"
+                               data-toggle="dropdown"
+                               aria-expanded="false">Training &amp; Tactics</a>
+                            <div class="dropdown-menu start-0 shadow-sm" aria-labelledby="navbarTrainingTactics">
+                                <a class="dropdown-item w-auto m-auto text-center fw-bolder"
+                                   href="/training-tactics.html"
+                                   title="...">Training &amp; Tactics</a>
+                                <div class="dropdown-divider mb-0 mb-md-2"></div>
+                                <a class="dropdown-item" href="/training-tactics--training-videos.html" title="...">Training Videos</a>
+                                <a class="dropdown-item" href="/training-tactics--downloadable-resources.html" title="...">Downloadable Resources</a>
+                                <a class="dropdown-item" href="/training-tactics--dted-level-0-data.html" title="...">DTED Level 0 Data</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle"
+                               href="#"
+                               id="navbarCollaborate"
+                               role="button"
+                               data-toggle="dropdown"
+                               aria-expanded="false">Collaborate</a>
+                            <div class="dropdown-menu end-0 shadow-sm" aria-labelledby="navbarCollaborate">
+                                <a class="dropdown-item w-auto m-auto text-center fw-bolder"
+                                   href="/collaborate.html"
+                                   title="...">Collaborate</a>
+                                <div class="dropdown-divider mb-0 mb-md-2"></div>
+                                <a class="dropdown-item" href="/events.html" title="...">Events</a>
+                                <a class="dropdown-item" href="/forum-landing.html" title="...">Forum</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle"
+                               href="#"
+                               id="navbarProgramOffices"
+                               role="button"
+                               data-toggle="dropdown"
+                               aria-expanded="false">Program Offices</a>
+                            <div class="dropdown-menu end-0 shadow-sm" aria-labelledby="navbarProgramOffices">
+                                <a class="dropdown-item w-auto m-auto text-center fw-bolder"
+                                   href="/program-offices.html"
+                                   title="...">Program Offices</a>
+                                <div class="dropdown-divider mb-0 mb-md-2"></div>
+                                <a class="dropdown-item" href="/program-office.html" title="...">Army</a>
+                                <a class="dropdown-item" href="/program-office.html" title="...">Colorado Center for Excellence</a>
+                                <a class="dropdown-item" href="/program-office.html" title="...">Corona Fire Department</a>
+                                <a class="dropdown-item" href="/program-office.html" title="...">Homeland Security Science and Technology</a>
+                                <a class="dropdown-item" href="/program-office.html" title="...">USMC</a>
+                                <a class="dropdown-item" href="/program-office.html" title="...">NIST</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle active"
+                               href="#"
+                               id="navbarDevResources"
+                               role="button"
+                               data-toggle="dropdown"
+                               aria-expanded="false">Dev Resources</a>
+                            <div class="dropdown-menu end-0 shadow-sm" aria-labelledby="navbarDevResources">
+                                <a class="dropdown-item w-auto m-auto text-center fw-bolder"
+                                   href="/developer-resources.html"
+                                   title="...">Available Resources</a>
+                                <div class="dropdown-divider mb-0 mb-md-2"></div>
+                                <a class="dropdown-item" href="/developer-resource.html" title="...">SDKs</a>
+                                <a class="dropdown-item" href="/developer-resource.html" title="...">Plugin Guides</a>
+                                <a class="dropdown-item" href="/developer-resource.html" title="...">Documentation</a>
+                                <a class="dropdown-item" href="/developer-resource.html" title="...">Our Process</a>
+                                <a class="dropdown-item" href="/developer-resource.html" title="...">Dev FAQs</a>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav ms-auto position-relative order-0 order-lg-2 navbar-search">
+                        <li class="nav-item dropdown">
+                            <a href="#"
+                               class="dropdown-toggle dropdown-toggler-hide"
+                               id="navbarSearch"
+                               role="button"
+                               data-toggle="dropdown"
+                               aria-haspopup="true"
+                               aria-expanded="false">
+                                <i class="d-none d-lg-inline ico-search fs-5 text-light"></i>
+                                <span class="d-none">Search</span>
+                            </a>
+                            <div class="dropdown-menu p-3 end-0 shadow-sm" aria-labelledby="navbarSearch">
+                                <div class="form-group">
+                                    <form action="/search-results.html"
+                                          id="formGlobalSearch"
+                                          class="navbar-search__form"
+                                          aria-labelledby="navbarSearch">
+                                        <div class="d-flex flex-column input-group input-group-sm">
+                                            <svg width="1em"
+                                                 height="1em"
+                                                 viewBox="0 0 16 16"
+                                                 class="d-none d-lg-block position-absolute top-0 end-0 translate-middle bi bi-caret-up-fill"
+                                                 fill="#ffffff"
+                                                 xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M7.247 4.86l-4.796 5.481c-.566.647-.106 1.659.753 1.659h9.592a1 1 0 0 0 .753-1.659l-4.796-5.48a1 1 0 0 0-1.506 0z"/>
+                                            </svg>
+                                            <label for="searchForm" class="form-label fw-bolder text-bark text-uppercase">Search the entire website</label>
+                                            <input type="text"
+                                                   class="form-control rounded-0 input-group-sm w-100 search-input-square"
+                                                   id="searchForm"
+                                                   placeholder="Search..." />
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <!-- condition start: user is logged in -->
+                    <ul class="navbar-nav position-relative order-0 order-lg-3 mx-auto mx-lg-0 navbar-duffle">
+                        <li class="nav-item">
+                            <div class="dropdown">
+                                <a class="nav-link position-relative dropdown-toggle dropdown-toggler-hide"
+                                   type="button"
+                                   id="duffleDropdown"
+                                   data-toggle="dropdown"
+                                   aria-expanded="false">
+                                    <div class="d-inline">
+                                        <div class="notification-dot fs-5" data-notification="0">
+                                            <i class="d-none d-lg-inline ico-briefcase text-light"></i>
+                                        </div>
+                                        <span class="d-inline-block d-lg-none">Duffle</span>
+                                    </div>
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-centered shadow-sm">
+                                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="position-absolute bottom-100 start-50 translate-middle bi bi-caret-up-fill" fill="#ffffff" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M7.247 4.86l-4.796 5.481c-.566.647-.106 1.659.753 1.659h9.592a1 1 0 0 0 .753-1.659l-4.796-5.48a1 1 0 0 0-1.506 0z"></path>
+                                    </svg>
+                                    <ul class="list-unstyled mb-0">
+                                        <li class="dropdown-item mb-0">
+                                            <span class="d-block text-center fs-6 smaller" id="duffleTotalQuantity">There are no items in your duffle.</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav position-relative order-0 order-lg-3 mx-auto mx-lg-0 navbar-forum">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link"
+                               href="/forum-landing.html"
+                               title="...">
+                                <div class="d-inline">
+                                    <div class="notification-dot fs-5" data-notification="5">
+                                        <i class="d-none d-lg-inline ico-message-square text-light"></i>
+                                    </div>
+                                    <span class="d-inline-block d-lg-none">Forum</span>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav position-relative order-0 order-lg-3 mx-auto mx-lg-0 navbar-user">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link"
+                               href="/user-account.html"
+                               title="...">
+                                <span class="d-inline-block d-lg-none">Account</span>
+                                <img src="img/avatars/generic-small.jpg"
+                                     class="d-none d-lg-block user-thumbnail rounded-1"
+                                     height="42"
+                                     width="42"
+                                     alt="..."
+                                     loading="lazy" />
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav position-relative order-0 order-lg-3 mx-auto mx-lg-0 navbar-logout">
+                        <li class="nav-item dropdown d-inline-flex justify-content-center me-0">
+                            <a class="btn btn-outline-light my-auto"
+                               href="/"
+                               title="Click to log out of your account"
+                               role="button">Logout</a>
+                        </li>
+                    </ul>
+                    <!-- condition end: user is logged in -->
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>
+<!-- header: end -->
+
+<!-- fluid bar: start -->
+<div class="fluid-bar my-0">
+    <div class="container">
+        <div class="row mt-0 py-3">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-md-6 d-flex justify-content-center justify-content-md-start align-items-center">
+                        <form action=""
+                              class="row position-relative align-items-center w-100"
+                              id="devResourcesSearch">
+                            <div class="col h-100 pe-2">
+                                <label class="visually-hidden" for="searchDocumentationInput">Refine dev resources search query</label>
+                                <div class="input-group position-relative search__input w-100">
+                                    <i class="ico-search position-absolute top-50 translate-middle fs-4 text-bark" aria-hidden="true"></i>
+                                    <input class="form-control me-auto border-0 rounded-pill py-2 w-100"
+                                           type="text" id="searchDocumentationInput"
+                                           aria-label="Search Documentation"
+                                           placeholder="Search Documentation" />
+                                </div>
+                            </div>
+                            <div class="col-auto ps-0 pe-0 h-100">
+                                <button type="submit"
+                                        class="btn btn-dark rounded-1"
+                                        id="">
+                                    <i class="ico-search fs-4 text-light"></i>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-12 col-md-6 mt-3 mt-md-0 d-flex flex-column flex-md-row justify-content-center justify-content-lg-end align-items-center product-selector">
+                        <div class="mx-auto mx-lg-0 ms-lg-auto">
+                            <div class="btn-group dropdown">
+                                <button type="button"
+                                        class="btn btn-primary dropdown-toggle"
+                                        data-toggle="dropdown"
+                                        aria-expanded="false">Select a Product</button>
+                                <ul class="dropdown-menu end-0 shadow-sm">
+                                    <li>
+                                        <a class="dropdown-item"
+                                           href="/product-detail.html"
+                                           title="...">ATAK-Mil</a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item"
+                                           href="/product-detail.html"
+                                           title="...">ATAK-Civ</a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item"
+                                           href="/product-detail.html"
+                                           title="...">WinTAK-Mil</a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item"
+                                           href="/product-detail.html"
+                                           title="...">WinTAK-Civ</a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item"
+                                           href="/product-detail.html"
+                                           title="...">PiTAK</a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item"
+                                           href="/product-detail.html"
+                                           title="...">TAK Server</a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item"
+                                           href="#"
+                                           title="...">Android End-User Device (EUD)</a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item"
+                                           href="/product-detail.html"
+                                           title="...">VTAK</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- fluid bar: end -->
+
+<!-- main body: start -->
+<main class="main developer-resources"
+      data-pattern="rtl"
+      data-pattern-color="dark">
+    <!-- content area: start -->
+    <article class="content-area pt-0" id="content">
+        <div class="container">
+            <!-- 2 column (desktop) w/ sidebar: start -->
+            <div class="row">
+                <!-- filters (sidebar desktop): start -->
+                <div class="col-12 col-md-2 py-3 pb-lg-0 pe-md-0 me-0 sidebar__filters bg-2col">
+                    <div class="px-3 px-sm-0 px-md-3">
+                        <span class="accordion-topper">Dev Resources</span>
+                        <div class="accordion accordion-quick-links" id="programOfficeLinks">
+                            <!-- atak development: start -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="developmentAtak">
+                                    <button class="accordion-button border-0 collapsed"
+                                            type="button"
+                                            data-toggle="collapse"
+                                            data-target="#atakDevelopment"
+                                            aria-expanded="false"
+                                            aria-controls="atakDevelopment">
+                                        <span class="fw-bolder text-start w-100">ATAK Development</span>
+                                    </button>
+                                </h2>
+                                <div id="atakDevelopment"
+                                     class="accordion-collapse collapse"
+                                     aria-labelledby="developmentAtak"
+                                     data-parent="#programOfficeLinks">
+                                    <div class="accordion-body">
+                                        <ul class="list-unstyled mb-0">
+                                            <li class="mb-2">
+                                                <a href="/developer-resource.html"
+                                                   class="link-dark text-decoration-none smaller"
+                                                   title="...">ATAK API Documentation</a>
+                                            </li>
+                                            <li class="mb-2">
+                                                <a href="/developer-resource.html"
+                                                   class="link-dark text-decoration-none smaller"
+                                                   title="...">ATAK Coding Style Guide</a>
+                                            </li>
+                                            <li class="mb-2">
+                                                <a href="/developer-resource.html"
+                                                   class="link-dark text-decoration-none smaller"
+                                                   title="...">ATAK Developer Guide</a>
+                                            </li>
+                                            <li class="mb-2">
+                                                <a href="/developer-resource.html"
+                                                   class="link-dark text-decoration-none smaller"
+                                                   title="...">ATAK Plugin Development Kits</a>
+                                            </li>
+                                            <li class="mb-2">
+                                                <a href="/developer-resource.html"
+                                                   class="link-dark text-decoration-none smaller"
+                                                   title="...">ATAK System Requirements</a>
+                                            </li>
+                                            <li class="mb-2">
+                                                <a href="/developer-resource.html"
+                                                   class="link-dark text-decoration-none smaller"
+                                                   title="...">ATAK UI Design Guide</a>
+                                            </li>
+                                            <li class="mb-2">
+                                                <a href="/developer-resource.html"
+                                                   class="link-dark text-decoration-none smaller"
+                                                   title="...">Branching Strategy</a>
+                                            </li>
+                                            <li class="mb-2">
+                                                <a href="/developer-resource.html"
+                                                   class="link-dark text-decoration-none smaller"
+                                                   title="...">Build System and Runtime</a>
+                                            </li>
+                                            <li class="mb-2">
+                                                <a href="/developer-resource.html"
+                                                   class="link-dark text-decoration-none smaller"
+                                                   title="...">Changes to the build environment for 4.1</a>
+                                            </li>
+                                            <li class="mb-2">
+                                                <a href="/developer-resource.html"
+                                                   class="link-dark text-decoration-none smaller"
+                                                   title="...">Changes to the build environment for 4.2 from 4.1</a>
+                                            </li>
+                                            <li class="mb-2">
+                                                <a href="/developer-resource.html"
+                                                   class="link-dark text-decoration-none smaller"
+                                                   title="...">Debugging ATAK Plugins</a>
+                                            </li>
+                                            <li class="mb-2">
+                                                <a href="/developer-resource.html"
+                                                   class="link-dark text-decoration-none smaller"
+                                                   title="...">Disabling and Hiding Preferences</a>
+                                            </li>
+                                            <li class="mb-2">
+                                                <a href="/developer-resource.html"
+                                                   class="link-dark text-decoration-none smaller"
+                                                   title="...">File Formats Supported</a>
+                                            </li>
+                                            <li class="mb-2">
+                                                <a href="/developer-resource.html"
+                                                   class="link-dark text-decoration-none smaller"
+                                                   title="...">Getting Started with ATAK Plugin Development</a>
+                                            </li>
+                                            <li class="mb-2">
+                                                <a href="/developer-resource.html"
+                                                   class="link-dark text-decoration-none smaller"
+                                                   title="...">Military vs Civilian ATAK Differences</a>
+                                            </li>
+                                            <li class="mb-2">
+                                                <a href="/developer-resource.html"
+                                                   class="link-dark text-decoration-none smaller"
+                                                   title="...">Pluging Compatability</a>
+                                            </li>
+                                            <li class="mt-2">
+                                                <a href="/developer-resource.html"
+                                                   class="link-dark text-decoration-none smaller"
+                                                   title="...">Testing ATAK Plugins</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- atak development: end -->
+
+                            <!-- cross product guides: start -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="guidesCrossProduct">
+                                    <button class="accordion-button border-0 collapsed"
+                                            type="button"
+                                            data-toggle="collapse"
+                                            data-target="#crossProductGuides"
+                                            aria-expanded="false"
+                                            aria-controls="crossProductGuides">
+                                        <span class="fw-bolder text-start w-100">Cross Product Guides</span>
+                                    </button>
+                                </h2>
+                                <div id="crossProductGuides"
+                                     class="accordion-collapse collapse"
+                                     aria-labelledby="guidesCrossProduct"
+                                     data-parent="#programOfficeLinks">
+                                    <div class="accordion-body">
+                                        <ul class="list-unstyled mb-0">
+                                            <li class="mb-2">
+                                                <a href="/developer-resource.html"
+                                                   class="link-dark text-decoration-none smaller"
+                                                   title="...">Option 1</a>
+                                            </li>
+                                            <li class="mb-2">
+                                                <a href="/developer-resource.html"
+                                                   class="link-dark text-decoration-none smaller"
+                                                   title="...">Option 2</a>
+                                            </li>
+                                            <li class="mt-2">
+                                                <a href="/developer-resource.html"
+                                                   class="link-dark text-decoration-none smaller"
+                                                   title="...">Option 3</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- cross product guides: end -->
+
+                            <!-- takwatch development: start -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="developmentTakwatch">
+                                    <button class="accordion-button border-0 collapsed"
+                                            type="button"
+                                            data-toggle="collapse"
+                                            data-target="#takwatchDevelopment"
+                                            aria-expanded="false"
+                                            aria-controls="takwatchDevelopment">
+                                        <span class="fw-bolder text-start w-100">TAKwatch Development</span>
+                                    </button>
+                                </h2>
+                                <div id="takwatchDevelopment"
+                                     class="accordion-collapse collapse"
+                                     aria-labelledby="developmentTakwatch"
+                                     data-parent="#programOfficeLinks">
+                                    <div class="accordion-body">
+                                        <ul class="list-unstyled mb-0">
+                                            <li class="mb-2">
+                                                <a href="/developer-resource.html"
+                                                   class="link-dark text-decoration-none smaller"
+                                                   title="...">Option 1</a>
+                                            </li>
+                                            <li class="mb-2">
+                                                <a href="/developer-resource.html"
+                                                   class="link-dark text-decoration-none smaller"
+                                                   title="...">Option 2</a>
+                                            </li>
+                                            <li class="mt-2">
+                                                <a href="/developer-resource.html"
+                                                   class="link-dark text-decoration-none smaller"
+                                                   title="...">Option 3</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- takwatch development: end -->
+
+                            <!-- webtak documentation: start -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="documentationWebtak">
+                                    <button class="accordion-button border-0 collapsed"
+                                            type="button"
+                                            data-toggle="collapse"
+                                            data-target="#webtakDocumentation"
+                                            aria-expanded="false"
+                                            aria-controls="webtakDocumentation">
+                                        <span class="fw-bolder text-start w-100">WebTAK Documentation</span>
+                                    </button>
+                                </h2>
+                                <div id="webtakDocumentation"
+                                     class="accordion-collapse collapse"
+                                     aria-labelledby="documentationWebtak"
+                                     data-parent="#programOfficeLinks">
+                                    <div class="accordion-body">
+                                        <ul class="list-unstyled mb-0">
+                                            <li class="mb-2">
+                                                <a href="/developer-resource.html"
+                                                   class="link-dark text-decoration-none smaller"
+                                                   title="...">Option 1</a>
+                                            </li>
+                                            <li class="mb-2">
+                                                <a href="/developer-resource.html"
+                                                   class="link-dark text-decoration-none smaller"
+                                                   title="...">Option 2</a>
+                                            </li>
+                                            <li class="mt-2">
+                                                <a href="/developer-resource.html"
+                                                   class="link-dark text-decoration-none smaller"
+                                                   title="...">Option 3</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- webtak documentation: end -->
+
+                            <!-- wintak development: start -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="developmentWintak">
+                                    <button class="accordion-button border-0 collapsed"
+                                            type="button"
+                                            data-toggle="collapse"
+                                            data-target="#wintakDevelopment"
+                                            aria-expanded="false"
+                                            aria-controls="wintakDevelopment">
+                                        <span class="fw-bolder text-start w-100">WinTAK Development</span>
+                                    </button>
+                                </h2>
+                                <div id="wintakDevelopment"
+                                     class="accordion-collapse collapse"
+                                     aria-labelledby="developmentWintak"
+                                     data-parent="#programOfficeLinks">
+                                    <div class="accordion-body">
+                                        <ul class="list-unstyled mb-0">
+                                            <li class="mb-2">
+                                                <a href="/developer-resource.html"
+                                                   class="link-dark text-decoration-none smaller"
+                                                   title="...">Option 1</a>
+                                            </li>
+                                            <li class="mb-2">
+                                                <a href="/developer-resource.html"
+                                                   class="link-dark text-decoration-none smaller"
+                                                   title="...">Option 2</a>
+                                            </li>
+                                            <li class="mt-2">
+                                                <a href="/developer-resource.html"
+                                                   class="link-dark text-decoration-none smaller"
+                                                   title="...">Option 3</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- wintak development: end -->
+                        </div>
+                    </div>
+                    <ul class="list-unstyled border-top mt-4 mb-0 pt-3 px-3 px-sm-0 px-lg-3">
+                        <li class="mb-2">
+                            <a href="/developer-resource.html"
+                               class="link-light text-decoration-none fw-bolder small"
+                               title="...">SDKs</a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="/developer-resource.html"
+                               class="link-light text-decoration-none fw-bolder small"
+                               title="...">Plugin Guides</a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="/developer-resource.html"
+                               class="link-light text-decoration-none fw-bolder small"
+                               title="...">Our Process</a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="/developer-resource.html"
+                               class="link-light text-decoration-none fw-bolder small"
+                               title="...">Frequently Asked Questions</a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="/developer-resource.html"
+                               class="link-light text-decoration-none fw-bolder small"
+                               title="...">Developer Forum</a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="/developer-resource.html"
+                               class="link-light text-decoration-none fw-bolder small"
+                               title="...">Support</a>
+                        </li>
+                        <li class="mt-2">
+                            <a href="/developer-resource.html"
+                               class="link-light text-decoration-none fw-bolder small"
+                               title="...">Submit Plugin</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- filters (sidebar desktop): end -->
+
+                <!-- filter results: start -->
+                <div class="col-12 col-lg-9 pt-4 sidebar__content bg-2col">
+                    <!-- breadcrumbs -> without marquee: start -->
+                    <div class="row">
+                        <div class="col-12 mx-auto">
+                            <div class="breadcrumbs position-relative text-start">
+                                <nav aria-label="product breadcrumbs">
+                                    <ol class="breadcrumb mb-0 p-0 bg-transparent">
+                                        <li class="breadcrumb-item"><a href="/" title="Return home">Home</a></li>
+                                        <li class="breadcrumb-item active" aria-current="page">Dev Resources</li>
+                                    </ol>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- breadcrumbs -> without marquee: end -->
+
+                    <!-- introduction: start -->
+                    <div class="row mt-5">
+                        <div class="col-12">
+                            <h1 class="fw-bolder">Developer Resources</h1>
+                            <p class="mb-0">Duis faucibus non et eget arcu, egestas malesuada at. Viverra enim sodales lorem nulla in mollis. Fermentum, eu nec faucibus enim.</p>
+                            <div class="card border-0 mt-4">
+                                <div class="card-body bg-smoke text-dark p-4 rounded-3">
+                                    <h6 class="card-title fw-bolder mb-3">Authenticated Developers Callout</h6>
+                                    <p class="card-text fs-6">Purus a non non quis consectetur neque. Ac eu faucibus massa nisl. Aliquam gravida enim, mauris quam.</p>
+                                    <a href="#0"
+                                       class="link-dark text-decoration-underline me-4"
+                                       title="...">Confluence →</a>
+                                    <a href="#0"
+                                       class="link-dark text-decoration-underline"
+                                       title="...">GitLab →</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- introduction: end -->
+
+                    <!-- divider 01: start -->
+                    <div class="row">
+                        <div class="col-12">
+                            <hr />
+                        </div>
+                    </div>
+                    <!-- divider 01: end -->
+
+                    <!-- resource cards: start -->
+                    <div class="row row-cols-2 row-cols-xl-3 g-3 tak-cards">
+                        <div class="col">
+                            <div class="card w-100 h-100 border-0 mb-auto overflow-hidden">
+                                <a href="/developer-resource.html"
+                                   class="card-body"
+                                   title="...">
+                                    <h5 class="card-title fw-bolder">SDKs&nbsp→</h5>
+                                    <p class="card-text">Brief description of what user will find when they click through this content block.</p>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card w-100 h-100 border-0 mb-auto overflow-hidden">
+                                <a href="/developer-resource.html"
+                                   class="card-body"
+                                   title="...">
+                                    <h5 class="card-title fw-bolder">Plugin Guides&nbsp;→</h5>
+                                    <p class="card-text">Velit nunc quisque nascetur molestie at nunc. Sed eget purus eget phasellus tincidunt pretium integer ante urna.</p>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card w-100 h-100 border-0 mb-auto overflow-hidden">
+                                <a href="/developer-resource.html"
+                                   class="card-body"
+                                   title="...">
+                                    <h5 class="card-title fw-bolder">Documentation&nbsp;→</h5>
+                                    <p class="card-text">Vel orci imperdiet mauris lectus massa. Risus nunc, suspendisse magnis habitant.</p>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card w-100 h-100 border-0 mb-auto overflow-hidden">
+                                <a href="/developer-resource.html"
+                                   class="card-body"
+                                   title="...">
+                                    <h5 class="card-title fw-bolder">Our Process&nbsp;→</h5>
+                                    <p class="card-text">Brief description of what user will find when they click through this content block.</p>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card w-100 h-100 border-0 mb-auto overflow-hidden">
+                                <a href="/developer-resource.html"
+                                   class="card-body"
+                                   title="...">
+                                    <h5 class="card-title fw-bolder">Dev FAQs&nbsp;→</h5>
+                                    <p class="card-text">Velit nunc quisque nascetur molestie at nunc. Sed eget purus eget phasellus tincidunt pretium integer ante urna.</p>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card w-100 h-100 border-0 mb-auto overflow-hidden">
+                                <a href="/developer-resource.html"
+                                   class="card-body"
+                                   title="...">
+                                    <h5 class="card-title fw-bolder">Dev Forum&nbsp;→</h5>
+                                    <p class="card-text">Vel orci imperdiet mauris lectus massa. Risus nunc, suspendisse magnis habitant.</p>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card w-100 h-100 border-0 mb-auto overflow-hidden">
+                                <a href="/developer-resource.html"
+                                   class="card-body"
+                                   title="...">
+                                    <h5 class="card-title fw-bolder">Dev Support&nbsp;→</h5>
+                                    <p class="card-text">Brief description of what user will find when they click through this content block.</p>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- last instance: start -->
+                        <div class="col">
+                            <div class="card w-100 h-100 border-0 mb-auto overflow-hidden">
+                                <a href="/developer-resource.html"
+                                   class="card-body"
+                                   title="...">
+                                    <h5 class="card-title fw-bolder">Submit Plugin&nbsp;→</h5>
+                                    <p class="card-text">Velit nunc quisque nascetur molestie at nunc. Sed eget purus eget phasellus tincidunt pretium integer ante urna.</p>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- last instance: stop -->
+                    </div>
+                    <!-- resource cards: end -->
+                </div>
+                <!-- filter results: end -->
+            </div>
+            <!-- 2 column (desktop) w/ sidebar: end -->
+        </div>
+    </article>
+    <!-- content area: end -->
+</main>
+<!-- main body: end -->
+
+<!-- footer and disclaimer: start -->
+<footer class="footer mt-auto pt-5 pb-3 pb-md-5" data-pattern="dark">
+    <!-- disclaimer: start -->
+    <section class="disclaimer mx-auto w-100 position-relative">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 accordion" id="usageStatement">
+                    <div class="p-3 p-md-5 bg-light disclaimer__accordion">
+                        <button class="disclaimer__button d-flex d-md-none flex-row w-100 fw-bolder"
+                                type="button"
+                                data-toggle="collapse"
+                                data-target="#collapseUsage"
+                                aria-expanded="false"
+                                aria-controls="collapseUsage">TAK Usage Statement <i class="ico-chevron-down fs-4 ms-auto"></i></button>
+                        <article id="collapseUsage"
+                                 class="disclaimer__content collapse"
+                                 aria-labelledby="headingOne"
+                                 data-parent="#usageStatement">
+                            <br/><br/>
+                            <p>The TAK capability suite is a United States Government (USG) owned product. Use of these USG owned products outside of test and evaluation require the proper authority to operate (ATO) paperwork granted by your organization’s headquarters (HQ). Before installing and/or using any of the products, ensure you are within the guidelines of your organization.</p>
+                            <p>TAK-MIL is a restricted use product for USG military use only. NO distribution is authorized outside this forum except through properly vetted Program Management Offices.</p>
+                            <p>ATAK-CIV is subject to the Export Administration Regulations (EAR) administered by the Department of Commerce, Bureau of Industry and Security (BIS), which advises this item is classified as EAR99. Other TAK-CIV Product Lines are currently being evaluated for commodity determination.</p>
+                            <p class="mb-0">The TAK capability suite is a United States Government owned product. TAK-MIL is a restricted use product only available through Foreign Military Sales distribution. TAK-CIV is a restricted use product available through distribution of properly licensed commercial entities and Department of Commerce approval.</p>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- disclaimer: end -->
+
+    <!--footer content: start -->
+    <div class="container">
+        <div class="d-flex flex-wrap flex-md-nowrap">
+            <div class="order-1 order-md-0 col-sm-12 col-md-7 footer__content">
+                <div class="d-flex mb-4 pb-4 footer__content--top">
+                    <div class="col-sm-2 col-md col-md-1 me-4">
+                        <img src="/img/logos/brand.svg"
+                             width="70"
+                             height="74"
+                             class="d-inline-block"
+                             alt="..."
+                             loading="lazy" />
+                    </div>
+                    <div class="col d-flex flex-column justify-content-center align-content-center">
+                        <span class="d-block pb-3">&copy; Copyright 2020 <strong>TAK.gov</strong></span>
+                        <div class="d-block">
+                            <address class="d-inline-block mb-md-0">123 E Street NW, Washington, D.C. 00000</address>
+                            <span class="d-none d-md-inline-block">&nbsp;&mdash;&nbsp;</span>
+                            <a href="tel:1234567890" class="d-inline-block" title="...">(123) 456-7890</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flex footer__content--bottom">
+                    <div class="col footer__links">
+                        <ul class="list-group list-group-horizontal flex-wrap p-0 footer__link-list">
+                            <li class="list-group-item ps-0 pe-0 text-start border-0">
+                                <a href="/developer-resources.html"
+                                   class="footer__link text-decoration-none"
+                                   title="...">Dev Resources</a>
+                            </li>
+                            <li class="list-group-item ps-0 pe-0 text-start border-0">
+                                <a href="#0"
+                                   class="footer__link text-decoration-none"
+                                   title="...">FAQs</a>
+                            </li>
+                            <li class="list-group-item ps-0 pe-0 text-start border-0">
+                                <a href="#0"
+                                   class="footer__link text-decoration-none"
+                                   title="...">Media Center</a>
+                            </li>
+                            <li class="list-group-item ps-0 pe-0 text-start border-0">
+                                <a href="#0"
+                                   class="footer__link text-decoration-none"
+                                   title="...">Privacy Policy</a>
+                            </li>
+                            <li class="list-group-item ps-0 pe-0 text-start border-0">
+                                <a href="#0"
+                                   class="footer__link text-decoration-none"
+                                   title="...">Careers</a>
+                            </li>
+                            <li class="list-group-item ps-0 pe-0 text-start border-0">
+                                <a href="/news.html"
+                                   class="footer__link text-decoration-none"
+                                   title="...">Press &amp; News</a>
+                            </li>
+                            <li class="list-group-item ps-0 pe-0 text-start border-0">
+                                <a href="#0"
+                                   class="footer__link text-decoration-none"
+                                   title="...">Terms of Use</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="order-0 order-md-1 col-sm-12 col-md-5 ps-md-5 pe-2 mb-5 justify-content-center footer__messaging">
+                <span class="d-block h3 mb-3">Developer Callout Lorem Ipsum</span>
+                <div class="row">
+                    <div class="col-12">
+                        <p class="mb-0 lh-lg">Condimentum orci et commodo venenatis mattis. Dolor vehicula commodo ut congue.</p>
+                        <a href="#0"
+                           class="btn btn-primary btn-lg text-decoration-none mt-2"
+                           title="...">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--footer content: end -->
+</footer>
+<!-- footer and disclaimer: end -->
+
+</body>
+
+<!-- main js file -->
+<script type="text/javascript" src="/js/index.min.js"></script>
+
+<!-- custom scripts -->
+<!-- <script src="" type="text/javascript"></script> -->
+
+</html>

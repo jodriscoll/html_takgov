@@ -1,0 +1,74 @@
+.sidebar__filters,
+.sidebar__content {
+  // only when used with these above pre-reqs
+  &.bg-2col {
+    // ...
+  }
+}
+
+// (overrides) left sidebar
+.sidebar__filters {
+  &.bg-2col {
+    background-color: $black;
+    position: relative;
+
+    @include media-breakpoint-up(md) {
+      padding-bottom: ($disclaimer-accordion-spacer / 1.5) !important;
+    }
+
+    // left side fill
+    &::before {
+      background: $black;
+      color: $white;
+      content: '';
+      height: 100%;
+      position: absolute;
+      top: 0;
+      z-index: -2;
+
+      @include media-breakpoint-down(md) {
+        left: -100vw;
+        right: auto;
+        width: 200vw;
+      }
+      @include media-breakpoint-up(md) {
+        right: 0;
+        width: 100vw;
+      }
+    }
+
+    // shown on the dev resources
+    .accordion-quick-links {
+      .accordion-header {
+        border-radius: 0 !important;
+      }
+
+      .accordion-button {
+        @include font-size(12px !important);
+        background-color: $smoke;
+
+        &.collapsed,
+        &[aria-expanded='false'] {
+          border-radius: 0 !important;
+        }
+      }
+
+      .accordion-body {
+        background-color: $white;
+        border-radius: 0 !important;
+      }
+    }
+  }
+}
+
+// (overrides) content right
+.sidebar__content {
+  &.bg-2col {
+    @include media-breakpoint-down(md) {
+      margin-bottom: ($disclaimer-medium-up-top-offset / 1.5);
+    }
+    @include media-breakpoint-up(md) {
+      margin-bottom: $disclaimer-medium-up-top-offset * 1.5;
+    }
+  }
+}

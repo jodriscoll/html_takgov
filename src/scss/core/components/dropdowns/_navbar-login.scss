@@ -1,0 +1,29 @@
+#navbarLogin {
+  + .dropdown-menu {
+    // form labels
+    .form-label {
+      // ...
+    }
+
+    // form inputs
+    .form-control {
+      background-color: $form-input-login-bg;
+      border-left-width: 0;
+    }
+
+    // forgot password
+    .forgot-password {
+      @include font-size(14px);
+      color: $blue-primary;
+      white-space: nowrap;
+    }
+
+    // call to action button
+    .btn-dark {
+      @include font-size(12px);
+      @include rfs(10px !important, padding);
+      @include rfs(16px, line-height);
+      white-space: nowrap;
+    }
+  }
+}

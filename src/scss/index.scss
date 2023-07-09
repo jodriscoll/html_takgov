@@ -1,0 +1,80 @@
+// import bootstrap
+@import 'core/bootstrap-overrides';
+@import '../../node_modules/bootstrap/scss/bootstrap.scss';
+
+// core dependencies
+@import 'core/variables';
+@import 'core/reboot';
+@import 'core/mixins';
+
+// feature dependencies
+@import 'core/features/image-library';
+@import 'core/features/gradients';
+@import 'core/features/helpers';
+
+// bootstrap overrides
+@import 'core/bootstrap/navbar';
+@import 'core/bootstrap/dropdown';
+@import 'core/bootstrap/breadcrumb';
+@import 'core/bootstrap/forms';
+@import 'core/bootstrap/buttons';
+@import 'core/bootstrap/nav';
+@import 'core/bootstrap/pagination';
+@import 'core/bootstrap/accordions';
+@import 'core/bootstrap/list-group';
+@import 'core/bootstrap/modal';
+@import 'core/bootstrap/badge';
+@import 'core/bootstrap/button-group';
+@import 'core/bootstrap/type';
+@import 'core/bootstrap/carousel';
+@import 'core/bootstrap/table';
+
+// parts
+@import 'core/components/body';
+@import 'core/components/main';
+@import 'core/components/footer';
+@import 'core/components/marquee';
+@import 'core/components/disclaimer';
+@import 'core/components/header';
+@import 'core/components/skip-to-content';
+@import 'core/components/tak-cards';
+@import 'core/components/multisteps';
+@import 'core/components/search-inputs';
+@import 'core/components/sidebar';
+@import 'core/components/form-elements';
+@import 'core/components/logo-list';
+@import 'core/components/slanted-columns';
+@import 'core/components/background-patterns';
+@import 'core/components/wysiwyg';
+@import 'core/components/fluid-bar';
+@import 'core/components/bg-2col';
+@import 'core/components/code-ui';
+@import 'core/components/author-card';
+@import 'core/components/video-player';
+
+// templates
+@import 'core/templates/collaborate';
+@import 'core/templates/create-account';
+@import 'core/templates/developer-resource.scss';
+@import 'core/templates/developer-resources.scss';
+@import 'core/templates/event-detail';
+@import 'core/templates/events';
+@import 'core/templates/forgot-password';
+@import 'core/templates/forum-detail';
+@import 'core/templates/forum-landing';
+@import 'core/templates/forum-listing';
+@import 'core/templates/forum-new-discussion';
+@import 'core/templates/index';
+@import 'core/templates/news';
+@import 'core/templates/news-article';
+@import 'core/templates/product-detail';
+@import 'core/templates/product-plugins';
+@import 'core/templates/products';
+@import 'core/templates/product';
+@import 'core/templates/program-office';
+@import 'core/templates/program-offices';
+@import 'core/templates/search-results';
+@import 'core/templates/solution-detail';
+@import 'core/templates/solutions';
+@import 'core/templates/training-tactics';
+@import 'core/templates/user-account';

@@ -1,0 +1,6 @@
+@mixin max-width-custom($breakpoint, $max-width-breakpoint) {
+  @include media-breakpoint-up($breakpoint) {
+    margin: auto;
+    max-width: map-get($grid-breakpoints, $max-width-breakpoint);
+  }
+}

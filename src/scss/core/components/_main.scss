@@ -1,0 +1,21 @@
+.main {
+  .content-area {
+    @include media-breakpoint-down(md) {
+      @include padding-bottom(80px);
+      @include padding-top(80px);
+    }
+    @include media-breakpoint-up(md) {
+      @include padding-top(48px);
+    }
+
+    // disclaimer spacer
+    &:last-of-type {
+      @include media-breakpoint-down(md) {
+        @include padding-bottom($disclaimer-medium-up-top-offset !important);
+      }
+      @include media-breakpoint-up(md) {
+        @include padding-bottom($disclaimer-medium-up-top-offset * 1.25);
+      }
+    }
+  }
+}

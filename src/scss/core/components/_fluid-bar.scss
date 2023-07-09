@@ -1,0 +1,211 @@
+$fluid-bar-margins: 40px;
+
+.fluid-bar {
+  @include margin-bottom($fluid-bar-margins);
+  @include margin-top($fluid-bar-margins);
+  background-color: $fluid-bar-bg;
+  color: $white;
+  //overflow: hidden;
+  position: relative;
+
+  // topographic pattern
+  &::after {
+    background: url($pattern-topographic-dark);
+    background-size: 30%;
+    content: '';
+    height: 100%;
+    left: 0;
+    opacity: 0.3;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: $zindex-marquee-pseudo;
+  }
+
+  > .container {
+    @include media-breakpoint-up(lg) {
+      max-width: map-get($grid-breakpoints, xxl);
+    }
+  }
+
+  // force content to be above the topographic pattern
+  div[class*='col-12'] {
+    &:first-of-type {
+      z-index: $zindex-marquee-pseudo + 2;
+    }
+
+    &:last-of-type {
+      z-index: $zindex-marquee-pseudo + 1;
+    }
+  }
+
+  // generic link list (product detail)
+  &__list {
+    @include media-breakpoint-up(lg) {
+      display: flex;
+      flex-direction: row;
+      margin-left: 0;
+      padding-left: 0 !important;
+    }
+  }
+
+  // generic links (product detail)
+  &__list-item {
+    @include media-breakpoint-up(lg) {
+      a {
+        color: $white;
+
+        // interactions
+        &:hover,
+        &:focus {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  &__controller {
+    .dropdown {
+      .dropdown-toggle {
+        outline: none;
+      }
+    }
+  }
+
+  // (overrides) call to action(s) (dev resources and forum discussion)
+  .btn {
+    &.btn-primary {
+      border: 1px solid $white !important;
+    }
+  }
+
+  // (overrides) pagination (forum conversations)
+  .pagination {
+    // each pagination item
+    .page-item {
+      // not a previous/next page item
+      &.page-number {
+        // ...
+      }
+
+      // previous page
+      &.previous-page {
+        // the link within
+        .page-link {
+          color: $black;
+
+          &:hover,
+          &:focus {
+            color: $black;
+          }
+        }
+      }
+
+      // next page
+      &.next-page {
+        // the link within
+        .page-link {
+          background-color: $slate;
+          border-color: $slate;
+          color: $white;
+
+          &:hover,
+          &:focus {
+            color: $white;
+          }
+        }
+      }
+
+      // if active
+      &.active {
+        // the link within
+        .page-link {
+          background-color: transparent;
+          border-color: $white;
+          color: $white;
+        }
+      }
+
+      // if disabled
+      &.disabled {
+        // the link within
+        .page-link {
+          color: $percent_40;
+          //background-color: $percent_15;
+          //border-color: $percent_15;
+        }
+      }
+    }
+
+    // each pagination link
+    .page-link {
+      background-color: transparent;
+      border-color: transparent;
+      color: $white;
+
+      &:hover,
+      &:focus {
+        border-color: $white;
+        color: $white;
+      }
+    }
+  }
+
+  // select a product dropdown (dev resource(s))
+  .product-selector {
+    .dropdown-menu {
+      @include padding(5px 0);
+      max-width: 200px;
+
+      .dropdown-item {
+        @include font-size(12px);
+        @include padding(10px !important);
+        white-space: normal;
+      }
+    }
+  }
+
+  // product location dropdown (product detail)
+  .product-locations {
+    .dropdown-menu {
+      @include media-breakpoint-down(lg) {
+        // ...
+      }
+      @include media-breakpoint-up(lg) {
+        background-clip: initial;
+        background-color: transparent;
+        border: 0;
+        border-radius: 0;
+        margin: 0;
+        max-width: 100%;
+        min-width: 0;
+        padding: 0;
+        position: relative;
+      }
+    }
+
+    .dropdown-item {
+      @include media-breakpoint-down(lg) {
+        // ...
+      }
+      @include media-breakpoint-up(lg) {
+        white-space: nowrap;
+
+        &:hover,
+        &:focus {
+          background-color: transparent;
+          color: $white;
+        }
+      }
+    }
+
+    .dropdown-toggle {
+      @include media-breakpoint-down(lg) {
+        // ...
+      }
+      @include media-breakpoint-up(lg) {
+        display: none;
+      }
+    }
+  }
+}

@@ -1,0 +1,120 @@
+// bootstrap modifiers may require !important
+
+$product-carousel-large-max-width: 608px;
+$product-carousel-thumb-indicator-height: 77px;
+$product-carousel-thumb-indicator-width: 77px;
+$product-carousel-indicator-slides-large-spacer: 20px;
+$product-carousel-image-large-height: 463px;
+$product-carousel-image-large-width: 463px;
+$product-carousel-thumb-spacer: 10px;
+
+// attached to main.main
+.product {
+  // alert, breadcrumbs
+  &-intro {
+    // ...
+  }
+
+  // gallery, download, information, etc...
+  &-details {
+    &__gallery {
+      @include media-breakpoint-up(md) {
+        max-width: $product-carousel-large-max-width;
+      }
+
+      // carousel overrides (be explicit)
+      .carousel {
+        // ...
+      }
+
+      .carousel-inner {
+        @include media-breakpoint-down(md) {
+          padding-bottom: $product-carousel-indicator-slides-large-spacer +
+            $product-carousel-thumb-indicator-width;
+        }
+        @include media-breakpoint-up(md) {
+          padding-left: $product-carousel-indicator-slides-large-spacer +
+            $product-carousel-thumb-indicator-width;
+        }
+      }
+
+      .carousel-item {
+        img {
+          border-radius: 10px;
+
+          @include media-breakpoint-up(md) {
+            //height: $product-carousel-image-large-height;
+            width: $product-carousel-image-large-width;
+          }
+        }
+
+        &.active {
+          // ...
+        }
+      }
+
+      .carousel-indicators {
+        @include margin-left(0);
+        @include margin-right(0);
+        display: flex;
+
+        @include media-breakpoint-down(md) {
+          bottom: 0;
+          flex-direction: row;
+          justify-content: flex-start;
+        }
+        @include media-breakpoint-up(md) {
+          flex-direction: column;
+          justify-content: flex-start;
+          left: 0;
+          right: unset;
+          top: 0;
+        }
+
+        li {
+          border: none;
+          height: $product-carousel-thumb-indicator-height;
+          width: $product-carousel-thumb-indicator-width;
+
+          @include media-breakpoint-down(sm) {
+            @include margin(0 $product-carousel-thumb-spacer);
+          }
+          @include media-breakpoint-up(md) {
+            @include margin($product-carousel-thumb-spacer 0);
+          }
+
+          // first & last thumbnail
+          &:first-of-type,
+          &:last-of-type {
+            @include margin(0);
+          }
+        }
+
+        img {
+          // ...
+        }
+      }
+    }
+
+    &__information {
+      @include media-breakpoint-up(md) {
+        flex-grow: 1;
+      }
+    }
+  }
+
+  // generic content
+  &-description {
+    // ...
+  }
+
+  // content, video player
+  &-training-videos {
+    // ...
+  }
+
+  // content, button, cards
+  &-approved-plugins {
+    // ...
+  }
+}

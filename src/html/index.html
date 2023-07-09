@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <title>TAK.gov</title>
+    <!-- favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/img/favicon/site.webmanifest">
+    <link rel="mask-icon" href="/img/favicon/safari-pinned-tab.svg" color="#d8e7b9">
+    <meta name="msapplication-TileColor" content="#d8e7b9">
+    <meta name="theme-color" content="#ffffff">
+    <!-- main css file -->
+    <link rel="stylesheet" href="css/index.min.css" />
+</head>
+
+<body>
+
+<!-- skip to content: start -->
+<a class="btn btn-primary position-absolute start-50 rounded-bottom visually-hidden-focusable skip-to-content"
+   href="#content"
+   title="...">Skip to main content</a>
+<!-- skip to content: end -->
+
+<!-- alert: start -->
+<div class="alert alert-success alert-dismissible mb-0 fade show" role="alert">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="d-flex flex-row align-items-center">
+                    <p class="mb-0 fw-bolder w-100 text-center text-dark">A new version of ATAK-Mil has been released. <a href="/product-detail.html" class="link-tak-blue text-decoration-underline" title="...">Learn More&nbsp;→</a></p>
+                    <button type="button"
+                            class="btn-close position-absolute top-50 end-0 translate-middle"
+                            data-dismiss="alert"
+                            aria-label="Close"></button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- alert: end -->
+
+<!-- header: start -->
+<header class="header">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark w-100" data-scale="condensed">
+        <div class="container d-flex">
+            <a class="navbar-brand align-middle"
+               href="/"
+               title="Return home">
+                <img src="/img/logos/brand.svg"
+                     width="86"
+                     height="90"
+                     class="d-inline-block"
+                     alt="..."
+                     loading="lazy" />
+                <img src="/img/logos/takgov.png"
+                     width="138"
+                     height="30"
+                     class="d-none d-xxl-inline-block"
+                     alt="..."
+                     loading="lazy" />
+            </a>
+            <button class="navbar-toggler"
+                    type="button"
+                    data-toggle="collapse"
+                    data-target="#navbarCollapse"
+                    aria-controls="navbarCollapse"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation">
+                <i class="ico-menu fs-1"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="d-flex flex-wrap flex-lg-nowrap ms-auto align-items-center">
+                    <ul class="navbar-nav mb-md-0 order-3 order-lg-1 navbar-navigation">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle"
+                               href="#"
+                               id="navbarSolutions"
+                               role="button"
+                               data-toggle="dropdown"
+                               aria-expanded="false">Solutions</a>
+                            <div class="dropdown-menu start-0 shadow-sm" aria-labelledby="navbarSolutions">
+                                <a class="dropdown-item w-auto m-auto text-center fw-bolder"
+                                   href="/solutions.html"
+                                   title="...">Our Solutions</a>
+                                <div class="dropdown-divider mb-0 mb-md-2"></div>
+                                <a class="dropdown-item" href="/solutions-detail.html" title="...">Military</a>
+                                <a class="dropdown-item" href="/solutions-detail.html" title="...">Law Enforcement</a>
+                                <a class="dropdown-item" href="/solutions-detail.html" title="...">Emergency Management &amp; First Responders</a>
+                                <a class="dropdown-item" href="/solutions-detail.html" title="...">Commercial</a>
+                                <a class="dropdown-item" href="/solutions-detail.html" title="...">Recreation</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle"
+                               href="#"
+                               id="navbarProducts"
+                               role="button"
+                               data-toggle="dropdown"
+                               aria-expanded="false">Products</a>
+                            <div class="dropdown-menu start-0 shadow-sm" aria-labelledby="navbarProducts">
+                                <a class="dropdown-item w-auto m-auto text-center fw-bolder"
+                                   href="/products.html"
+                                   title="...">All Products</a>
+                                <div class="dropdown-divider mb-0 mb-md-2"></div>
+                                <div class="dropdown-columns d-flex w-100 flex-wrap flex-md-nowrap">
+                                    <div class="col-12 col-md-3">
+                                        <span class="dropdown-header fw-bolder">ATAK</span>
+                                        <a class="dropdown-item" href="/product-detail.html" title="...">ATAK-Mil</a>
+                                        <a class="dropdown-item" href="/product-detail.html" title="...">ATAK-Civ</a>
+                                        <a class="dropdown-item" href="/product-plugins.html" title="...">ATAK Plugins</a>
+                                    </div>
+                                    <div class="col-12 col-md-3">
+                                        <span class="dropdown-header fw-bolder">WinTAK</span>
+                                        <a class="dropdown-item" href="/product-detail.html" title="...">WinTAK-Mil</a>
+                                        <a class="dropdown-item" href="/product-detail.html" title="...">WinTAK-Civ</a>
+                                        <a class="dropdown-item" href="/product-plugins.html" title="...">WinTAK Plugins</a>
+                                    </div>
+                                    <div class="col-12 col-md-6">
+                                        <span class="dropdown-header fw-bolder">Other</span>
+                                        <a class="dropdown-item" href="/product-detail.html" title="...">iTAK</a>
+                                        <a class="dropdown-item" href="/product-detail.html" title="...">PiTAK</a>
+                                        <a class="dropdown-item" href="/product-detail.html" title="...">TAK Server</a>
+                                        <a class="dropdown-item" href="/product-detail.html" title="...">Android End-User Device (EUD)</a>
+                                        <a class="dropdown-item" href="/product-detail.html" title="...">VTAK</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle"
+                               href="#"
+                               id="navbarTrainingTactics"
+                               role="button"
+                               data-toggle="dropdown"
+                               aria-expanded="false">Training &amp; Tactics</a>
+                            <div class="dropdown-menu start-0 shadow-sm" aria-labelledby="navbarTrainingTactics">
+                                <a class="dropdown-item w-auto m-auto text-center fw-bolder"
+                                   href="/training-tactics.html"
+                                   title="...">Training &amp; Tactics</a>
+                                <div class="dropdown-divider mb-0 mb-md-2"></div>
+                                <a class="dropdown-item" href="/training-tactics--training-videos.html" title="...">Training Videos</a>
+                                <a class="dropdown-item" href="/training-tactics--downloadable-resources.html" title="...">Downloadable Resources</a>
+                                <a class="dropdown-item" href="/training-tactics--dted-level-0-data.html" title="...">DTED Level 0 Data</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle"
+                               href="#"
+                               id="navbarCollaborate"
+                               role="button"
+                               data-toggle="dropdown"
+                               aria-expanded="false">Collaborate</a>
+                            <div class="dropdown-menu end-0 shadow-sm" aria-labelledby="navbarCollaborate">
+                                <a class="dropdown-item w-auto m-auto text-center fw-bolder"
+                                   href="/collaborate.html"
+                                   title="...">Collaborate</a>
+                                <div class="dropdown-divider mb-0 mb-md-2"></div>
+                                <a class="dropdown-item" href="/events.html" title="...">Events</a>
+                                <a class="dropdown-item" href="/forum-landing.html" title="...">Forum</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle"
+                               href="#"
+                               id="navbarProgramOffices"
+                               role="button"
+                               data-toggle="dropdown"
+                               aria-expanded="false">Program Offices</a>
+                            <div class="dropdown-menu end-0 shadow-sm" aria-labelledby="navbarProgramOffices">
+                                <a class="dropdown-item w-auto m-auto text-center fw-bolder"
+                                   href="/program-offices.html"
+                                   title="...">Program Offices</a>
+                                <div class="dropdown-divider mb-0 mb-md-2"></div>
+                                <a class="dropdown-item" href="/program-office.html" title="...">Army</a>
+                                <a class="dropdown-item" href="/program-office.html" title="...">Colorado Center for Excellence</a>
+                                <a class="dropdown-item" href="/program-office.html" title="...">Corona Fire Department</a>
+                                <a class="dropdown-item" href="/program-office.html" title="...">Homeland Security Science and Technology</a>
+                                <a class="dropdown-item" href="/program-office.html" title="...">USMC</a>
+                                <a class="dropdown-item" href="/program-office.html" title="...">NIST</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle"
+                               href="#"
+                               id="navbarDevResources"
+                               role="button"
+                               data-toggle="dropdown"
+                               aria-expanded="false">Dev Resources</a>
+                            <div class="dropdown-menu end-0 shadow-sm" aria-labelledby="navbarDevResources">
+                                <a class="dropdown-item w-auto m-auto text-center fw-bolder"
+                                   href="/developer-resources.html"
+                                   title="...">Available Resources</a>
+                                <div class="dropdown-divider mb-0 mb-md-2"></div>
+                                <a class="dropdown-item" href="/developer-resource.html" title="...">SDKs</a>
+                                <a class="dropdown-item" href="/developer-resource.html" title="...">Plugin Guides</a>
+                                <a class="dropdown-item" href="/developer-resource.html" title="...">Documentation</a>
+                                <a class="dropdown-item" href="/developer-resource.html" title="...">Our Process</a>
+                                <a class="dropdown-item" href="/developer-resource.html" title="...">Dev FAQs</a>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav ms-auto position-relative order-0 order-lg-2 navbar-search">
+                        <li class="nav-item dropdown">
+                            <a href="#"
+                               class="dropdown-toggle dropdown-toggler-hide"
+                               id="navbarSearch"
+                               role="button"
+                               data-toggle="dropdown"
+                               aria-haspopup="true"
+                               aria-expanded="false">
+                                <i class="d-none d-lg-inline ico-search fs-5 text-light"></i>
+                                <span class="d-none">Search</span>
+                            </a>
+                            <div class="dropdown-menu p-3 end-0 shadow-sm" aria-labelledby="navbarSearch">
+                                <div class="form-group">
+                                    <form action="/search-results.html"
+                                          id="formGlobalSearch"
+                                          class="navbar-search__form"
+                                          aria-labelledby="navbarSearch">
+                                        <div class="d-flex flex-column input-group input-group-sm">
+                                            <svg width="1em"
+                                                 height="1em"
+                                                 viewBox="0 0 16 16"
+                                                 class="d-none d-lg-block position-absolute top-0 end-0 translate-middle bi bi-caret-up-fill"
+                                                 fill="#ffffff"
+                                                 xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M7.247 4.86l-4.796 5.481c-.566.647-.106 1.659.753 1.659h9.592a1 1 0 0 0 .753-1.659l-4.796-5.48a1 1 0 0 0-1.506 0z"/>
+                                            </svg>
+                                            <label for="searchForm" class="form-label fw-bolder text-bark text-uppercase">Search the entire website</label>
+                                            <input type="text"
+                                                   class="form-control rounded-0 input-group-sm w-100 search-input-square"
+                                                   id="searchForm"
+                                                   placeholder="Search..." />
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <!-- condition start: user is not logged in -->
+                    <ul class="navbar-nav d-flex flex-wrap flex-md-nowrap flex-row order-1 order-lg-3 mt-3 mb-3 mt-lg-0 mb-lg-0 navbar-utility">
+                        <li class="nav-item dropdown d-inline-flex justify-content-center position-relative nav-login">
+                            <a class="btn-login my-auto rounded-0 text-uppercase"
+                               href="#"
+                               id="navbarLogin"
+                               title="Click to view the login form"
+                               role="button"
+                               data-toggle="dropdown"
+                               aria-expanded="false">Login</a>
+                            <form action="/user-account.html"
+                                  id="formLogin"
+                                  class="dropdown-menu dropdown-menu-centered needs-validation p-3 mt-lg-2 shadow-sm"
+                                  novalidate
+                                  aria-labelledby="navbarLogin">
+                                <svg width="1em"
+                                     height="1em"
+                                     viewBox="0 0 16 16"
+                                     class="position-absolute bottom-100 start-50 translate-middle bi bi-caret-up-fill"
+                                     fill="#ffffff"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M7.247 4.86l-4.796 5.481c-.566.647-.106 1.659.753 1.659h9.592a1 1 0 0 0 .753-1.659l-4.796-5.48a1 1 0 0 0-1.506 0z"/>
+                                </svg>
+                                <div class="mb-3">
+                                    <div class="input-group input-group-sm flex-column w-100">
+                                        <label for="loginUsername" class="form-label fw-bolder text-bark text-uppercase">Username</label>
+                                        <input type="email"
+                                               class="form-control rounded-0 w-100"
+                                               id="loginUsername"
+                                               placeholder="Your Username"
+                                               autocomplete="username"
+                                               required />
+                                        <div class="invalid-feedback mt-2 fw-bold">Please provide a username</div>
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <div class="input-group input-group-sm flex-column w-100">
+                                        <label for="loginPassword" class="form-label fw-bolder text-bark text-uppercase">Password</label>
+                                        <input type="password"
+                                               class="form-control rounded-0 w-100"
+                                               id="loginPassword"
+                                               placeholder="Your Password"
+                                               autocomplete="current-password"
+                                               required />
+                                        <div class="invalid-feedback mt-2 fw-bold">Please enter your password</div>
+                                    </div>
+                                </div>
+                                <div class="d-flex align-items-center">
+                                    <div class="flex-column col-6 pe-4">
+                                        <a href="/forgot-password.html"
+                                           class="forgot-password text-decoration-underline"
+                                           title="...">Forgot Password?</a>
+                                    </div>
+                                    <div class="flex-column col-6 align-content-end ps-4">
+                                        <button type="submit"
+                                                class="btn btn-dark w-100"
+                                                title="Login attempt">Continue&nbsp<i class="ico-arrow-right ms-1 mt-n1 fs-6"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                        </li>
+                        <li class="nav-item d-inline-flex justify-content-center me-0 ms-auto nav-create-account">
+                            <a class="btn btn-primary my-auto"
+                               href="/create-account.html"
+                               title="Click to view the login form">Create an Account</a>
+                        </li>
+                    </ul>
+                    <!-- condition start: user is not logged in -->
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>
+<!-- header: end -->
+
+<!-- main body: start -->
+<main class="main homepage bg-black"
+      data-pattern="bottom-up"
+      data-pattern-color="light">
+    <!-- marquee: start -->
+    <section class="marquee"
+             role="complementary"
+             data-overlay="false"
+             data-pattern="false"
+             data-bg="false"
+             data-video="true">
+        <!-- video loop: start -->
+        <div class="marquee__video"
+             style="--marquee-bg-image: url('/img/marquee/marquee-home.jpg');">
+            <video id="marquee-video"
+                   class="video"
+                   autoplay
+                   muted
+                   loop
+                   preload="none">
+                <source src="media/tak-background-video.mp4" type="video/mp4">
+                <p>Your user agent does not support the HTML5 Video element.</p>
+            </video>
+        </div>
+        <!-- video loop: end -->
+
+        <!-- content: start -->
+        <div class="container pb-0 position-relative text-center marquee__content">
+            <div class="row">
+                <div class="col-12 col-md-9 mx-auto">
+                    <h1 class="display-1 mb-4 fw-bolder">Harness the power of realtime data to solve real world problems with TAK</h1>
+                    <p class="lead mb-0 fw-bold-light">TAK is the core of a suite of GPS communications tools that allow for scaled operational planning, data sharing, visualized elevation data, and target management. With TAK, your team can get oriented quickly, make better informed decisions and quickly respond to threats. Add TAK to your operations, and make sure when your boots are on the ground, you have the tactical advantage.</p>
+                    <button type="button"
+                            class="btn btn-primary mt-5 shadow-sm"
+                            data-toggle="modal"
+                            data-target="#homeVideo">
+                        <i class="ico-play-circle fs-4 me-2"></i>Meet TAK
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- content: start -->
+
+        <!-- logo strip: start -->
+        <div class="container-fluid">
+            <div class="row mt-5 border-bottom border-color-light-blue gradient-black-to-transparent">
+                <div class="col-12 mx-auto marquee__logos">
+                    <span class="d-block h6 fw-bold mb-2 mb-md-4 text-center w-100">Trusted by:</span>
+                    <ul class="list-unstyled d-flex flex-row flex-wrap mb-0 justify-content-center mx-auto logo-list dark">
+                        <li class="border-0 pb-4">
+                            <img src="img/uploads/logo-nvesd.png"
+                                 class=""
+                                 height="80"
+                                 width="80"
+                                 alt="..." />
+                        </li>
+                        <li class="border-0 pb-4">
+                            <img src="img/uploads/logo-peo-solider.png"
+                                 class=""
+                                 height="80"
+                                 width="80"
+                                 alt="..." />
+                        </li>
+                        <li class="border-0 pb-4">
+                            <img src="img/uploads/logo-pm-mission-command.png"
+                                 class=""
+                                 height="80"
+                                 width="80"
+                                 alt="..." />
+                        </li>
+                        <li class="border-0 pb-4">
+                            <img src="img/uploads/logo-nawcwd.png"
+                                 class=""
+                                 height="80"
+                                 width="80"
+                                 alt="..." />
+                        </li>
+                        <li class="border-0 pb-4">
+                            <img src="img/uploads/logo-usaf.png"
+                                 class=""
+                                 height="80"
+                                 width="80"
+                                 alt="..." />
+                        </li>
+                        <li class="border-0 pb-4">
+                            <img src="img/uploads/logo-peo-avn.png"
+                                 class=""
+                                 height="80"
+                                 width="80"
+                                 alt="..." />
+                        </li>
+                    </ul>
+                </div>
+                <!-- logo strip: end -->
+            </div>
+        </div>
+        <!-- logo strip: end -->
+    </section>
+    <!-- marquee: end -->
+
+    <!-- content area: start -->
+    <article class="content-area pt-0" id="content">
+        <div class="container-fluid text-light">
+            <!-- cards w/ title: start -->
+            <div class="row pb-5 bg-percent-90 border-bottom border-color-light-blue cards-with-reticle">
+                <div class="col-12">
+                    <div class="container mt-5">
+                        <!-- cards w/ title introduction: start -->
+                        <div class="row mb-5">
+                            <div class="col-12">
+                                <h2 class="h1 fw-bolder mb-0 text-center">Operational Success Starts With TAK</h2>
+                            </div>
+                        </div>
+                        <!-- cards w/ title introduction: end -->
+
+                        <!-- ltr / rtl cards: start -->
+                        <div class="col-12 mx-auto">
+                            <div class="card border-0 bg-transparent mb-5">
+                                <div class="row g-0">
+                                    <div class="col-12 col-md-6 col-md-6 order-1 mb-3 mb-md-0">
+                                        <img src="img/uploads/device-demonstration-01.png"
+                                             class="tak-image-frame light-border"
+                                             alt="..." />
+                                    </div>
+                                    <div class="col-12 col-md-6 col-md-6 order-2">
+                                        <div class="card-body p-0 ps-md-5 pt-3">
+                                            <h3 class="d-block border-bottom border-2 border-light fw-bolder pb-2 mb-3 position-relative title-with-icon">
+                                                <i class="ico-eye me-3 fs-5"></i>Complete Situational  Awareness
+                                            </h3>
+                                            <p class="card-text">Pulvinar laoreet elementum dolor vulputate. Eget risus, libero vestibulum, quis. Nunc in viverra tortor duis amet etiam ut ut felis. Mauris interdum sollicitudin viverra sagittis, amet, etiam purus amet elit. Nibh lorem non.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card border-0 bg-transparent my-5">
+                                <div class="row g-0">
+                                    <div class="col-12 col-md-6 order-2 order-md-1">
+                                        <div class="card-body p-0 pe-md-5 pt-3">
+                                            <h3 class="d-block border-bottom border-2 border-light fw-bolder pb-2 mb-3 position-relative title-with-icon">
+                                                <i class="ico-map-pin me-3 fs-5"></i>Pre-Operational Planning
+                                            </h3>
+                                            <p class="card-text">TAK uses 3D synthetic environments to understand the terrain before boots even hit the ground, allowing your team to properly plan their operation.</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-md-6 order-1 order-md-2 mb-3 mb-md-0">
+                                        <img src="img/uploads/solutions-thumb-09.jpg"
+                                             class="tak-image-frame light-border"
+                                             alt="..." />
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- last instance: start -->
+                            <div class="card border-0 bg-transparent mt-5">
+                                <div class="row g-0">
+                                    <div class="col-12 col-md-6 order-1 mb-3 mb-md-0">
+                                        <img src="img/uploads/solutions-thumb-10.jpg"
+                                             class="tak-image-frame light-border"
+                                             alt="..." />
+                                    </div>
+                                    <div class="col-12 col-md-6 order-2">
+                                        <div class="card-body p-0 ps-md-5 pt-3">
+                                            <h3 class="d-block border-bottom border-2 border-light fw-bolder pb-2 mb-3 position-relative title-with-icon">
+                                                <i class="ico-zap me-3 fs-5"></i>Streamlined Deployment
+                                            </h3>
+                                            <p class="card-text">TAK uses 3D synthetic environments to understand the terrain before boots even hit the ground, allowing your team to properly plan their operation.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- last instance: end -->
+                        </div>
+                        <!-- ltr / rtl cards: end -->
+                    </div>
+                </div>
+            </div>
+            <!-- cards w/ title: end -->
+
+            <!-- tak solutions w/ title: start -->
+            <div class="row slanted-columns-title">
+                <div class="col-12 mt-5">
+                    <h2 class="h1 fw-bolder mb-3 mb-sm-0 text-center">Find Your TAK Solution</h2>
+                </div>
+            </div>
+            <div class="row slanted-columns">
+                <div class="col-12">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12">
+                                <ul class="d-flex flex-sm-row flex-wrap flex-sm-nowrap mx-auto ps-0 w-100 align-items-stretch slanted-columns__list">
+                                    <li class="slanted-columns__instance">
+                                        <div class="slanted-columns__content">
+                                            <img src="img/uploads/solutions-slant-military.jpg"
+                                                 class="slanted-columns__thumbnail"
+                                                 alt="..." />
+                                            <a href="/solutions-detail.html"
+                                               class="slanted-columns__link"
+                                               title="...">Military</a>
+                                        </div>
+                                    </li>
+                                    <li class="slanted-columns__instance">
+                                        <div class="slanted-columns__content">
+                                            <img src="img/uploads/solutions-slant-law-enforcement.jpg"
+                                                 class="slanted-columns__thumbnail"
+                                                 alt="..." />
+                                            <a href="/solutions-detail.html"
+                                               class="slanted-columns__link"
+                                               title="...">Law Enforcement</a>
+                                        </div>
+                                    </li>
+                                    <li class="slanted-columns__instance">
+                                        <div class="slanted-columns__content">
+                                            <img src="img/uploads/solutions-slant-emergency-management-first-responders.jpg"
+                                                 class="slanted-columns__thumbnail"
+                                                 alt="..." />
+                                            <a href="/solutions-detail.html"
+                                               class="slanted-columns__link"
+                                               title="...">Emergency Management &amp; First Responders</a>
+                                        </div>
+                                    </li>
+                                    <li class="slanted-columns__instance">
+                                        <div class="slanted-columns__content">
+                                            <img src="img/uploads/solutions-slant-commercial.jpg"
+                                                 class="slanted-columns__thumbnail"
+                                                 alt="..." />
+                                            <a href="/solutions-detail.html"
+                                               class="slanted-columns__link"
+                                               title="...">Commercial</a>
+                                        </div>
+                                    </li>
+                                    <li class="slanted-columns__instance">
+                                        <div class="slanted-columns__content">
+                                            <img src="img/uploads/solutions-slant-outdoor-recreation.jpg"
+                                                 class="slanted-columns__thumbnail"
+                                                 alt="..." />
+                                            <a href="/solutions-detail.html"
+                                               class="slanted-columns__link"
+                                               title="...">Outdoor Recreation</a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- tak solutions w/ title: start -->
+
+            <!-- news articles: start -->
+            <div class="row see-tak-news">
+                <div class="col-12 mx-auto mt-5">
+                    <div class="container mx-auto mt-5">
+                        <div class="col-12">
+                            <!-- introduction: start -->
+                            <div class="row mb-3">
+                                <div class="col">
+                                    <h6 class="d-block h2 pb-2 mb-4 border-bottom border-2 border-dark fw-bolder position-relative title-with-icon">
+                                        <i class="ico-star fs-4"></i>See TAK in Action
+                                    </h6>
+                                </div>
+                            </div>
+                            <!-- introduction: end -->
+
+                            <!-- cards and button: start -->
+                            <div class="row">
+                                <!-- article normal title: start -->
+                                <div class="col-12 col-md-4">
+                                    <div class="card border-0 bg-percent-80 rounded-3 shadow-sm">
+                                        <a href="/news-article.html"
+                                           class="card-body link-light"
+                                           title="...">
+                                            <h5 class="card-title fw-bolder">Article Title Lorem Ipsum&nbsp;→</h5>
+                                            <p class="card-text text-muted fst-italic"><small>http://fullarticleurl.com/article-name-and-if-its...</small></p>
+                                            <p class="card-text"><strong>May 1, 2021 &mdash;</strong> Tortor nisl, nisi consequat natoque est aliquam amet. Ut ultrices eu amet elit cursus egestas sodales nisi, enim. Dis tincidunt eget.</p>
+                                        </a>
+                                    </div>
+                                </div>
+                                <!-- article normal title: end -->
+
+                                <!-- article longer title: start -->
+                                <div class="col-12 col-md-4 mt-4 mt-md-0">
+                                    <div class="card border-0 bg-percent-80 rounded-3 shadow-sm">
+                                        <a href="/news-article.html"
+                                           class="card-body link-light"
+                                           title="...">
+                                            <h5 class="card-title fw-bolder">Article Title Dis Amet Sodales Aliquam&nbsp;→</h5>
+                                            <p class="card-text text-muted fst-italic"><small>http://fullarticleurl.com/article-name-and-if-its...</small></p>
+                                            <p class="card-text"><strong>May 1, 2021 &mdash;</strong> Tortor nisl, nisi consequat natoque est aliquam amet. Ut ultrices eu amet elit cursus egestas sodales nisi, enim. Dis tincidunt eget.</p>
+                                        </a>
+                                    </div>
+                                </div>
+                                <!-- article longer title: end -->
+
+                                <!-- article last: start -->
+                                <div class="col-12 col-md-4 mt-4 mt-md-0">
+                                    <div class="card border-0 bg-percent-80 rounded-3 shadow-sm">
+                                        <a href="/news-article.html"
+                                           class="card-body link-light"
+                                           title="...">
+                                            <h5 class="card-title fw-bolder">Article Title Sagittis Est&nbsp;→</h5>
+                                            <p class="card-text text-muted fst-italic"><small>http://fullarticleurl.com/article-name-and-if-its...</small></p>
+                                            <p class="card-text"><strong>May 1, 2021 &mdash;</strong> Tortor nisl, nisi consequat natoque est aliquam amet. Ut ultrices eu amet elit cursus egestas sodales nisi, enim. Dis tincidunt eget.</p>
+                                        </a>
+                                    </div>
+                                </div>
+                                <!-- article last: end -->
+
+                                <!-- view all button: start -->
+                                <div class="col-12 mt-5 text-center">
+                                    <a href="/news.html"
+                                       class="btn btn-primary mx-auto"
+                                       title="...">Browse All TAK News</a>
+                                </div>
+                                <!-- view all button: end -->
+                            </div>
+                            <!-- cards and button: end -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- news articles: end -->
+        </div>
+    </article>
+    <!-- content area: end -->
+</main>
+<!-- main body: end -->
+
+<!-- footer and disclaimer: start -->
+<footer class="footer mt-auto pt-5 pb-3 pb-md-5" data-pattern="light">
+    <!-- disclaimer: start -->
+    <section class="disclaimer mx-auto w-100 position-relative">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 accordion" id="usageStatement">
+                    <div class="p-3 p-md-5 bg-dark text-light disclaimer__accordion">
+                        <button class="disclaimer__button d-flex d-md-none flex-row w-100 fw-bolder"
+                                type="button"
+                                data-toggle="collapse"
+                                data-target="#collapseUsage"
+                                aria-expanded="false"
+                                aria-controls="collapseUsage">TAK Usage Statement <i class="ico-chevron-down fs-4 ms-auto"></i></button>
+                        <article id="collapseUsage"
+                                 class="disclaimer__content collapse"
+                                 aria-labelledby="headingOne"
+                                 data-parent="#usageStatement">
+                            <br/><br/>
+                            <p>The TAK capability suite is a United States Government (USG) owned product. Use of these USG owned products outside of test and evaluation require the proper authority to operate (ATO) paperwork granted by your organization’s headquarters (HQ). Before installing and/or using any of the products, ensure you are within the guidelines of your organization.</p>
+                            <p>TAK-MIL is a restricted use product for USG military use only. NO distribution is authorized outside this forum except through properly vetted Program Management Offices.</p>
+                            <p>ATAK-CIV is subject to the Export Administration Regulations (EAR) administered by the Department of Commerce, Bureau of Industry and Security (BIS), which advises this item is classified as EAR99. Other TAK-CIV Product Lines are currently being evaluated for commodity determination.</p>
+                            <p class="mb-0">The TAK capability suite is a United States Government owned product. TAK-MIL is a restricted use product only available through Foreign Military Sales distribution. TAK-CIV is a restricted use product available through distribution of properly licensed commercial entities and Department of Commerce approval.</p>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- disclaimer: end -->
+
+    <!--footer content: start -->
+    <div class="container">
+        <div class="d-flex flex-wrap flex-md-nowrap">
+            <div class="order-1 order-md-0 col-sm-12 col-md-7 footer__content">
+                <div class="d-flex mb-4 pb-4 footer__content--top">
+                    <div class="col-sm-2 col-md col-md-1 me-4">
+                        <img src="/img/logos/brand.svg"
+                             width="70"
+                             height="74"
+                             class="d-inline-block"
+                             alt="..."
+                             loading="lazy" />
+                    </div>
+                    <div class="col d-flex flex-column justify-content-center align-content-center">
+                        <span class="d-block pb-3">&copy; Copyright 2020 <strong>TAK.gov</strong></span>
+                        <div class="d-block">
+                            <address class="d-inline-block mb-md-0">123 E Street NW, Washington, D.C. 00000</address>
+                            <span class="d-none d-md-inline-block">&nbsp;&mdash;&nbsp;</span>
+                            <a href="tel:1234567890" class="d-inline-block" title="...">(123) 456-7890</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flex footer__content--bottom">
+                    <div class="col footer__links">
+                        <ul class="list-group list-group-horizontal flex-wrap p-0 footer__link-list">
+                            <li class="list-group-item ps-0 pe-0 text-start border-0">
+                                <a href="/developer-resources.html"
+                                   class="footer__link text-decoration-none"
+                                   title="...">Dev Resources</a>
+                            </li>
+                            <li class="list-group-item ps-0 pe-0 text-start border-0">
+                                <a href="#0"
+                                   class="footer__link text-decoration-none"
+                                   title="...">FAQs</a>
+                            </li>
+                            <li class="list-group-item ps-0 pe-0 text-start border-0">
+                                <a href="#0"
+                                   class="footer__link text-decoration-none"
+                                   title="...">Media Center</a>
+                            </li>
+                            <li class="list-group-item ps-0 pe-0 text-start border-0">
+                                <a href="#0"
+                                   class="footer__link text-decoration-none"
+                                   title="...">Privacy Policy</a>
+                            </li>
+                            <li class="list-group-item ps-0 pe-0 text-start border-0">
+                                <a href="#0"
+                                   class="footer__link text-decoration-none"
+                                   title="...">Careers</a>
+                            </li>
+                            <li class="list-group-item ps-0 pe-0 text-start border-0">
+                                <a href="/news.html"
+                                   class="footer__link text-decoration-none"
+                                   title="...">Press &amp; News</a>
+                            </li>
+                            <li class="list-group-item ps-0 pe-0 text-start border-0">
+                                <a href="#0"
+                                   class="footer__link text-decoration-none"
+                                   title="...">Terms of Use</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="order-0 order-md-1 col-sm-12 col-md-5 ps-md-5 pe-2 mb-5 justify-content-center footer__messaging">
+                <span class="d-block h3 mb-3">Developer Callout Lorem Ipsum</span>
+                <div class="row">
+                    <div class="col-12">
+                        <p class="mb-0 lh-lg">Condimentum orci et commodo venenatis mattis. Dolor vehicula commodo ut congue.</p>
+                        <a href="#0"
+                           class="btn btn-primary btn-lg text-decoration-none mt-2"
+                           title="...">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--footer content: end -->
+</footer>
+<!-- footer and disclaimer: end -->
+
+<!-- marquee modal: start -->
+<div class="modal fade"
+     id="homeVideo"
+     tabindex="-1"
+     aria-labelledby="home-modal-title"
+     aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="home-modal-title">Home modal title</h5>
+                <button type="button"
+                        class="btn-close"
+                        data-dismiss="modal"
+                        aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="ratio ratio-16x9">
+                    <iframe src="https://www.youtube.com/embed/-FlxM_0S2lA?rel=0"
+                            title="YouTube video"
+                            allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- marquee modal: end -->
+</body>
+
+<!-- main js file -->
+<script type="text/javascript" src="/js/index.min.js"></script>
+
+<!-- custom scripts -->
+<!-- <script src="" type="text/javascript"></script> -->
+
+</html>

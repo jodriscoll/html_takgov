@@ -1,0 +1,85 @@
+// navbar-navigation
+
+&-navigation {
+  &.navbar-nav {
+    @include media-breakpoint-down(lg) {
+      // make the search field fill the width
+      width: 100%;
+    }
+  }
+
+  // dropdown overrides
+  .dropdown {
+    // button
+    .dropdown-toggle {
+      @include media-breakpoint-down(md) {
+        border-bottom-color: $white;
+      }
+
+      // dropdown arrow
+      &::after {
+        @include font-size(18px);
+
+        @include media-breakpoint-down(lg) {
+          right: ($dropdown-icon-right-offset + 3); // default is 5px
+          top: 25px !important; // default is top: 50%
+        }
+      }
+
+      // when opened...
+      &.show {
+        @include media-breakpoint-down(lg) {
+          @include rfs(0, border-bottom-left-radius);
+          @include rfs(0, border-bottom-right-radius);
+          background-color: $bark;
+          border-color: $bark;
+        }
+      }
+    }
+
+    // menu wrapper
+    .dropdown-menu {
+      // small amount of space at the top & bottom of the dropdown menu
+      @include padding(8px 0 !important);
+    }
+
+    // each menu item
+    .dropdown-item {
+      @include padding(10px 15px);
+      @include margin-bottom(0);
+    }
+
+    // headings
+    .dropdown-header {
+      @include font-size(14px);
+      color: $slate;
+
+      @include media-breakpoint-down(md) {
+        background-color: $smoke;
+      }
+    }
+
+    // (custom) dropdown columns, shown in the products dropdown
+    .dropdown-columns {
+      @include media-breakpoint-down(md) {
+        > div:not(:last-of-type) {
+          //@include rfs(10px, margin-bottom);
+          @include margin-bottom(10px !important);
+        }
+      }
+    }
+
+    // (custom) toggle hider
+    .dropdown-toggler-hide {
+      @include media-breakpoint-down(lg) {
+        display: none;
+      }
+      @include media-breakpoint-up(lg) {
+        // default icon inherited from bootstrap
+        &::after {
+          display: none;
+        }
+      }
+    }
+  }
+}

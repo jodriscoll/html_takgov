@@ -1,0 +1,22 @@
+// navbar-utility (login, user profile, etc...)
+
+&-utility {
+  &.navbar-nav {
+    @include media-breakpoint-down(lg) {
+      // make the baseline for positioning
+      position: relative;
+      width: 100%;
+    }
+
+    // btn overrides
+    a.btn-primary {
+      height: 100%;
+    }
+  }
+
+  // dropdown override(s)
+  .dropdown-menu {
+    //@include padding-left(30px);
+    //@include padding-left(30px);
+  }
+}

@@ -1,0 +1,99 @@
+// navbar-duffle (logged in only)
+
+&-duffle {
+  @include media-breakpoint-down(md) {
+    @include margin-bottom($nav-mobile-menu-text-link-spacer);
+    @include margin-top($nav-mobile-menu-text-link-spacer);
+  }
+
+  &.navbar-nav {
+    @include media-breakpoint-down(lg) {
+      //width: auto !important;
+    }
+
+    .nav-link {
+      @include media-breakpoint-down(lg) {
+        @include padding(7px 10px 0 0);
+        @include margin-bottom(0);
+        border: none;
+        display: inline-block;
+      }
+    }
+  }
+
+  // dropdown overrides
+  .dropdown {
+    // dropdown toggle
+    .dropdown-toggle {
+      // remove the default space for the chevron icon
+      @include padding-right(0 !important);
+
+      @include media-breakpoint-down(md) {
+        -webkit-appearance: none !important;
+      }
+
+      // hide the default chevron icon
+      &::after {
+        display: none;
+      }
+    }
+
+    // dropdown parent
+    .dropdown-menu {
+      @include media-breakpoint-down(lg) {
+        border-top-left-radius: 10px !important;
+        border-top-right-radius: 10px !important;
+        top: 50px;
+        width: calc(100vw - 80px);
+
+        > svg {
+          left: 20px !important;
+        }
+      }
+      @include media-breakpoint-up(md) {
+        width: 360px;
+      }
+    }
+
+    // dropdown children
+    .dropdown-item {
+      @include media-breakpoint-down(md) {
+        strong,
+        a,
+        button {
+          font-size: 12px !important;
+        }
+
+        strong {
+          margin-bottom: 0 !important;
+        }
+
+        &::after {
+          display: none;
+        }
+      }
+
+      &:not(:last-child) {
+        padding-bottom: 1rem;
+        border-bottom: 2px solid $duffle-divider;
+      }
+      &:not(:first-child) {
+        padding-top: 1rem;
+      }
+
+      > * {
+        @include padding(0);
+      }
+
+      &:hover {
+        background-color: transparent;
+      }
+    }
+
+    // dividers
+    .dropdown-divider {
+      background-color: $duffle-divider;
+      border-top: 1px solid $duffle-divider;
+    }
+  }
+}

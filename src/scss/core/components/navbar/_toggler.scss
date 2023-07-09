@@ -1,0 +1,38 @@
+// navbar-toggler (mobile/tablet toggle button)
+
+&-toggler {
+  border: none;
+
+  // if collapsed
+  &[aria-expanded='true'] {
+    // display the "hamburger" icon
+    i::before {
+      content: $icon-x;
+    }
+  }
+
+  // if expanded
+  &[aria-expanded='true'] {
+    // display the "X" icon
+    .navbar-toggler-icon.ico-::before {
+      content: $icon-plus;
+      transform: rotate(-45deg);
+    }
+  }
+}
+
+// navbar-toggler-icon (mobile/tablet toggle icon)
+&-toggler-icon {
+  &.ico- {
+    background-image: none; // remove the bootstrap icon
+
+    // baseline structure for icons
+    &::before {
+      @include font-size(45px);
+      color: $white;
+      content: '';
+      display: inline-block;
+      font-family: $font-family-icons;
+    }
+  }
+}

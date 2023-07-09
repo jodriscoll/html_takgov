@@ -1,0 +1,7 @@
+// imported through /features/_helpers.scss
+
+.border-color {
+  &-light-blue {
+    border-color: $tak-light-blue !important;
+  }
+}

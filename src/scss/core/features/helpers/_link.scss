@@ -1,0 +1,29 @@
+// imported through /features/_helpers.scss
+
+.link {
+  &-tak-blue {
+    color: $tak-light-blue;
+
+    &:hover,
+    &:focus {
+      color: darken($tak-light-blue, 10%);
+    }
+  }
+
+  &-right-arrow {
+    position: relative;
+
+    // arrow icon
+    &::after {
+      color: inherit;
+      content: $icon-arrow-right;
+      font-family: $font-family-icons;
+      font-size: inherit;
+      line-height: 1;
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+}

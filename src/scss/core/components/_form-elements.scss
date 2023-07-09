@@ -1,0 +1,236 @@
+$custom-icon-height: 22px;
+$custom-icon-width: 22px;
+
+$checkmark-custom-radius: 5px;
+$checkmark-custom-default: 'ico-tak-checkbox-empty';
+$checkmark-custom-active: 'ico-tak-checkbox-selected';
+$checkmark-custom-disabled: 'ico-tak-checkbox-disabled';
+
+$radio-custom-radius: 50%;
+$radio-custom-default: 'ico-tak-radio-empty';
+$radio-custom-active: 'ico-tak-radio-selected';
+$radio-custom-disabled: 'ico-tak-radio-disabled';
+
+$display-box-shadows: false;
+
+// re-write
+[data-form-elements='true'] {
+  // hide the default input fields
+  > label {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    align-items: center;
+
+    input[type='radio'],
+    input[type='checkbox'] {
+      display: none;
+    }
+  }
+
+  // everything will be wrapped in a label, to be accessible friendly
+  label {
+    @include padding(5px 0);
+    background-color: transparent;
+    border: none;
+    color: $black;
+    cursor: pointer;
+    text-align: left;
+    user-select: none;
+    vertical-align: middle;
+    white-space: nowrap;
+
+    // all icon styles for custom form elements
+    i[class*='ico-'] {
+      @include font-size(22px);
+      @include padding(1px);
+      border-radius: $checkmark-custom-radius;
+      height: $custom-icon-height;
+      outline: 2px solid transparent;
+      overflow: hidden;
+      transition: background-color $general-animation-style, color $general-animation-style,
+        box-shadow $general-animation-style;
+      width: $custom-icon-width;
+
+      @if $display-box-shadows {
+        box-shadow: 0 0 0 2px $white;
+      }
+
+      // custom font icon
+      &::before {
+        position: absolute;
+        left: 0;
+
+        @include media-breakpoint-down(md) {
+          top: 7px;
+        }
+        @include media-breakpoint-up(md) {
+          top: 5px;
+        }
+      }
+    }
+
+    // the string of text shown to the user
+    .field-text {
+      //@include font-size(16px);
+      @include padding-left(10px);
+      font-family: $font-family-public-sans;
+      transition: color $general-animation-style;
+    }
+
+    // custom checkboxes
+    input[type='checkbox'] {
+      // all icon styles for custom form elements
+      ~ i[class*='ico-'] {
+        border-radius: 5px;
+      }
+
+      // the default icon, visible by default
+      ~ i[class='#{$checkmark-custom-default}'] {
+        background-color: $percent_15;
+        color: $percent_15;
+        display: inline;
+      }
+
+      // the active & disabled icon, hidden by default
+      ~ i[class='#{$checkmark-custom-active}'],
+      ~ i[class='#{$checkmark-custom-disabled}'] {
+        display: none;
+      }
+
+      // when the field is checked, active, etc...
+      &:checked {
+        // hide the default icon
+        ~ i[class='#{$checkmark-custom-default}'] {
+          display: none;
+        }
+
+        // show the active icon
+        ~ i[class='#{$checkmark-custom-active}'] {
+          background-color: $white;
+          color: $black;
+          display: inline;
+        }
+      }
+    }
+
+    // custom radio
+    input[type='radio'] {
+      // all icon styles for custom form elements
+      ~ i[class*='ico-'] {
+        border-radius: $radio-custom-radius;
+      }
+
+      // the default icon, visible by default
+      ~ i[class='#{$radio-custom-default}'] {
+        background-color: $percent_15;
+        color: $percent_15;
+        display: inline;
+      }
+
+      // the active & disabled icon, hidden by default
+      ~ i[class='#{$radio-custom-active}'],
+      ~ i[class='#{$radio-custom-disabled}'] {
+        display: none;
+      }
+
+      // when the field is checked, active, etc...
+      &:checked {
+        // hide the default icon
+        ~ i[class='#{$radio-custom-default}'] {
+          display: none;
+        }
+
+        // show the active icon
+        ~ i[class='#{$radio-custom-active}'] {
+          background-color: $white;
+          color: $black;
+          display: inline;
+        }
+      }
+    }
+
+    // shared interactive states
+    &:hover,
+    &:focus {
+      color: $black;
+
+      // all support field types
+      input[type='checkbox'],
+      input[type='radio'] {
+        // any state
+        ~ i[class*='ico-'] {
+          background-color: $white;
+          color: $black;
+
+          @if $display-box-shadows {
+            box-shadow: 0 0 0 2px $percent_15;
+          }
+        }
+      }
+    }
+
+    // only on user hover
+    &:hover {
+      // ...
+    }
+
+    // only on user focus
+    &:focus {
+      // ...
+    }
+
+    // when the field is disabled
+    &.disabled {
+      // checkmark
+      input[type='checkbox'] {
+        // hide the default and possible active icon
+        ~ i[class='#{$checkmark-custom-default}'],
+        ~ i[class='#{$checkmark-custom-active}'] {
+          display: none;
+        }
+
+        // show the disabled icon
+        ~ i[class='#{$checkmark-custom-disabled}'] {
+          background-color: $white;
+          color: $percent_15;
+          display: inline;
+
+          @if $display-box-shadows {
+            box-shadow: 0 0 0 2px $white !important;
+          }
+        }
+
+        // match the color up to the icon
+        ~ .field-text {
+          color: $percent_15;
+        }
+      }
+
+      // radio
+      input[type='radio'] {
+        // hide the default and possible active icon
+        ~ i[class='#{$radio-custom-default}'],
+        ~ i[class='#{$radio-custom-active}'] {
+          display: none;
+        }
+
+        // show the disabled icon
+        ~ i[class='#{$radio-custom-disabled}'] {
+          background-color: $white;
+          color: $percent_15;
+          display: inline;
+
+          @if $display-box-shadows {
+            box-shadow: 0 0 0 2px $white !important;
+          }
+        }
+
+        // match the color up to the icon
+        ~ .field-text {
+          color: $percent_15;
+        }
+      }
+    }
+  }
+}

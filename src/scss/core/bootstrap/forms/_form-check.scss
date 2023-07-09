@@ -1,0 +1,76 @@
+//@import '../../../../../node_modules/bootstrap/scss/variables';
+//@import '../../../../../node_modules/bootstrap/scss/forms/form-check.scss';
+
+// bootstrap modifiers may require !important
+
+.form-check {
+  // ...
+  .form-check-input {
+    // ...
+  }
+}
+
+.form-check-input {
+  // ...
+
+  &[type='checkbox'] {
+    // ...
+  }
+
+  &[type='radio'] {
+    // ...
+  }
+
+  &:active {
+    // ...
+  }
+
+  &:focus {
+    // ...
+  }
+
+  &:checked {
+    // ...
+
+    &[type='checkbox'] {
+      // ...
+    }
+
+    &[type='radio'] {
+      // ...
+    }
+  }
+
+  &[type='checkbox']:indeterminate {
+    // ...
+  }
+
+  &:disabled {
+    // ...
+  }
+
+  // Use disabled attribute in addition of :disabled pseudo-class
+  // See: https://github.com/twbs/bootstrap/issues/28247
+  &[disabled],
+  &:disabled {
+    ~ .form-check-label {
+      // ...
+    }
+  }
+}
+
+.form-check-label {
+  // ...
+}
+
+.form-switch {
+  // ...
+}
+
+.form-check-inline {
+  // ...
+}
+
+.btn-check {
+  // ...
+}

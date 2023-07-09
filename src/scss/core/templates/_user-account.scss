@@ -1,0 +1,45 @@
+// bootstrap modifiers may require !important
+
+// attached to main.main
+.user-account {
+  .user {
+    &__upload-filename {
+      @include font-size(12px);
+    }
+
+    &__validation-list {
+      // ...
+    }
+
+    &__validation-item {
+      @include font-size(14px);
+
+      &[data-pass-reset-status='true'] {
+        color: $green-primary;
+
+        // checkmark with circle icon
+        .ico-::before {
+          content: $icon-check-circle;
+        }
+      }
+
+      &[data-pass-reset-status='false'] {
+        color: $red-primary;
+
+        // checkmark with circle icon
+        .ico-::before {
+          content: $icon-x-circle;
+        }
+      }
+    }
+
+    // strip styling for disabled inputs
+    .form-control {
+      &.disabled {
+        @include padding(0 !important);
+        background-color: transparent;
+        border: none;
+      }
+    }
+  }
+}

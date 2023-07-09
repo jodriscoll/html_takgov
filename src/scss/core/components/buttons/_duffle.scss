@@ -1,0 +1,21 @@
+// duffle button
+.btn {
+  &-duffle {
+    @extend .btn-outline-dark;
+    border-radius: 0;
+
+    @at-root .nav-pills + .tab-content & {
+      @include font-size(12px);
+    }
+
+    @include media-breakpoint-down(md) {
+      width: 100%;
+    }
+
+    // if using bootstrap toggle, or custom data-attribute
+    &.active,
+    &[data-duffle-selected='true'] {
+      @extend .btn-success;
+    }
+  }
+}

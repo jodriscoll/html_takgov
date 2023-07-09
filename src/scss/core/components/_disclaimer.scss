@@ -1,0 +1,75 @@
+.disclaimer {
+  z-index: $zindex-disclaimer;
+
+  @include media-breakpoint-down(md) {
+    @include margin-bottom((-$disclaimer-small-down-top-offset / 1.5));
+    top: -$disclaimer-small-down-top-offset;
+  }
+  @include media-breakpoint-up(md) {
+    @include margin-bottom((-$disclaimer-medium-up-top-offset / 1.5));
+    top: -$disclaimer-medium-up-top-offset;
+  }
+
+  // (mobile only) accordion button
+  &__button {
+    @include media-breakpoint-down(sm) {
+      @include font-size(16px);
+      //@include rfs(19px, line-height);
+    }
+
+    // when opened...
+    &[aria-expanded='true'] {
+      *[class*='ico'] {
+        &::before {
+          transform: rotate(-180deg);
+        }
+      }
+    }
+
+    // chevron icon within
+    *[class*='ico'] {
+      display: inline-flex;
+
+      &::before {
+        transition: transform $general-animation-style;
+      }
+    }
+  }
+
+  // content controlled by (on mobile only) accordion
+  &__content {
+    @include media-breakpoint-up(md) {
+      display: block !important;
+
+      // minor hack to avoid the accordion flicker on mobile
+      br {
+        display: none;
+      }
+    }
+  }
+
+  // text bubble
+  &__accordion {
+    @include rfs(10px, border-radius);
+    @include rfs(0 2px 15px rgba($black, 0.15), box-shadow);
+    background-color: $white;
+
+    // content
+    p {
+      @include font-size(12px);
+      @include rfs(18px, line-height);
+    }
+
+    // variation on homepage
+    &.bg-dark {
+      .disclaimer__button {
+        color: $white;
+      }
+    }
+  }
+
+  // container
+  .container {
+    // ...
+  }
+}

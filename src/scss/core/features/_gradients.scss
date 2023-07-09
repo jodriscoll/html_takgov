@@ -1,0 +1,5 @@
+.gradient {
+  &-black-to-transparent {
+    background: linear-gradient(to top, $black, rgba($black, 0));
+  }
+}

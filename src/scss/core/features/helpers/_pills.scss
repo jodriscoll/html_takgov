@@ -1,0 +1,7 @@
+// imported through /features/_helpers.scss
+
+.rounded-pill {
+  &.bg-yellow-light {
+    background-color: $filter-pill !important;
+  }
+}

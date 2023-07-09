@@ -1,0 +1,265 @@
+$code-bg-color: #18191b;
+$code-comment-color: #666666;
+$code-color-01: #cf6a4c;
+$code-color-02: #f9ee98;
+$code-color-03: #8f9d6a;
+$code-color-04: #7587a6;
+$code-color-05: #e9c062;
+$code-color-06: #ac885b;
+$code-color-07: #545454;
+
+pre[class*='language-'] {
+  background: $code-bg-color;
+  color: $white;
+  font-family: monospace;
+  font-size: 15.6px;
+  padding: 15.6px 15.6px 15.6px 58.28px;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 24.96px;
+  max-height: 197px;
+
+  // tab spaces
+  -moz-tab-size: 2;
+  -o-tab-size: 2;
+  tab-size: 2;
+
+  // ignore hyphens
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+
+  border-radius: 8px;
+  overflow: auto;
+
+  button {
+    font-family: $font-family-base;
+    position: absolute !important;
+    right: 5px;
+    top: 5px;
+  }
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+  color: $code-comment-color;
+}
+
+.token.punctuation {
+  opacity: 0.7;
+}
+
+.token.namespace {
+  opacity: 0.7;
+}
+
+.token.tag,
+.token.boolean,
+.token.number,
+.token.deleted {
+  color: $code-color-01;
+}
+
+.token.keyword,
+.token.property,
+.token.selector,
+.token.constant,
+.token.symbol,
+.token.builtin {
+  color: $code-color-02;
+}
+
+.token.attr-name,
+.token.attr-value,
+.token.string,
+.token.char,
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string,
+.token.variable,
+.token.inserted {
+  color: $code-color-03;
+}
+
+.token.atrule {
+  color: $code-color-04;
+}
+
+.token.regex,
+.token.important {
+  color: $code-color-05;
+}
+
+.token.important,
+.token.bold {
+  font-weight: bold;
+}
+.token.italic {
+  font-style: italic;
+}
+
+.token.entity {
+  cursor: help;
+}
+
+/* Markup */
+.language-markup .token.tag,
+.language-markup .token.attr-name,
+.language-markup .token.punctuation {
+  color: $code-color-06;
+}
+
+/* Make the tokens sit above the line highlight so the colours don't look faded. */
+.token {
+  position: relative;
+  z-index: 1;
+}
+
+.line-highlight {
+  background: $code-color-07; /* #545454 */
+  background: linear-gradient(
+    to right,
+    hsla(0, 0%, 33%, 0.1) 70%,
+    hsla(0, 0%, 33%, 0)
+  ); /* #545454 */
+  border-bottom: 1px dashed $code-color-07; /* #545454 */
+  border-top: 1px dashed $code-color-07; /* #545454 */
+  left: 0;
+  line-height: inherit;
+  margin-top: 7.5px; /* Same as .prism’s padding-top */
+  padding: inherit 0;
+  pointer-events: none;
+  position: absolute;
+  right: 0;
+  white-space: pre;
+  z-index: 0;
+}
+
+.line-highlight:before,
+.line-highlight[data-end]:after {
+  background-color: hsl(215, 15%, 59%); /* #8794A6 */
+  border-radius: 999px;
+  box-shadow: 0 1px white;
+  color: hsl(24, 20%, 95%); /* #F5F2F0 */
+  content: attr(data-start);
+  font: bold 65%/1.5 sans-serif;
+  left: 6px;
+  min-width: 10px;
+  padding: 0 5px;
+  position: absolute;
+  text-align: center;
+  text-shadow: none;
+  top: 4px;
+  vertical-align: 3px;
+}
+
+.line-highlight[data-end]:after {
+  bottom: 4px;
+  content: attr(data-end);
+  top: auto;
+}
+
+pre[data-line] {
+  position: relative;
+  padding: 10px 0 10px 30px;
+}
+
+.line-highlight {
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding: inherit 0;
+  margin-top: 10px; /* Same as .prism’s padding-top */
+
+  background: hsla(24, 20%, 50%, 0.08);
+  background: linear-gradient(to right, hsla(24, 20%, 50%, 0.1) 70%, hsla(24, 20%, 50%, 0));
+
+  pointer-events: none;
+
+  line-height: inherit;
+  white-space: pre;
+}
+
+.line-highlight:before,
+.line-highlight[data-end]:after {
+  content: attr(data-start);
+  position: absolute;
+  top: 4px;
+  left: 6px;
+  min-width: 10px;
+  padding: 0 5px;
+  background-color: hsla(24, 20%, 50%, 0.4);
+  color: hsl(24, 20%, 95%);
+  font: bold 65%/1.5 sans-serif;
+  text-align: center;
+  vertical-align: 3px;
+  border-radius: 999px;
+  text-shadow: none;
+  box-shadow: 0 1px white;
+}
+
+.line-highlight[data-end]:after {
+  content: attr(data-end);
+  top: auto;
+  bottom: 4px;
+}
+
+.line-numbers .line-highlight:before,
+.line-numbers .line-highlight:after {
+  content: none;
+}
+
+pre[class*='language-'].line-numbers {
+  position: relative;
+  padding-left: 60px;
+  counter-reset: linenumber;
+}
+
+pre[class*='language-'].line-numbers > code {
+  box-sizing: content-box !important;
+  position: relative;
+  white-space: inherit;
+  unicode-bidi: normal;
+  overflow-wrap: normal !important;
+  -webkit-text-size-adjust: unset !important;
+  hyphens: none !important;
+  left: -450px;
+  top: -20px;
+}
+
+.line-numbers .line-numbers-rows {
+  position: absolute;
+  pointer-events: none;
+  left: -20px;
+  width: 46px;
+  border-right: 1px solid rgb(153, 153, 153);
+  user-select: none;
+  top: 22px;
+
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.line-numbers-rows > span {
+  pointer-events: none;
+  display: block;
+  counter-increment: linenumber;
+}
+
+.line-numbers-rows > span::before {
+  content: counter(linenumber);
+  color: #999;
+  display: block;
+  padding-right: 12px;
+  text-align: right;
+}

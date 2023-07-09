@@ -1,0 +1,41 @@
+// imported through /features/_helpers.scss
+
+.reticle-frame {
+  position: relative;
+
+  &::before,
+  &::after {
+    background: url($base64-spacer) no-repeat center transparent;
+    content: '';
+    height: 100%;
+    position: absolute;
+    top: 0;
+    width: 24px;
+    z-index: 2;
+  }
+
+  // left corners
+  &::before {
+    left: 0;
+  }
+
+  // right corners
+  &::after {
+    right: 0;
+  }
+}
+
+.tak-image-frame {
+  border: 5px solid transparent;
+  border-radius: 15px;
+  /* source | slice | width | outset | repeat */
+  border-image: url($base64-spacer) 50 / 50px 40px / 12px round stretch;
+
+  &.dark-border {
+    border-image-source: url($svg-reticle-border-dark);
+  }
+
+  &.light-border {
+    border-image-source: url($svg-reticle-border-light);
+  }
+}

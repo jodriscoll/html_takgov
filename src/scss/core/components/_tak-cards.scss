@@ -1,0 +1,115 @@
+// section of cards
+.tak-cards {
+  // each card
+  .card {
+    @include rfs(10px, border-radius);
+    box-shadow: 0 2px 15px rgba($black, 0.15);
+
+    // contains the image and badge
+    &-top {
+      @include media-breakpoint-down(md) {
+        height: $tak-card-thumbnail-height-sm;
+      }
+      @include media-breakpoint-up(md) {
+        height: $tak-card-thumbnail-height-md;
+      }
+    }
+
+    // thumbnail
+    &-image {
+      height: auto;
+      left: 50%;
+      min-width: 100%;
+      max-width: none;
+      min-height: 100%;
+      top: 50%;
+      transform: translateY(-50%) translateX(-50%);
+      width: auto;
+    }
+
+    // badge container
+    &-badge {
+      @include rfs(10px 0 0 0, border-radius);
+      @include padding(5px);
+      background-color: $black;
+
+      // if an icon font
+      &::before {
+        color: $white;
+      }
+    }
+
+    // badge thumbnail
+    &-badge-image {
+      &.large {
+        height: 64px;
+        width: 64px;
+      }
+      &.small {
+        height: 32px;
+        width: 32px;
+      }
+    }
+
+    // pill
+    &-pill {
+      @include rfs(25px, border-radius);
+      @include padding(5px 10px);
+      background-color: $black;
+      bottom: 5px;
+      left: 5px;
+
+      span {
+        @include font-size(12px);
+        color: $white;
+      }
+    }
+
+    // content wrapper
+    &-body {
+      background-color: $white;
+
+      // if an anchor...
+      @at-root #{selector-unify(&, a)} {
+        transition: background-color $general-animation-style;
+
+        // interactions, only occur on mouse/keyboard based devices
+        &:focus,
+        &:hover {
+          background-color: $tak-card-hover-bg;
+
+          // customizations for the content within
+          .card-title,
+          .card-text {
+            color: darken($yellow-tertiary, 25%);
+            transition: color $general-animation-style;
+          }
+        }
+      }
+    }
+
+    // card title
+    &-title {
+      @include media-breakpoint-down(md) {
+        @include font-size(16px);
+        @include rfs(20px, line-height);
+      }
+      @include media-breakpoint-up(md) {
+        @include font-size(24px);
+        @include rfs(30px, line-height);
+      }
+    }
+
+    // card description text
+    &-text {
+      @include media-breakpoint-down(md) {
+        @include font-size(12px);
+        @include rfs(18px, line-height);
+      }
+      @include media-breakpoint-up(md) {
+        @include font-size(14px);
+        @include rfs(21px, line-height);
+      }
+    }
+  }
+}

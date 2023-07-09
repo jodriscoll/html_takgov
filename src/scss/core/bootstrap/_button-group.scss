@@ -1,0 +1,21 @@
+//@import "../../../../node_modules/bootstrap/scss/button-group";
+
+// bootstrap modifiers may require !important
+
+.btn-group {
+  // ...
+}
+
+.btn-group-sm {
+  // custom form-element support
+  span {
+    @include font-size($btn-font-size-sm);
+  }
+}
+
+.btn-group-lg {
+  // custom form-element support
+  span {
+    @include font-size($btn-font-size-lg);
+  }
+}

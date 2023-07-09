@@ -1,0 +1,52 @@
+.logo-list {
+  li {
+    position: relative;
+
+    @include media-breakpoint-down(sm) {
+      @include margin(20px);
+    }
+    @include media-breakpoint-up(md) {
+      @include margin-right(40px);
+      @include padding-right(40px);
+
+      // gradient divider, that's slanted
+      &::after {
+        background: transparent;
+        content: '';
+        height: 100%;
+        position: absolute;
+        right: 0;
+        top: 0;
+        transform: skew(25deg);
+        width: 2px;
+      }
+    }
+  }
+
+  img {
+    @include media-breakpoint-down(sm) {
+      height: 40px;
+      width: 40px;
+    }
+    @include media-breakpoint-up(md) {
+      height: 80px;
+      width: 80px;
+    }
+  }
+
+  // dark version (homepage)
+  &.dark {
+    li::after {
+      background: $black;
+      background: linear-gradient(0deg, $black 0%, $tak-light-blue 50%, $black 100%);
+    }
+  }
+
+  // light version (solutions detail)
+  &.light {
+    li::after {
+      background: $white;
+      background: linear-gradient(0deg, $white 0%, $tak-light-blue 50%, $white 100%);
+    }
+  }
+}

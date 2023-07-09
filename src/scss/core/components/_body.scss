@@ -1,0 +1,6 @@
+body {
+    // skip to content
+    a[href*="#content"] {
+        z-index: $zindex-skip-to-content;
+    }
+}

@@ -1,0 +1,160 @@
+//@import "../../../../node_modules/bootstrap/scss/dropdown";
+
+// bootstrap modifiers may require !important
+
+.dropdown {
+  // entire menu of links
+  .dropdown-menu {
+    @include font-size(16px);
+    @include rfs(10px, border-radius);
+    // removing this, breaks the navigation dropdowns
+    left: auto;
+    z-index: $zindex-dropdown;
+
+    @include media-breakpoint-up(md) {
+      @include rfs(18px 0, padding);
+    }
+
+    // connecting "arrow", wherever present
+    .bi-caret-up-fill {
+      //border-top: 1px solid rgba($black, 0.15);
+      //stroke: rgba($black, 0.15);
+      top: -2px;
+
+      // when told to be set to the left
+      &.left-0 {
+        left: $dropdown-icon-dropdown-offset !important;
+      }
+
+      // when told to be set to the right
+      &.right-0 {
+        left: $dropdown-icon-dropdown-offset !important;
+      }
+    }
+
+    // (custom) positions
+    &-centered {
+      right: auto;
+
+      @include media-breakpoint-down(lg) {
+        @include margin-top(8px);
+        //margin-top: .4rem;
+        left: 0;
+        position: absolute;
+        transform: none;
+      }
+      @include media-breakpoint-up(lg) {
+        left: 50%;
+        transform: translate(-50%, 0);
+        width: 300px;
+      }
+
+      // arrow pointing up
+      .bi-caret-up-fill {
+        //top: -6px;
+
+        @include media-breakpoint-down(lg) {
+          left: 50px !important;
+        }
+      }
+    }
+  }
+
+  // dropdown toggle links
+  .dropdown-toggle {
+    // space for dropdown icon
+    @include padding-right(30px !important);
+
+    // dropdown arrow
+    &::after {
+      @include font-size(18px);
+      @include margin-left(auto);
+      border: none;
+      content: $icon-chevron-down;
+      font-family: $font-family-icons;
+      display: inline-block;
+      line-height: normal;
+      position: absolute;
+      right: $dropdown-icon-right-offset;
+      top: 50%;
+      transform: translateY(-50%);
+      transition: transform $general-animation-style;
+      vertical-align: middle;
+    }
+
+    @include media-breakpoint-down(md) {
+      span {
+        @include font-size(16px);
+      }
+    }
+
+    // when the dropdown menu is opened
+    &.show {
+      // rotate the chevron arrow
+      &::after {
+        transform: translateY(-50%) rotate(-180deg);
+      }
+    }
+  }
+
+  // each menu item
+  .dropdown-item {
+    @include padding(10px 20px);
+    display: block;
+    transition: background-color $general-animation-style;
+    //white-space: normal;
+
+    &:active,
+    &:hover,
+    &:focus {
+      background-color: $percent_15;
+      color: $black;
+    }
+
+    @include media-breakpoint-down(md) {
+      @include font-size(16px);
+      @include rfs(19px, line-height);
+      @include rfs($dropdown-menu-item-chevron, padding-right);
+      position: relative;
+      white-space: normal;
+
+      // chevron arrow
+      &::after {
+        border: none;
+        content: $icon-arrow-right;
+        display: inline-block;
+        font-family: $font-family-icons;
+        line-height: normal;
+        position: absolute;
+        right: ($dropdown-menu-item-chevron / 3.5);
+        top: 50%;
+        transform: translateY(-50%);
+        vertical-align: middle;
+      }
+    }
+
+    @include media-breakpoint-up(md) {
+      @include font-size(14px);
+      @include rfs(14px, line-height);
+      @include rfs(10px, margin-bottom);
+
+      &:last-of-type {
+        @include rfs(0, margin-bottom);
+      }
+    }
+  }
+
+  // dropdown headings
+  .dropdown-header {
+    // ...
+  }
+
+  // divider bar
+  .dropdown-divider {
+    // ...
+  }
+
+  // specific instances
+  @import '../components/dropdowns/navbar-login';
+  @import '../components/dropdowns/navbar-products';
+}

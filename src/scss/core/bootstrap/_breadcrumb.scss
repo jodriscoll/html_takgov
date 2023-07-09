@@ -1,0 +1,34 @@
+//@import "../../../../node_modules/bootstrap/scss/breadcrumb";
+
+// bootstrap modifiers may require !important
+$breadcrumb-divider: $icon-chevron-right;
+
+.breadcrumbs {
+  // each breadcrumb
+  .breadcrumb {
+    &-item {
+      @include media-breakpoint-down(md) {
+        @include font-size(12px);
+      }
+      @include media-breakpoint-up(md) {
+        @include font-size(14px);
+      }
+
+      // active breadcrumbs
+      a {
+        color: $tak-light-blue;
+        text-decoration: underline;
+      }
+
+      // each breadcrumb item
+      + .breadcrumb-item {
+        // divider icon
+        &::before {
+          color: $black;
+          content: $breadcrumb-divider;
+          font-family: $font-family-icons;
+        }
+      }
+    }
+  }
+}

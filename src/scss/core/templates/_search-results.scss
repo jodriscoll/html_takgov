@@ -1,0 +1,44 @@
+// bootstrap modifiers may require !important
+
+// attached to main.main
+.search-results {
+  .search {
+    // title
+    &__title {
+      // ...
+    }
+
+    // search query input field
+    &__input {
+      *[class*='ico-'] {
+        left: $grid-gutter-width;
+        z-index: $zindex-input-icon;
+      }
+      .form-control {
+        @include padding(12px 13px 12px 45px !important);
+        z-index: $zindex-input-field;
+      }
+    }
+
+    &__total-results {
+      // ...
+    }
+
+    &__total-results-count {
+      // ...
+    }
+
+    &__results {
+      // ...
+    }
+
+    &__results-list {
+      padding-left: 0;
+      margin-left: 0;
+    }
+
+    &__results-item {
+      // ...
+    }
+  }
+}

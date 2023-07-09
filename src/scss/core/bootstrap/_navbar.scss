@@ -1,0 +1,143 @@
+//@import '../../../../node_modules/bootstrap/scss/navbar.scss';
+
+// bootstrap modifiers may require !important
+$nav-link-sm-padding-value: 10px;
+$nav-search-dropdown-icon: $icon-search;
+$nav-search-input-icon-sm-width: 16px;
+$nav-mobile-menu-text-link-spacer: 12px;
+$nav-mobile-notification-offset: 6px;
+
+.navbar {
+  // modifiers
+  &.navbar-dark {
+    background-color: $slate !important;
+  }
+
+  // larger version
+  &[data-scale='full'] {
+    .container {
+      @include media-breakpoint-up(lg) {
+        @include padding(34px $grid-gutter-width);
+      }
+    }
+  }
+
+  // smaller version
+  &[data-scale='condensed'] {
+    @include media-breakpoint-up(lg) {
+      @include padding-bottom(0);
+      @include padding-top(0);
+    }
+
+    .container {
+      @include media-breakpoint-up(lg) {
+        @include padding(0 $grid-gutter-width);
+      }
+    }
+
+    .navbar-brand {
+      img {
+        // ...
+      }
+    }
+  }
+
+  // collapse elements (tablet down)
+  &-collapse {
+    @include media-breakpoint-down(lg) {
+      .d-flex {
+        // force each portion of the navbar to consume an entire row
+        > ul {
+          //width: 100%;
+        }
+      }
+    }
+    @include media-breakpoint-down(lg) {
+      @include padding-top(20px);
+      width: 100%;
+
+      // collapsing animation
+      &.collapsing {
+        transition: height 0.35s ease, padding-top 0.35s ease;
+      }
+
+      &.show {
+        // ...
+      }
+    }
+  }
+
+  // nav menu
+  &-nav {
+    // each nav item
+    .nav-item {
+      @include media-breakpoint-up(lg) {
+        @include rfs(18px, margin-right);
+      }
+    }
+  }
+
+  // child elements
+  .container {
+    @include media-breakpoint-up(lg) {
+      max-width: map-get($grid-breakpoints, xxl);
+    }
+  }
+
+  // navigation item containers
+  .nav-item {
+    @include media-breakpoint-up(lg) {
+      @include font-size(14px);
+    }
+  }
+
+  // navigation links
+  .nav-link {
+    @include media-breakpoint-down(lg) {
+      @include font-size(16px);
+      @include rfs(2px solid $white, border);
+      @include rfs(
+        $nav-link-sm-padding-value 25px $nav-link-sm-padding-value $nav-link-sm-padding-value,
+        padding
+      );
+      @include rfs(10px, border-radius);
+      @include rfs(9px, margin-bottom);
+
+      // chevron icon
+      &::after {
+        @include rfs($nav-link-sm-padding-value, right);
+        position: absolute;
+      }
+
+      + .dropdown-menu {
+        @include rfs(0, border-top-left-radius);
+        @include rfs(0, border-top-right-radius);
+        @include rfs(15px, margin-bottom);
+        @include rfs(-10px, margin-top);
+      }
+
+      @at-root .navbar-dark .navbar-nav .nav-link {
+        color: $white;
+      }
+    }
+  }
+
+  .dropdown {
+    .dropdown-menu {
+      z-index: $zindex-marquee-pseudo + 3;
+    }
+  }
+
+  // variations for the global navigation
+  @import '../components/navbar/brand';
+  @import '../components/navbar/toggler';
+  @import '../components/navbar/navigation';
+  @import '../components/navbar/search';
+  @import '../components/navbar/duffle';
+  @import '../components/navbar/forum';
+  @import '../components/navbar/user';
+  @import '../components/navbar/utility';
+  //@import '../components/navbar/login';
+  @import '../components/navbar/logout';
+  //@import '../components/navbar/create-account';
+}

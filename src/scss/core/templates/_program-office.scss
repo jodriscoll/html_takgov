@@ -1,0 +1,19 @@
+// bootstrap modifiers may require !important
+$template-video-player-max-width-desktop: 465px;
+
+// attached to main.main
+.program-office {
+  // ...
+
+  .video-playlist {
+    @include media-breakpoint-up(lg) {
+      max-width: $template-video-player-max-width-desktop + $video-playlist-width-desktop !important;
+    }
+
+    &__player {
+      @include media-breakpoint-up(lg) {
+        max-width: $template-video-player-max-width-desktop !important;
+      }
+    }
+  }
+}

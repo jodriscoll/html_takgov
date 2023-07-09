@@ -1,0 +1,38 @@
+// navbar-forum (logged in only)
+
+&-forum {
+  @include media-breakpoint-down(md) {
+    @include margin-bottom($nav-mobile-menu-text-link-spacer);
+    @include margin-top($nav-mobile-menu-text-link-spacer);
+  }
+
+  &.navbar-nav {
+    @include media-breakpoint-down(lg) {
+      //width: auto !important;
+    }
+
+    .nav-link {
+      @include media-breakpoint-down(lg) {
+        @include padding(7px 10px 0 0);
+        @include margin-bottom(0);
+        border: none;
+        display: inline-block;
+      }
+    }
+  }
+
+  .dropdown {
+    // navigation link (single icon)
+    .nav-link {
+      // when the active page
+      &.active {
+        border-bottom: none;
+
+        // set the navbar icon to an active state
+        *[class*='ico-']::before {
+          color: $tak-light-blue;
+        }
+      }
+    }
+  }
+}

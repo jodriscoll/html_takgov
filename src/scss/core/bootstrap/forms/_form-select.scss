@@ -1,0 +1,19 @@
+//@import "../../../../../node_modules/bootstrap/scss/forms/form-select.scss";
+
+// bootstrap modifiers may require !important
+$form-input-border-default:         1px;
+$form-input-border-left-width:      3px;
+$form-input-border-bottom-width:    2px;
+$form-input-error-icon-position:    calc(100% - 8px);
+$form-input-error-icon-size:        16px;
+
+.form-select {
+    //@include rfs(10px 13px !important, padding);
+    @include rfs($form-input-border-left-width solid $form-input-bg, border-left);
+    @include rfs($form-input-border-bottom-width solid $umber, border-bottom);
+    background-color: $form-input-bg;
+    border-right-color: $form-input-bg;
+    border-top-color: $form-input-bg;
+    -webkit-appearance: none;
+}
+

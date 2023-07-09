@@ -1,0 +1,30 @@
+//@import "../../../../node_modules/bootstrap/scss/type";
+
+// bootstrap modifiers may require !important
+$list-colored-bullet-html-content-code: '\2022';
+$list-colored-padding-left: 20px;
+
+.list-colored {
+  @include padding-left($list-colored-padding-left);
+
+  li {
+    position: relative;
+
+    &::before {
+      @include font-size($list-colored-padding-left + 10px);
+
+      color: inherit;
+      content: $list-colored-bullet-html-content-code;
+      left: -$list-colored-padding-left;
+      position: absolute;
+      top: -10px;
+    }
+  }
+
+  // light blue (solutions detail)
+  &.light-blue {
+    li::before {
+      color: $tak-light-blue;
+    }
+  }
+}

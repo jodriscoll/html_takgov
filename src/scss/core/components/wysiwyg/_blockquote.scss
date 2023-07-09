@@ -1,0 +1,57 @@
+// imported through: /components/_wysiwyg.scss
+$blockquote-font-size-desktop: 24px;
+$blockquote-line-height-desktop: 36px;
+$blockquote-spacer: 30px;
+$blockquote-padding-x: 20px;
+$blockquote-side-borders: 2px;
+$blockquote-icon-offset: 15px;
+
+&.wysiwyg {
+  figure {
+    border-left: $blockquote-side-borders solid $black;
+    border-right: $blockquote-side-borders solid $black;
+    padding-left: $blockquote-padding-x;
+    padding-right: $blockquote-padding-x;
+    position: relative;
+
+    // both quote icons
+    &::after,
+    &::before {
+      background-color: $white;
+      color: $black;
+      content: '';
+      font-family: $font-family-icons;
+      padding: 5px;
+      position: absolute;
+      top: 50%;
+    }
+
+    // left
+    &::before {
+      content: $icon-tak-quote-left;
+      left: -$blockquote-icon-offset;
+    }
+
+    // right
+    &::after {
+      content: $icon-tak-quote-right;
+      right: -$blockquote-icon-offset;
+    }
+  }
+
+  .blockquote {
+    @include font-size($blockquote-font-size-desktop);
+    line-height: $blockquote-line-height-desktop;
+    margin-bottom: 0;
+
+    > :last-child {
+      margin-bottom: 0;
+    }
+
+    &-footer {
+      display: block;
+      margin-bottom: 0;
+      margin-top: $blockquote-spacer;
+    }
+  }
+}

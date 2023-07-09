@@ -1,0 +1,14 @@
+// bootstrap modifiers may require !important
+
+// attached to main.main
+.news-article {
+  .article-content {
+    @include media-breakpoint-up(md) {
+      @include margin-bottom(150px);
+    }
+  }
+
+  .article-related {
+    // ...
+  }
+}

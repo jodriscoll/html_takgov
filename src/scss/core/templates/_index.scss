@@ -1,0 +1,20 @@
+// bootstrap modifiers may require !important
+
+// attached to main.main
+.homepage {
+  .container-fluid {
+    // ...
+
+    @include media-breakpoint-down(sm) {
+      // reset the double gutter padding due to fluid nesting
+      .cards-with-reticle,
+      .see-tak-news,
+      .slanted-columns {
+        .container {
+          padding-left: 0;
+          padding-right: 0;
+        }
+      }
+    }
+  }
+}

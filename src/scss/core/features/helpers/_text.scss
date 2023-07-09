@@ -1,0 +1,40 @@
+// imported through /features/_helpers.scss
+
+.text {
+  &-notice {
+    @include font-size(12px);
+    @include rfs(18px, line-height);
+  }
+
+  &-bark {
+    color: $bark !important;
+  }
+
+  &-grey-60 {
+    color: rgba($percent_60, 0.6);
+  }
+
+  &-grey-30 {
+    color: $percent_30 !important;
+  }
+}
+
+.title-with-icon {
+  $smaller-icon-width: 20px;
+  $all-sizes-icon-spacer: 15px;
+
+  @include padding-left($smaller-icon-width + $all-sizes-icon-spacer);
+
+  // icons
+  [class^='ico-'],
+  [class*=' ico-'] {
+    left: 0;
+    position: absolute;
+    top: 4px;
+  }
+}
+
+.assist-text {
+  color: $assistive-text-color;
+  font-style: italic;
+}

@@ -1,0 +1,109 @@
+// bootstrap modifiers may require !important
+$event-modal-close-spacer-mobile: 20px; // 30px
+$event-modal-close-button-size: 24px;
+$event-modal-top-spacer-mobile: $event-modal-close-spacer-mobile + $event-modal-close-button-size +
+  16px;
+$event-right-col-offset-desktop: -114px;
+
+// attached to main.main
+.event-detail {
+  &__content {
+    // ...
+  }
+
+  &__register {
+    @include media-breakpoint-down(md) {
+      background-color: $black;
+      bottom: 0;
+      display: none;
+      flex-direction: column;
+      height: 100vh;
+      padding-bottom: $event-modal-close-spacer-mobile;
+      padding-top: $event-modal-top-spacer-mobile;
+      position: fixed;
+      z-index: -1000;
+      //transition: opacity $general-animation-style;
+
+      &.fade {
+        transition: none;
+      }
+      &.active,
+      &.show {
+        display: block;
+        animation-name: modal-fade-in;
+        animation-duration: 0.25s;
+        animation-timing-function: ease-in-out;
+        animation-fill-mode: forwards;
+      }
+    }
+    @include media-breakpoint-between(sm, md) {
+      left: 0;
+    }
+    @include media-breakpoint-up(md) {
+      // @TODO: find a way to do this dynamically
+      @include margin-top($event-right-col-offset-desktop !important);
+
+      z-index: ($zindex-marquee-content);
+
+      &.fade {
+        transition: none;
+        opacity: 1;
+      }
+    }
+
+    .card {
+      @include media-breakpoint-down(md) {
+        margin-bottom: auto;
+        margin-top: auto;
+        max-height: 100%;
+        overflow-y: scroll;
+        width: 100%;
+      }
+      // if no actions are available for the event
+      &[data-event-action='false'] {
+        display: none;
+      }
+    }
+
+    .btn-close {
+      color: $white;
+      position: absolute;
+      right: $event-modal-close-spacer-mobile;
+      top: $event-modal-close-spacer-mobile;
+
+      @include media-breakpoint-up(md) {
+        display: none;
+      }
+    }
+  }
+}
+
+@keyframes modal-fade-in {
+  0% {
+    z-index: -1000;
+    opacity: 0;
+  }
+  1% {
+    z-index: $zindex-modal-backdrop;
+    opacity: 0;
+  }
+  100% {
+    z-index: $zindex-modal-backdrop;
+    opacity: 1;
+  }
+}
+
+@keyframes modal-fade-out {
+  0% {
+    z-index: $zindex-modal-backdrop;
+    opacity: 1;
+  }
+  99% {
+    z-index: $zindex-modal-backdrop;
+    opacity: 0;
+  }
+  100% {
+    z-index: -1000;
+    opacity: 0;
+  }
+}

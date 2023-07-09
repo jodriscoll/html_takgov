@@ -1,0 +1,24 @@
+// bootstrap modifiers may require !important
+
+// attached to main.main
+.developer-resource {
+  // widen the content containers
+  .container {
+    @include media-breakpoint-up(lg) {
+      // attached to .container
+      max-width: map-get($grid-breakpoints, xxl);
+    }
+  }
+
+  // remove the generic bottom padding for the core container
+  .content-area {
+    padding-bottom: 0 !important;
+  }
+
+  // add a custom border to the nav-pills
+  .nav {
+    &.nav-pills {
+      border-bottom: 2px solid $black;
+    }
+  }
+}

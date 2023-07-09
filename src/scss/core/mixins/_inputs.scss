@@ -1,0 +1,43 @@
+@mixin search-input-rounded($hide-label: false, $position-bottom: 8px) {
+  background-color: transparent;
+  display: block;
+  margin-top: 0;
+  padding: 0 !important;
+  position: relative;
+  z-index: $zindex-input-field;
+
+  // search icon
+  &::before {
+    @include rfs($nav-search-input-icon-sm-width, width);
+    bottom: $position-bottom;
+    content: $icon-search;
+    font-family: $font-family-icons;
+    position: absolute;
+    left: 10px;
+    z-index: $zindex-input-icon;
+  }
+
+  // the search input
+  > input {
+    @include rfs(21px !important, border-radius);
+    color: $black;
+
+    @include media-breakpoint-down(md) {
+      @include rfs(8px 8px 8px ($nav-search-input-icon-sm-width * 3) !important, padding);
+    }
+    @include media-breakpoint-up(md) {
+      @include rfs(8px 8px 8px ($nav-search-input-icon-sm-width * 2) !important, padding);
+    }
+
+    &::placeholder {
+      color: $percent_30;
+    }
+  }
+
+  @if $hide-label {
+    // hide the label
+    label {
+      display: none;
+    }
+  }
+}
